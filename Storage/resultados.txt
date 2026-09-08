@@ -1150,3 +1150,2307 @@ TABLA 5 antes
 12  2.504066  293.150000
 13  2.505018  305.000000
 
+iteration0
+
+
+TABLA 1 antes
+                             name  from_junction  to_junction  controlled_mdot_kg_per_s  control_active  in_service type
+0             Flow_control_charge              1            6                      -0.0            True        True   fc
+1      Flow_control_bypass_charge              6            1                       0.1            True       False   fc
+2     Flow_control_charge_storage              7            9                      -0.0            True        True   fc
+3          Flow_control_discharge              9            7                       0.1            True       False   fc
+4   Flow_control_bypass_discharge              7            9                       0.1            True       False   fc
+5  Flow_control_discharge_storage              6            1                       0.1            True       False   fc
+
+TABLA 2 antes
+   p_from_bar  p_to_bar    t_from_k      t_to_k  t_outlet_k  mdot_from_kg_per_s  mdot_to_kg_per_s  vdot_m3_per_s
+0     2.98848  5.000000  359.785475  293.150000      293.15                -0.0               0.0           -0.0
+1         NaN       NaN         NaN         NaN         NaN                 NaN               NaN            NaN
+2     5.00000  2.511241  293.150000  304.771407      293.15                -0.0               0.0           -0.0
+3         NaN       NaN         NaN         NaN         NaN                 NaN               NaN            NaN
+4         NaN       NaN         NaN         NaN         NaN                 NaN               NaN            NaN
+5         NaN       NaN         NaN         NaN         NaN                 NaN               NaN            NaN
+
+TABLA 3 antes
+                          name  return_junction  flow_junction  p_flow_bar  t_flow_k  mdot_flow_kg_per_s  in_service type
+0     Circ_pump_charge_storage                6              7         5.0     313.0                -0.0        True   pt
+1  Circ_pump_discharge_storage                7              6         5.0     300.0                 0.0        True   pt
+
+TABLA 4 antes
+   p_from_bar  p_to_bar  t_from_k  t_to_k  t_outlet_k  mdot_from_kg_per_s  mdot_to_kg_per_s  vdot_m3_per_s  deltat_k  qext_w
+0         5.0       5.0    293.15  293.15       313.0                -0.0               0.0           -0.0    -19.85    -0.0
+1         5.0       5.0    293.15  293.15       300.0                 0.0              -0.0            0.0     -6.85     0.0
+
+TABLA 5 antes
+       p_bar         t_k
+0   3.000000  360.000000
+1   2.988480  359.785475
+2   2.983340  359.465073
+3   2.982516  359.057995
+4   2.982680  359.137479
+5   2.987521  359.304286
+6   5.000000  293.150000
+7   5.000000  293.150000
+8   2.500000  304.692955
+9   2.511241  304.771407
+10  2.522483  304.850053
+11  2.523294  305.000000
+12  2.523132  305.000000
+13  2.523425  305.000000
+
+iteration0
+
+
+TABLA 1 despues
+                             name  from_junction  to_junction  controlled_mdot_kg_per_s  control_active  in_service type
+0             Flow_control_charge              1            6                      -0.0            True       False   fc
+1      Flow_control_bypass_charge              6            1                       0.0            True       False   fc
+2     Flow_control_charge_storage              7            9                      -0.0            True       False   fc
+3          Flow_control_discharge              9            7                       0.0            True        True   fc
+4   Flow_control_bypass_discharge              7            9                       0.0            True        True   fc
+5  Flow_control_discharge_storage              6            1                       0.0            True        True   fc
+
+TABLA 2 despues
+   p_from_bar  p_to_bar    t_from_k      t_to_k  t_outlet_k  mdot_from_kg_per_s  mdot_to_kg_per_s  vdot_m3_per_s
+0         NaN       NaN         NaN         NaN         NaN                 NaN               NaN            NaN
+1         NaN       NaN         NaN         NaN         NaN                 NaN               NaN            NaN
+2         NaN       NaN         NaN         NaN         NaN                 NaN               NaN            NaN
+3    2.511241  5.000000  304.771407  293.150000      293.15                 0.0              -0.0            0.0
+4    5.000000  2.511241  293.150000  304.771407      293.15                 0.0              -0.0            0.0
+5    5.000000  2.988480  293.150000  359.785475      293.15                 0.0              -0.0            0.0
+
+TABLA 3 despues
+                          name  return_junction  flow_junction  p_flow_bar  t_flow_k  mdot_flow_kg_per_s  in_service type
+0     Circ_pump_charge_storage                6              7         5.0     313.0                 0.0        True   pt
+1  Circ_pump_discharge_storage                7              6         5.0     354.0                 0.0        True   pt
+
+TABLA 4 despues
+   p_from_bar  p_to_bar  t_from_k  t_to_k  t_outlet_k  mdot_from_kg_per_s  mdot_to_kg_per_s  vdot_m3_per_s  deltat_k  qext_w
+0         5.0       5.0    293.15  293.15       313.0                 0.0              -0.0            0.0    -19.85     0.0
+1         5.0       5.0    293.15  293.15       354.0                 0.0              -0.0            0.0    -60.85     0.0
+
+TABLA 5 antes
+       p_bar         t_k
+0   3.000000  360.000000
+1   2.988480  359.785475
+2   2.983340  359.465073
+3   2.982516  359.057995
+4   2.982680  359.137479
+5   2.987521  359.304286
+6   5.000000  293.150000
+7   5.000000  293.150000
+8   2.500000  304.692955
+9   2.511241  304.771407
+10  2.522483  304.850053
+11  2.523294  305.000000
+12  2.523132  305.000000
+13  2.523425  305.000000
+
+iteration1
+
+
+TABLA 1 antes
+                             name  from_junction  to_junction  controlled_mdot_kg_per_s  control_active  in_service type
+0             Flow_control_charge              1            6                      0.88            True        True   fc
+1      Flow_control_bypass_charge              6            1                      0.00            True       False   fc
+2     Flow_control_charge_storage              7            9                      0.88            True        True   fc
+3          Flow_control_discharge              9            7                      0.00            True       False   fc
+4   Flow_control_bypass_discharge              7            9                      0.00            True       False   fc
+5  Flow_control_discharge_storage              6            1                      0.00            True       False   fc
+
+TABLA 2 antes
+   p_from_bar  p_to_bar    t_from_k      t_to_k  t_outlet_k  mdot_from_kg_per_s  mdot_to_kg_per_s  vdot_m3_per_s
+0     2.97604  5.000000  359.851252  359.851252  359.851252                0.88             -0.88       0.000910
+1         NaN       NaN         NaN         NaN         NaN                 NaN               NaN            NaN
+2     5.00000  2.523366  312.947736  307.287070  312.947736                0.88             -0.88       0.000887
+3         NaN       NaN         NaN         NaN         NaN                 NaN               NaN            NaN
+4         NaN       NaN         NaN         NaN         NaN                 NaN               NaN            NaN
+5         NaN       NaN         NaN         NaN         NaN                 NaN               NaN            NaN
+
+TABLA 3 antes
+                          name  return_junction  flow_junction  p_flow_bar    t_flow_k  mdot_flow_kg_per_s  in_service type
+0     Circ_pump_charge_storage                6              7         5.0  312.947736                0.88        True   pt
+1  Circ_pump_discharge_storage                7              6         5.0  354.000000                0.00        True   pt
+
+TABLA 4 antes
+   p_from_bar  p_to_bar    t_from_k      t_to_k  t_outlet_k  mdot_from_kg_per_s  mdot_to_kg_per_s  vdot_m3_per_s   deltat_k         qext_w
+0         5.0       5.0  359.851252  312.947736  312.947736                0.88             -0.88       0.000898  46.903516 -172989.237407
+1         5.0       5.0  312.947736  359.851252  354.000000                0.00             -0.00       0.000000 -41.052264       0.000000
+
+TABLA 5 antes
+       p_bar         t_k
+0   3.000000  360.000000
+1   2.976040  359.851252
+2   2.970913  359.530227
+3   2.970090  359.122360
+4   2.970254  359.201998
+5   2.975084  359.369127
+6   5.000000  359.851252
+7   5.000000  312.947736
+8   2.500000  307.228336
+9   2.523366  307.287070
+10  2.534581  304.849874
+11  2.535390  305.000000
+12  2.535229  305.000000
+13  2.535521  305.000000
+
+iteration1
+
+
+TABLA 1 despues
+                             name  from_junction  to_junction  controlled_mdot_kg_per_s  control_active  in_service type
+0             Flow_control_charge              1            6                      0.88            True        True   fc
+1      Flow_control_bypass_charge              6            1                      0.00            True        True   fc
+2     Flow_control_charge_storage              7            9                      0.88            True        True   fc
+3          Flow_control_discharge              9            7                      0.00            True       False   fc
+4   Flow_control_bypass_discharge              7            9                      0.00            True       False   fc
+5  Flow_control_discharge_storage              6            1                      0.00            True       False   fc
+
+TABLA 2 despues
+   p_from_bar  p_to_bar    t_from_k      t_to_k  t_outlet_k  mdot_from_kg_per_s  mdot_to_kg_per_s  vdot_m3_per_s
+0     2.97604  5.000000  359.851252  359.851252  359.851252                0.88             -0.88       0.000910
+1     5.00000  2.976040  359.851252  359.851252  293.150000                0.00             -0.00       0.000000
+2     5.00000  2.523366  312.947736  307.287070  312.947736                0.88             -0.88       0.000887
+3         NaN       NaN         NaN         NaN         NaN                 NaN               NaN            NaN
+4         NaN       NaN         NaN         NaN         NaN                 NaN               NaN            NaN
+5         NaN       NaN         NaN         NaN         NaN                 NaN               NaN            NaN
+
+TABLA 3 despues
+                          name  return_junction  flow_junction  p_flow_bar    t_flow_k  mdot_flow_kg_per_s  in_service type
+0     Circ_pump_charge_storage                6              7         5.0  312.947736                0.88        True   pt
+1  Circ_pump_discharge_storage                7              6         5.0  354.000000                0.00        True   pt
+
+TABLA 4 despues
+   p_from_bar  p_to_bar    t_from_k      t_to_k  t_outlet_k  mdot_from_kg_per_s  mdot_to_kg_per_s  vdot_m3_per_s   deltat_k         qext_w
+0         5.0       5.0  359.851252  312.947736  312.947736                0.88             -0.88       0.000898  46.903516 -172989.237407
+1         5.0       5.0  312.947736  359.851252  354.000000                0.00             -0.00       0.000000 -41.052264       0.000000
+
+TABLA 5 antes
+       p_bar         t_k
+0   3.000000  360.000000
+1   2.976040  359.851252
+2   2.970913  359.530227
+3   2.970090  359.122360
+4   2.970254  359.201998
+5   2.975084  359.369127
+6   5.000000  359.851252
+7   5.000000  312.947736
+8   2.500000  307.228336
+9   2.523366  307.287070
+10  2.534581  304.849874
+11  2.535390  305.000000
+12  2.535229  305.000000
+13  2.535521  305.000000
+
+iteration2
+
+
+TABLA 1 antes
+                             name  from_junction  to_junction  controlled_mdot_kg_per_s  control_active  in_service type
+0             Flow_control_charge              1            6                      0.88            True       False   fc
+1      Flow_control_bypass_charge              6            1                      0.00            True       False   fc
+2     Flow_control_charge_storage              7            9                      0.88            True       False   fc
+3          Flow_control_discharge              9            7                      0.15            True        True   fc
+4   Flow_control_bypass_discharge              7            9                      0.00            True       False   fc
+5  Flow_control_discharge_storage              6            1                      0.15            True        True   fc
+
+TABLA 2 antes
+   p_from_bar  p_to_bar    t_from_k      t_to_k  t_outlet_k  mdot_from_kg_per_s  mdot_to_kg_per_s  vdot_m3_per_s
+0         NaN       NaN         NaN         NaN         NaN                 NaN               NaN            NaN
+1         NaN       NaN         NaN         NaN         NaN                 NaN               NaN            NaN
+2         NaN       NaN         NaN         NaN         NaN                 NaN               NaN            NaN
+3    2.509513  5.000000  304.770337  304.770337  304.770337                0.15             -0.15       0.000151
+4         NaN       NaN         NaN         NaN         NaN                 NaN               NaN            NaN
+5    5.000000  2.990254  363.402569  360.043220  363.402569                0.15             -0.15       0.000155
+
+TABLA 3 antes
+                          name  return_junction  flow_junction  p_flow_bar    t_flow_k  mdot_flow_kg_per_s  in_service type
+0     Circ_pump_charge_storage                6              7         5.0  312.947736                0.00        True   pt
+1  Circ_pump_discharge_storage                7              6         5.0  363.402569                0.15        True   pt
+
+TABLA 4 antes
+   p_from_bar  p_to_bar    t_from_k      t_to_k  t_outlet_k  mdot_from_kg_per_s  mdot_to_kg_per_s  vdot_m3_per_s   deltat_k        qext_w
+0         5.0       5.0  363.402569  304.770337  312.947736                0.00             -0.00       0.000000  50.454833     -0.000000
+1         5.0       5.0  304.770337  363.402569  363.402569                0.15             -0.15       0.000153 -58.632232  36875.201653
+
+TABLA 5 antes
+       p_bar         t_k
+0   3.000000  360.000000
+1   2.990254  360.043220
+2   2.985162  359.720375
+3   2.984345  359.310203
+4   2.984508  359.390289
+5   2.989304  359.558360
+6   5.000000  363.402569
+7   5.000000  304.770337
+8   2.500000  304.685044
+9   2.509513  304.770337
+10  2.520650  304.849350
+11  2.521453  305.000000
+12  2.521293  305.000000
+13  2.521584  305.000000
+
+iteration2
+
+
+TABLA 1 despues
+                             name  from_junction  to_junction  controlled_mdot_kg_per_s  control_active  in_service type
+0             Flow_control_charge              1            6                      0.88            True       False   fc
+1      Flow_control_bypass_charge              6            1                      0.00            True       False   fc
+2     Flow_control_charge_storage              7            9                      0.88            True       False   fc
+3          Flow_control_discharge              9            7                      0.15            True        True   fc
+4   Flow_control_bypass_discharge              7            9                      0.00            True        True   fc
+5  Flow_control_discharge_storage              6            1                      0.15            True        True   fc
+
+TABLA 2 despues
+   p_from_bar  p_to_bar    t_from_k      t_to_k  t_outlet_k  mdot_from_kg_per_s  mdot_to_kg_per_s  vdot_m3_per_s
+0         NaN       NaN         NaN         NaN         NaN                 NaN               NaN            NaN
+1         NaN       NaN         NaN         NaN         NaN                 NaN               NaN            NaN
+2         NaN       NaN         NaN         NaN         NaN                 NaN               NaN            NaN
+3    2.509513  5.000000  304.770337  304.770337  304.770337                0.15             -0.15       0.000151
+4    5.000000  2.509513  304.770337  304.770337  293.150000                0.00             -0.00       0.000000
+5    5.000000  2.990254  363.402569  360.043220  363.402569                0.15             -0.15       0.000155
+
+TABLA 3 despues
+                          name  return_junction  flow_junction  p_flow_bar    t_flow_k  mdot_flow_kg_per_s  in_service type
+0     Circ_pump_charge_storage                6              7         5.0  312.947736                0.00        True   pt
+1  Circ_pump_discharge_storage                7              6         5.0  363.402569                0.15        True   pt
+
+TABLA 4 despues
+   p_from_bar  p_to_bar    t_from_k      t_to_k  t_outlet_k  mdot_from_kg_per_s  mdot_to_kg_per_s  vdot_m3_per_s   deltat_k        qext_w
+0         5.0       5.0  363.402569  304.770337  312.947736                0.00             -0.00       0.000000  50.454833     -0.000000
+1         5.0       5.0  304.770337  363.402569  363.402569                0.15             -0.15       0.000153 -58.632232  36875.201653
+
+TABLA 5 antes
+       p_bar         t_k
+0   3.000000  360.000000
+1   2.990254  360.043220
+2   2.985162  359.720375
+3   2.984345  359.310203
+4   2.984508  359.390289
+5   2.989304  359.558360
+6   5.000000  363.402569
+7   5.000000  304.770337
+8   2.500000  304.685044
+9   2.509513  304.770337
+10  2.520650  304.849350
+11  2.521453  305.000000
+12  2.521293  305.000000
+13  2.521584  305.000000
+
+iteration3
+
+
+TABLA 1 antes
+                             name  from_junction  to_junction  controlled_mdot_kg_per_s  control_active  in_service type
+0             Flow_control_charge              1            6                      0.88            True       False   fc
+1      Flow_control_bypass_charge              6            1                      0.00            True       False   fc
+2     Flow_control_charge_storage              7            9                      0.88            True       False   fc
+3          Flow_control_discharge              9            7                      0.18            True        True   fc
+4   Flow_control_bypass_discharge              7            9                      0.00            True       False   fc
+5  Flow_control_discharge_storage              6            1                      0.18            True        True   fc
+
+TABLA 2 antes
+   p_from_bar  p_to_bar    t_from_k      t_to_k  t_outlet_k  mdot_from_kg_per_s  mdot_to_kg_per_s  vdot_m3_per_s
+0         NaN       NaN         NaN         NaN         NaN                 NaN               NaN            NaN
+1         NaN       NaN         NaN         NaN         NaN                 NaN               NaN            NaN
+2         NaN       NaN         NaN         NaN         NaN                 NaN               NaN            NaN
+3    2.506164  5.000000  304.724994  304.724994  304.724994                0.18             -0.18       0.000181
+4         NaN       NaN         NaN         NaN         NaN                 NaN               NaN            NaN
+5    5.000000  2.993692  363.284117  360.100948  363.284117                0.18             -0.18       0.000187
+
+TABLA 3 antes
+                          name  return_junction  flow_junction  p_flow_bar    t_flow_k  mdot_flow_kg_per_s  in_service type
+0     Circ_pump_charge_storage                6              7         5.0  312.947736                0.00        True   pt
+1  Circ_pump_discharge_storage                7              6         5.0  363.284117                0.18        True   pt
+
+TABLA 4 antes
+   p_from_bar  p_to_bar    t_from_k      t_to_k  t_outlet_k  mdot_from_kg_per_s  mdot_to_kg_per_s  vdot_m3_per_s   deltat_k        qext_w
+0         5.0       5.0  363.284117  304.724994  312.947736                0.00             -0.00       0.000000  50.336382     -0.000000
+1         5.0       5.0  304.724994  363.284117  363.284117                0.18             -0.18       0.000184 -58.559124  44194.553966
+
+TABLA 5 antes
+       p_bar         t_k
+0   3.000000  360.000000
+1   2.993692  360.100948
+2   2.990805  359.671815
+3   2.990596  358.860610
+4   2.990150  359.342204
+5   2.992744  359.615263
+6   5.000000  363.284117
+7   5.000000  304.724994
+8   2.500000  304.619130
+9   2.506164  304.724994
+10  2.513926  304.819582
+11  2.514135  305.000000
+12  2.514571  305.000000
+13  2.514858  305.000000
+
+iteration3
+
+
+TABLA 1 despues
+                             name  from_junction  to_junction  controlled_mdot_kg_per_s  control_active  in_service type
+0             Flow_control_charge              1            6                      0.88            True       False   fc
+1      Flow_control_bypass_charge              6            1                      0.00            True       False   fc
+2     Flow_control_charge_storage              7            9                      0.88            True       False   fc
+3          Flow_control_discharge              9            7                      0.18            True        True   fc
+4   Flow_control_bypass_discharge              7            9                      0.00            True        True   fc
+5  Flow_control_discharge_storage              6            1                      0.18            True        True   fc
+
+TABLA 2 despues
+   p_from_bar  p_to_bar    t_from_k      t_to_k  t_outlet_k  mdot_from_kg_per_s  mdot_to_kg_per_s  vdot_m3_per_s
+0         NaN       NaN         NaN         NaN         NaN                 NaN               NaN            NaN
+1         NaN       NaN         NaN         NaN         NaN                 NaN               NaN            NaN
+2         NaN       NaN         NaN         NaN         NaN                 NaN               NaN            NaN
+3    2.506164  5.000000  304.724994  304.724994  304.724994                0.18             -0.18       0.000181
+4    5.000000  2.506164  304.724994  304.724994  293.150000                0.00             -0.00       0.000000
+5    5.000000  2.993692  363.284117  360.100948  363.284117                0.18             -0.18       0.000187
+
+TABLA 3 despues
+                          name  return_junction  flow_junction  p_flow_bar    t_flow_k  mdot_flow_kg_per_s  in_service type
+0     Circ_pump_charge_storage                6              7         5.0  312.947736                0.00        True   pt
+1  Circ_pump_discharge_storage                7              6         5.0  363.284117                0.18        True   pt
+
+TABLA 4 despues
+   p_from_bar  p_to_bar    t_from_k      t_to_k  t_outlet_k  mdot_from_kg_per_s  mdot_to_kg_per_s  vdot_m3_per_s   deltat_k        qext_w
+0         5.0       5.0  363.284117  304.724994  312.947736                0.00             -0.00       0.000000  50.336382     -0.000000
+1         5.0       5.0  304.724994  363.284117  363.284117                0.18             -0.18       0.000184 -58.559124  44194.553966
+
+TABLA 5 antes
+       p_bar         t_k
+0   3.000000  360.000000
+1   2.993692  360.100948
+2   2.990805  359.671815
+3   2.990596  358.860610
+4   2.990150  359.342204
+5   2.992744  359.615263
+6   5.000000  363.284117
+7   5.000000  304.724994
+8   2.500000  304.619130
+9   2.506164  304.724994
+10  2.513926  304.819582
+11  2.514135  305.000000
+12  2.514571  305.000000
+13  2.514858  305.000000
+
+iteration4
+
+
+TABLA 1 antes
+                             name  from_junction  to_junction  controlled_mdot_kg_per_s  control_active  in_service type
+0             Flow_control_charge              1            6                      0.88            True        True   fc
+1      Flow_control_bypass_charge              6            1                      0.00            True       False   fc
+2     Flow_control_charge_storage              7            9                      0.88            True        True   fc
+3          Flow_control_discharge              9            7                      0.18            True       False   fc
+4   Flow_control_bypass_discharge              7            9                      0.00            True       False   fc
+5  Flow_control_discharge_storage              6            1                      0.18            True       False   fc
+
+TABLA 2 antes
+   p_from_bar  p_to_bar    t_from_k      t_to_k  t_outlet_k  mdot_from_kg_per_s  mdot_to_kg_per_s  vdot_m3_per_s
+0    2.983521  5.000000  359.820637  359.820637  359.820637                0.88             -0.88       0.000910
+1         NaN       NaN         NaN         NaN         NaN                 NaN               NaN            NaN
+2    5.000000  2.516078  310.964933  307.023002  310.964933                0.88             -0.88       0.000886
+3         NaN       NaN         NaN         NaN         NaN                 NaN               NaN            NaN
+4         NaN       NaN         NaN         NaN         NaN                 NaN               NaN            NaN
+5         NaN       NaN         NaN         NaN         NaN                 NaN               NaN            NaN
+
+TABLA 3 antes
+                          name  return_junction  flow_junction  p_flow_bar    t_flow_k  mdot_flow_kg_per_s  in_service type
+0     Circ_pump_charge_storage                6              7         5.0  310.964933                0.88        True   pt
+1  Circ_pump_discharge_storage                7              6         5.0  363.284117                0.00        True   pt
+
+TABLA 4 antes
+   p_from_bar  p_to_bar    t_from_k      t_to_k  t_outlet_k  mdot_from_kg_per_s  mdot_to_kg_per_s  vdot_m3_per_s   deltat_k         qext_w
+0         5.0       5.0  359.820637  310.964933  310.964933                0.88             -0.88       0.000898  48.855704 -180190.861634
+1         5.0       5.0  310.964933  359.820637  363.284117                0.00             -0.00       0.000000 -52.319185       0.000000
+
+TABLA 5 antes
+       p_bar         t_k
+0   3.000000  360.000000
+1   2.983521  359.820637
+2   2.978388  359.499901
+3   2.977564  359.092402
+4   2.977728  359.171968
+5   2.983456  357.957929
+6   5.000000  359.820637
+7   5.000000  310.964933
+8   2.500000  306.952729
+9   2.516078  307.023002
+10  2.522454  304.801326
+11  2.523264  305.000000
+12  2.523103  305.000000
+13  2.522519  305.000000
+
+iteration4
+
+
+TABLA 1 despues
+                             name  from_junction  to_junction  controlled_mdot_kg_per_s  control_active  in_service type
+0             Flow_control_charge              1            6                      0.88            True        True   fc
+1      Flow_control_bypass_charge              6            1                      0.00            True        True   fc
+2     Flow_control_charge_storage              7            9                      0.88            True        True   fc
+3          Flow_control_discharge              9            7                      0.18            True       False   fc
+4   Flow_control_bypass_discharge              7            9                      0.00            True       False   fc
+5  Flow_control_discharge_storage              6            1                      0.18            True       False   fc
+
+TABLA 2 despues
+   p_from_bar  p_to_bar    t_from_k      t_to_k  t_outlet_k  mdot_from_kg_per_s  mdot_to_kg_per_s  vdot_m3_per_s
+0    2.983521  5.000000  359.820637  359.820637  359.820637                0.88             -0.88       0.000910
+1    5.000000  2.983521  359.820637  359.820637  293.150000                0.00             -0.00       0.000000
+2    5.000000  2.516078  310.964933  307.023002  310.964933                0.88             -0.88       0.000886
+3         NaN       NaN         NaN         NaN         NaN                 NaN               NaN            NaN
+4         NaN       NaN         NaN         NaN         NaN                 NaN               NaN            NaN
+5         NaN       NaN         NaN         NaN         NaN                 NaN               NaN            NaN
+
+TABLA 3 despues
+                          name  return_junction  flow_junction  p_flow_bar    t_flow_k  mdot_flow_kg_per_s  in_service type
+0     Circ_pump_charge_storage                6              7         5.0  310.964933                0.88        True   pt
+1  Circ_pump_discharge_storage                7              6         5.0  363.284117                0.00        True   pt
+
+TABLA 4 despues
+   p_from_bar  p_to_bar    t_from_k      t_to_k  t_outlet_k  mdot_from_kg_per_s  mdot_to_kg_per_s  vdot_m3_per_s   deltat_k         qext_w
+0         5.0       5.0  359.820637  310.964933  310.964933                0.88             -0.88       0.000898  48.855704 -180190.861634
+1         5.0       5.0  310.964933  359.820637  363.284117                0.00             -0.00       0.000000 -52.319185       0.000000
+
+TABLA 5 antes
+       p_bar         t_k
+0   3.000000  360.000000
+1   2.983521  359.820637
+2   2.978388  359.499901
+3   2.977564  359.092402
+4   2.977728  359.171968
+5   2.983456  357.957929
+6   5.000000  359.820637
+7   5.000000  310.964933
+8   2.500000  306.952729
+9   2.516078  307.023002
+10  2.522454  304.801326
+11  2.523264  305.000000
+12  2.523103  305.000000
+13  2.522519  305.000000
+
+iteration5
+
+
+TABLA 1 antes
+                             name  from_junction  to_junction  controlled_mdot_kg_per_s  control_active  in_service type
+0             Flow_control_charge              1            6                      0.75            True        True   fc
+1      Flow_control_bypass_charge              6            1                      0.00            True       False   fc
+2     Flow_control_charge_storage              7            9                      0.75            True        True   fc
+3          Flow_control_discharge              9            7                      0.18            True       False   fc
+4   Flow_control_bypass_discharge              7            9                      0.00            True       False   fc
+5  Flow_control_discharge_storage              6            1                      0.18            True       False   fc
+
+TABLA 2 antes
+   p_from_bar  p_to_bar    t_from_k      t_to_k  t_outlet_k  mdot_from_kg_per_s  mdot_to_kg_per_s  vdot_m3_per_s
+0    2.987333  5.000000  359.795419  359.795419  359.795419                0.75             -0.75       0.000775
+1         NaN       NaN         NaN         NaN         NaN                 NaN               NaN            NaN
+2    5.000000  2.512396  337.274636  316.430187  337.274636                0.75             -0.75       0.000765
+3         NaN       NaN         NaN         NaN         NaN                 NaN               NaN            NaN
+4         NaN       NaN         NaN         NaN         NaN                 NaN               NaN            NaN
+5         NaN       NaN         NaN         NaN         NaN                 NaN               NaN            NaN
+
+TABLA 3 antes
+                          name  return_junction  flow_junction  p_flow_bar    t_flow_k  mdot_flow_kg_per_s  in_service type
+0     Circ_pump_charge_storage                6              7         5.0  337.274636                0.75        True   pt
+1  Circ_pump_discharge_storage                7              6         5.0  363.284117                0.00        True   pt
+
+TABLA 4 antes
+   p_from_bar  p_to_bar    t_from_k      t_to_k  t_outlet_k  mdot_from_kg_per_s  mdot_to_kg_per_s  vdot_m3_per_s   deltat_k        qext_w
+0         5.0       5.0  359.795419  337.274636  337.274636                0.75             -0.75        0.00077  22.520783 -70855.070664
+1         5.0       5.0  337.274636  359.795419  363.284117                0.00             -0.00        0.00000 -26.009481      0.000000
+
+TABLA 5 antes
+       p_bar         t_k
+0   3.000000  360.000000
+1   2.987333  359.795419
+2   2.984415  359.370124
+3   2.984203  358.566123
+4   2.983752  359.043455
+5   2.987087  358.843702
+6   5.000000  359.795419
+7   5.000000  337.274636
+8   2.500000  316.327750
+9   2.512396  316.430187
+10  2.517463  304.776719
+11  2.517673  305.000000
+12  2.518114  305.000000
+13  2.517707  305.000000
+
+iteration5
+
+
+TABLA 1 despues
+                             name  from_junction  to_junction  controlled_mdot_kg_per_s  control_active  in_service type
+0             Flow_control_charge              1            6                      0.75            True        True   fc
+1      Flow_control_bypass_charge              6            1                      0.00            True        True   fc
+2     Flow_control_charge_storage              7            9                      0.75            True        True   fc
+3          Flow_control_discharge              9            7                      0.18            True       False   fc
+4   Flow_control_bypass_discharge              7            9                      0.00            True       False   fc
+5  Flow_control_discharge_storage              6            1                      0.18            True       False   fc
+
+TABLA 2 despues
+   p_from_bar  p_to_bar    t_from_k      t_to_k  t_outlet_k  mdot_from_kg_per_s  mdot_to_kg_per_s  vdot_m3_per_s
+0    2.987333  5.000000  359.795419  359.795419  359.795419                0.75             -0.75       0.000775
+1    5.000000  2.987333  359.795419  359.795419  293.150000                0.00             -0.00       0.000000
+2    5.000000  2.512396  337.274636  316.430187  337.274636                0.75             -0.75       0.000765
+3         NaN       NaN         NaN         NaN         NaN                 NaN               NaN            NaN
+4         NaN       NaN         NaN         NaN         NaN                 NaN               NaN            NaN
+5         NaN       NaN         NaN         NaN         NaN                 NaN               NaN            NaN
+
+TABLA 3 despues
+                          name  return_junction  flow_junction  p_flow_bar    t_flow_k  mdot_flow_kg_per_s  in_service type
+0     Circ_pump_charge_storage                6              7         5.0  337.274636                0.75        True   pt
+1  Circ_pump_discharge_storage                7              6         5.0  363.284117                0.00        True   pt
+
+TABLA 4 despues
+   p_from_bar  p_to_bar    t_from_k      t_to_k  t_outlet_k  mdot_from_kg_per_s  mdot_to_kg_per_s  vdot_m3_per_s   deltat_k        qext_w
+0         5.0       5.0  359.795419  337.274636  337.274636                0.75             -0.75        0.00077  22.520783 -70855.070664
+1         5.0       5.0  337.274636  359.795419  363.284117                0.00             -0.00        0.00000 -26.009481      0.000000
+
+TABLA 5 antes
+       p_bar         t_k
+0   3.000000  360.000000
+1   2.987333  359.795419
+2   2.984415  359.370124
+3   2.984203  358.566123
+4   2.983752  359.043455
+5   2.987087  358.843702
+6   5.000000  359.795419
+7   5.000000  337.274636
+8   2.500000  316.327750
+9   2.512396  316.430187
+10  2.517463  304.776719
+11  2.517673  305.000000
+12  2.518114  305.000000
+13  2.517707  305.000000
+
+iteration6
+
+
+TABLA 1 antes
+                             name  from_junction  to_junction  controlled_mdot_kg_per_s  control_active  in_service type
+0             Flow_control_charge              1            6                      0.75            True        True   fc
+1      Flow_control_bypass_charge              6            1                      0.00            True       False   fc
+2     Flow_control_charge_storage              7            9                      0.75            True        True   fc
+3          Flow_control_discharge              9            7                      0.18            True       False   fc
+4   Flow_control_bypass_discharge              7            9                      0.00            True       False   fc
+5  Flow_control_discharge_storage              6            1                      0.18            True       False   fc
+
+TABLA 2 antes
+   p_from_bar  p_to_bar    t_from_k      t_to_k  t_outlet_k  mdot_from_kg_per_s  mdot_to_kg_per_s  vdot_m3_per_s
+0    2.987381  5.000000  359.795030  359.795030  359.795030                0.75             -0.75       0.000775
+1         NaN       NaN         NaN         NaN         NaN                 NaN               NaN            NaN
+2    5.000000  2.512364  347.546222  320.207574  347.546222                0.75             -0.75       0.000769
+3         NaN       NaN         NaN         NaN         NaN                 NaN               NaN            NaN
+4         NaN       NaN         NaN         NaN         NaN                 NaN               NaN            NaN
+5         NaN       NaN         NaN         NaN         NaN                 NaN               NaN            NaN
+
+TABLA 3 antes
+                          name  return_junction  flow_junction  p_flow_bar    t_flow_k  mdot_flow_kg_per_s  in_service type
+0     Circ_pump_charge_storage                6              7         5.0  347.546222                0.75        True   pt
+1  Circ_pump_discharge_storage                7              6         5.0  363.284117                0.00        True   pt
+
+TABLA 4 antes
+   p_from_bar  p_to_bar    t_from_k      t_to_k  t_outlet_k  mdot_from_kg_per_s  mdot_to_kg_per_s  vdot_m3_per_s   deltat_k        qext_w
+0         5.0       5.0  359.795030  347.546222  347.546222                0.75             -0.75       0.000772  12.248808 -38564.699705
+1         5.0       5.0  347.546222  359.795030  363.284117                0.00             -0.00       0.000000 -15.737895      0.000000
+
+TABLA 5 antes
+       p_bar         t_k
+0   3.000000  360.000000
+1   2.987381  359.795030
+2   2.986074  359.159369
+3   2.985240  358.755982
+4   2.986074  293.150000
+5   2.986423  359.313705
+6   5.000000  359.795030
+7   5.000000  347.546222
+8   2.500000  320.095993
+9   2.512364  320.207574
+10  2.517401  304.836217
+11  2.518221  305.000000
+12  2.517401  293.150000
+13  2.518344  305.000000
+
+iteration6
+
+
+TABLA 1 despues
+                             name  from_junction  to_junction  controlled_mdot_kg_per_s  control_active  in_service type
+0             Flow_control_charge              1            6                      0.75            True        True   fc
+1      Flow_control_bypass_charge              6            1                      0.00            True        True   fc
+2     Flow_control_charge_storage              7            9                      0.75            True        True   fc
+3          Flow_control_discharge              9            7                      0.18            True       False   fc
+4   Flow_control_bypass_discharge              7            9                      0.00            True       False   fc
+5  Flow_control_discharge_storage              6            1                      0.18            True       False   fc
+
+TABLA 2 despues
+   p_from_bar  p_to_bar    t_from_k      t_to_k  t_outlet_k  mdot_from_kg_per_s  mdot_to_kg_per_s  vdot_m3_per_s
+0    2.987381  5.000000  359.795030  359.795030  359.795030                0.75             -0.75       0.000775
+1    5.000000  2.987381  359.795030  359.795030  293.150000                0.00             -0.00       0.000000
+2    5.000000  2.512364  347.546222  320.207574  347.546222                0.75             -0.75       0.000769
+3         NaN       NaN         NaN         NaN         NaN                 NaN               NaN            NaN
+4         NaN       NaN         NaN         NaN         NaN                 NaN               NaN            NaN
+5         NaN       NaN         NaN         NaN         NaN                 NaN               NaN            NaN
+
+TABLA 3 despues
+                          name  return_junction  flow_junction  p_flow_bar    t_flow_k  mdot_flow_kg_per_s  in_service type
+0     Circ_pump_charge_storage                6              7         5.0  347.546222                0.75        True   pt
+1  Circ_pump_discharge_storage                7              6         5.0  363.284117                0.00        True   pt
+
+TABLA 4 despues
+   p_from_bar  p_to_bar    t_from_k      t_to_k  t_outlet_k  mdot_from_kg_per_s  mdot_to_kg_per_s  vdot_m3_per_s   deltat_k        qext_w
+0         5.0       5.0  359.795030  347.546222  347.546222                0.75             -0.75       0.000772  12.248808 -38564.699705
+1         5.0       5.0  347.546222  359.795030  363.284117                0.00             -0.00       0.000000 -15.737895      0.000000
+
+TABLA 5 antes
+       p_bar         t_k
+0   3.000000  360.000000
+1   2.987381  359.795030
+2   2.986074  359.159369
+3   2.985240  358.755982
+4   2.986074  293.150000
+5   2.986423  359.313705
+6   5.000000  359.795030
+7   5.000000  347.546222
+8   2.500000  320.095993
+9   2.512364  320.207574
+10  2.517401  304.836217
+11  2.518221  305.000000
+12  2.517401  293.150000
+13  2.518344  305.000000
+
+iteration7
+
+
+TABLA 1 antes
+                             name  from_junction  to_junction  controlled_mdot_kg_per_s  control_active  in_service type
+0             Flow_control_charge              1            6                      0.75            True       False   fc
+1      Flow_control_bypass_charge              6            1                      0.00            True       False   fc
+2     Flow_control_charge_storage              7            9                      0.75            True       False   fc
+3          Flow_control_discharge              9            7                      0.40            True        True   fc
+4   Flow_control_bypass_discharge              7            9                      0.00            True       False   fc
+5  Flow_control_discharge_storage              6            1                      0.40            True        True   fc
+
+TABLA 2 antes
+   p_from_bar  p_to_bar    t_from_k      t_to_k  t_outlet_k  mdot_from_kg_per_s  mdot_to_kg_per_s  vdot_m3_per_s
+0         NaN       NaN         NaN         NaN         NaN                 NaN               NaN            NaN
+1         NaN       NaN         NaN         NaN         NaN                 NaN               NaN            NaN
+2         NaN       NaN         NaN         NaN         NaN                 NaN               NaN            NaN
+3    2.502372   5.00000  304.714889  304.714889  304.714889                 0.4              -0.4       0.000402
+4         NaN       NaN         NaN         NaN         NaN                 NaN               NaN            NaN
+5    5.000000   2.99758  362.811865  360.535705  362.811865                 0.4              -0.4       0.000414
+
+TABLA 3 antes
+                          name  return_junction  flow_junction  p_flow_bar    t_flow_k  mdot_flow_kg_per_s  in_service type
+0     Circ_pump_charge_storage                6              7         5.0  347.546222                 0.0        True   pt
+1  Circ_pump_discharge_storage                7              6         5.0  362.811865                 0.4        True   pt
+
+TABLA 4 antes
+   p_from_bar  p_to_bar    t_from_k      t_to_k  t_outlet_k  mdot_from_kg_per_s  mdot_to_kg_per_s  vdot_m3_per_s   deltat_k        qext_w
+0         5.0       5.0  362.811865  304.714889  347.546222                 0.0              -0.0       0.000000  15.265642     -0.000000
+1         5.0       5.0  304.714889  362.811865  362.811865                 0.4              -0.4       0.000408 -58.096975  97430.442559
+
+TABLA 5 antes
+       p_bar         t_k
+0   3.000000  360.000000
+1   2.997580  360.535705
+2   2.996307  359.886124
+3   2.995494  359.473937
+4   2.996307  293.150000
+5   2.996646  360.043792
+6   5.000000  362.811865
+7   5.000000  304.714889
+8   2.500000  304.544024
+9   2.502372  304.714889
+10  2.507277  304.834016
+11  2.508076  305.000000
+12  2.507277  293.150000
+13  2.508195  305.000000
+
+iteration7
+
+
+TABLA 1 despues
+                             name  from_junction  to_junction  controlled_mdot_kg_per_s  control_active  in_service type
+0             Flow_control_charge              1            6                      0.75            True       False   fc
+1      Flow_control_bypass_charge              6            1                      0.00            True       False   fc
+2     Flow_control_charge_storage              7            9                      0.75            True       False   fc
+3          Flow_control_discharge              9            7                      0.40            True        True   fc
+4   Flow_control_bypass_discharge              7            9                      0.00            True        True   fc
+5  Flow_control_discharge_storage              6            1                      0.40            True        True   fc
+
+TABLA 2 despues
+   p_from_bar  p_to_bar    t_from_k      t_to_k  t_outlet_k  mdot_from_kg_per_s  mdot_to_kg_per_s  vdot_m3_per_s
+0         NaN       NaN         NaN         NaN         NaN                 NaN               NaN            NaN
+1         NaN       NaN         NaN         NaN         NaN                 NaN               NaN            NaN
+2         NaN       NaN         NaN         NaN         NaN                 NaN               NaN            NaN
+3    2.502372  5.000000  304.714889  304.714889  304.714889                 0.4              -0.4       0.000402
+4    5.000000  2.502372  304.714889  304.714889  293.150000                 0.0              -0.0       0.000000
+5    5.000000  2.997580  362.811865  360.535705  362.811865                 0.4              -0.4       0.000414
+
+TABLA 3 despues
+                          name  return_junction  flow_junction  p_flow_bar    t_flow_k  mdot_flow_kg_per_s  in_service type
+0     Circ_pump_charge_storage                6              7         5.0  347.546222                 0.0        True   pt
+1  Circ_pump_discharge_storage                7              6         5.0  362.811865                 0.4        True   pt
+
+TABLA 4 despues
+   p_from_bar  p_to_bar    t_from_k      t_to_k  t_outlet_k  mdot_from_kg_per_s  mdot_to_kg_per_s  vdot_m3_per_s   deltat_k        qext_w
+0         5.0       5.0  362.811865  304.714889  347.546222                 0.0              -0.0       0.000000  15.265642     -0.000000
+1         5.0       5.0  304.714889  362.811865  362.811865                 0.4              -0.4       0.000408 -58.096975  97430.442559
+
+TABLA 5 antes
+       p_bar         t_k
+0   3.000000  360.000000
+1   2.997580  360.535705
+2   2.996307  359.886124
+3   2.995494  359.473937
+4   2.996307  293.150000
+5   2.996646  360.043792
+6   5.000000  362.811865
+7   5.000000  304.714889
+8   2.500000  304.544024
+9   2.502372  304.714889
+10  2.507277  304.834016
+11  2.508076  305.000000
+12  2.507277  293.150000
+13  2.508195  305.000000
+
+iteration8
+
+
+TABLA 1 antes
+                             name  from_junction  to_junction  controlled_mdot_kg_per_s  control_active  in_service type
+0             Flow_control_charge              1            6                      0.75            True       False   fc
+1      Flow_control_bypass_charge              6            1                      0.00            True       False   fc
+2     Flow_control_charge_storage              7            9                      0.75            True       False   fc
+3          Flow_control_discharge              9            7                      0.50            True        True   fc
+4   Flow_control_bypass_discharge              7            9                      0.00            True       False   fc
+5  Flow_control_discharge_storage              6            1                      0.50            True        True   fc
+
+TABLA 2 antes
+   p_from_bar  p_to_bar    t_from_k      t_to_k  t_outlet_k  mdot_from_kg_per_s  mdot_to_kg_per_s  vdot_m3_per_s
+0         NaN       NaN         NaN         NaN         NaN                 NaN               NaN            NaN
+1         NaN       NaN         NaN         NaN         NaN                 NaN               NaN            NaN
+2         NaN       NaN         NaN         NaN         NaN                 NaN               NaN            NaN
+3    2.501863  5.000000  304.714011  304.714011  304.714011                 0.5              -0.5       0.000502
+4         NaN       NaN         NaN         NaN         NaN                 NaN               NaN            NaN
+5    5.000000  2.998101  362.694189  360.708108  362.694189                 0.5              -0.5       0.000518
+
+TABLA 3 antes
+                          name  return_junction  flow_junction  p_flow_bar    t_flow_k  mdot_flow_kg_per_s  in_service type
+0     Circ_pump_charge_storage                6              7         5.0  347.546222                 0.0        True   pt
+1  Circ_pump_discharge_storage                7              6         5.0  362.694189                 0.5        True   pt
+
+TABLA 4 antes
+   p_from_bar  p_to_bar    t_from_k      t_to_k  t_outlet_k  mdot_from_kg_per_s  mdot_to_kg_per_s  vdot_m3_per_s   deltat_k         qext_w
+0         5.0       5.0  362.694189  304.714011  347.546222                 0.0              -0.0        0.00000  15.147967      -0.000000
+1         5.0       5.0  304.714011  362.694189  362.694189                 0.5              -0.5        0.00051 -57.980177  121541.779284
+
+TABLA 5 antes
+       p_bar         t_k
+0   3.000000  360.000000
+1   2.998101  360.708108
+2   2.996836  360.055268
+3   2.996029  359.641019
+4   2.996836  293.150000
+5   2.997174  360.213715
+6   5.000000  362.694189
+7   5.000000  304.714011
+8   2.500000  304.521087
+9   2.501863  304.714011
+10  2.506737  304.833504
+11  2.507531  305.000000
+12  2.506737  293.150000
+13  2.507649  305.000000
+
+iteration8
+
+
+TABLA 1 despues
+                             name  from_junction  to_junction  controlled_mdot_kg_per_s  control_active  in_service type
+0             Flow_control_charge              1            6                      0.75            True       False   fc
+1      Flow_control_bypass_charge              6            1                      0.00            True       False   fc
+2     Flow_control_charge_storage              7            9                      0.75            True       False   fc
+3          Flow_control_discharge              9            7                      0.50            True        True   fc
+4   Flow_control_bypass_discharge              7            9                      0.00            True        True   fc
+5  Flow_control_discharge_storage              6            1                      0.50            True        True   fc
+
+TABLA 2 despues
+   p_from_bar  p_to_bar    t_from_k      t_to_k  t_outlet_k  mdot_from_kg_per_s  mdot_to_kg_per_s  vdot_m3_per_s
+0         NaN       NaN         NaN         NaN         NaN                 NaN               NaN            NaN
+1         NaN       NaN         NaN         NaN         NaN                 NaN               NaN            NaN
+2         NaN       NaN         NaN         NaN         NaN                 NaN               NaN            NaN
+3    2.501863  5.000000  304.714011  304.714011  304.714011                 0.5              -0.5       0.000502
+4    5.000000  2.501863  304.714011  304.714011  293.150000                 0.0              -0.0       0.000000
+5    5.000000  2.998101  362.694189  360.708108  362.694189                 0.5              -0.5       0.000518
+
+TABLA 3 despues
+                          name  return_junction  flow_junction  p_flow_bar    t_flow_k  mdot_flow_kg_per_s  in_service type
+0     Circ_pump_charge_storage                6              7         5.0  347.546222                 0.0        True   pt
+1  Circ_pump_discharge_storage                7              6         5.0  362.694189                 0.5        True   pt
+
+TABLA 4 despues
+   p_from_bar  p_to_bar    t_from_k      t_to_k  t_outlet_k  mdot_from_kg_per_s  mdot_to_kg_per_s  vdot_m3_per_s   deltat_k         qext_w
+0         5.0       5.0  362.694189  304.714011  347.546222                 0.0              -0.0        0.00000  15.147967      -0.000000
+1         5.0       5.0  304.714011  362.694189  362.694189                 0.5              -0.5        0.00051 -57.980177  121541.779284
+
+TABLA 5 antes
+       p_bar         t_k
+0   3.000000  360.000000
+1   2.998101  360.708108
+2   2.996836  360.055268
+3   2.996029  359.641019
+4   2.996836  293.150000
+5   2.997174  360.213715
+6   5.000000  362.694189
+7   5.000000  304.714011
+8   2.500000  304.521087
+9   2.501863  304.714011
+10  2.506737  304.833504
+11  2.507531  305.000000
+12  2.506737  293.150000
+13  2.507649  305.000000
+
+iteration9
+
+
+TABLA 1 antes
+                             name  from_junction  to_junction  controlled_mdot_kg_per_s  control_active  in_service type
+0             Flow_control_charge              1            6                      0.75            True        True   fc
+1      Flow_control_bypass_charge              6            1                      0.00            True       False   fc
+2     Flow_control_charge_storage              7            9                      0.75            True        True   fc
+3          Flow_control_discharge              9            7                      0.50            True       False   fc
+4   Flow_control_bypass_discharge              7            9                      0.00            True       False   fc
+5  Flow_control_discharge_storage              6            1                      0.50            True       False   fc
+
+TABLA 2 antes
+   p_from_bar  p_to_bar   t_from_k      t_to_k  t_outlet_k  mdot_from_kg_per_s  mdot_to_kg_per_s  vdot_m3_per_s
+0     2.99103  5.000000  359.75688  359.756880   359.75688                0.75             -0.75       0.000775
+1         NaN       NaN        NaN         NaN         NaN                 NaN               NaN            NaN
+2     5.00000  2.508781  332.06437  316.395801   332.06437                0.75             -0.75       0.000762
+3         NaN       NaN        NaN         NaN         NaN                 NaN               NaN            NaN
+4         NaN       NaN        NaN         NaN         NaN                 NaN               NaN            NaN
+5         NaN       NaN        NaN         NaN         NaN                 NaN               NaN            NaN
+
+TABLA 3 antes
+                          name  return_junction  flow_junction  p_flow_bar    t_flow_k  mdot_flow_kg_per_s  in_service type
+0     Circ_pump_charge_storage                6              7         5.0  332.064370                0.75        True   pt
+1  Circ_pump_discharge_storage                7              6         5.0  362.694189                0.00        True   pt
+
+TABLA 4 antes
+   p_from_bar  p_to_bar   t_from_k     t_to_k  t_outlet_k  mdot_from_kg_per_s  mdot_to_kg_per_s  vdot_m3_per_s   deltat_k        qext_w
+0         5.0       5.0  359.75688  332.06437  332.064370                0.75             -0.75       0.000769  27.692510 -87099.925603
+1         5.0       5.0  332.06437  359.75688  362.694189                0.00             -0.00       0.000000 -30.629819      0.000000
+
+TABLA 5 antes
+       p_bar         t_k
+0   3.000000  360.000000
+1   2.991030  359.756880
+2   2.990688  358.514790
+3   2.990470  357.731057
+4   2.990688  293.150000
+5   2.990070  359.276098
+6   5.000000  359.756880
+7   5.000000  332.064370
+8   2.500000  316.274164
+9   2.508781  316.395801
+10  2.511654  304.782996
+11  2.511871  305.000000
+12  2.511654  293.150000
+13  2.512597  305.000000
+
+iteration9
+
+
+TABLA 1 despues
+                             name  from_junction  to_junction  controlled_mdot_kg_per_s  control_active  in_service type
+0             Flow_control_charge              1            6                      0.75            True        True   fc
+1      Flow_control_bypass_charge              6            1                      0.00            True        True   fc
+2     Flow_control_charge_storage              7            9                      0.75            True        True   fc
+3          Flow_control_discharge              9            7                      0.50            True       False   fc
+4   Flow_control_bypass_discharge              7            9                      0.00            True       False   fc
+5  Flow_control_discharge_storage              6            1                      0.50            True       False   fc
+
+TABLA 2 despues
+   p_from_bar  p_to_bar   t_from_k      t_to_k  t_outlet_k  mdot_from_kg_per_s  mdot_to_kg_per_s  vdot_m3_per_s
+0     2.99103  5.000000  359.75688  359.756880   359.75688                0.75             -0.75       0.000775
+1     5.00000  2.991030  359.75688  359.756880   293.15000                0.00             -0.00       0.000000
+2     5.00000  2.508781  332.06437  316.395801   332.06437                0.75             -0.75       0.000762
+3         NaN       NaN        NaN         NaN         NaN                 NaN               NaN            NaN
+4         NaN       NaN        NaN         NaN         NaN                 NaN               NaN            NaN
+5         NaN       NaN        NaN         NaN         NaN                 NaN               NaN            NaN
+
+TABLA 3 despues
+                          name  return_junction  flow_junction  p_flow_bar    t_flow_k  mdot_flow_kg_per_s  in_service type
+0     Circ_pump_charge_storage                6              7         5.0  332.064370                0.75        True   pt
+1  Circ_pump_discharge_storage                7              6         5.0  362.694189                0.00        True   pt
+
+TABLA 4 despues
+   p_from_bar  p_to_bar   t_from_k     t_to_k  t_outlet_k  mdot_from_kg_per_s  mdot_to_kg_per_s  vdot_m3_per_s   deltat_k        qext_w
+0         5.0       5.0  359.75688  332.06437  332.064370                0.75             -0.75       0.000769  27.692510 -87099.925603
+1         5.0       5.0  332.06437  359.75688  362.694189                0.00             -0.00       0.000000 -30.629819      0.000000
+
+TABLA 5 antes
+       p_bar         t_k
+0   3.000000  360.000000
+1   2.991030  359.756880
+2   2.990688  358.514790
+3   2.990470  357.731057
+4   2.990688  293.150000
+5   2.990070  359.276098
+6   5.000000  359.756880
+7   5.000000  332.064370
+8   2.500000  316.274164
+9   2.508781  316.395801
+10  2.511654  304.782996
+11  2.511871  305.000000
+12  2.511654  293.150000
+13  2.512597  305.000000
+
+iteration10
+
+
+TABLA 1 antes
+                             name  from_junction  to_junction  controlled_mdot_kg_per_s  control_active  in_service type
+0             Flow_control_charge              1            6                      0.75            True       False   fc
+1      Flow_control_bypass_charge              6            1                      0.00            True       False   fc
+2     Flow_control_charge_storage              7            9                      0.75            True       False   fc
+3          Flow_control_discharge              9            7                      0.50            True        True   fc
+4   Flow_control_bypass_discharge              7            9                      0.00            True       False   fc
+5  Flow_control_discharge_storage              6            1                      0.50            True        True   fc
+
+TABLA 2 antes
+   p_from_bar  p_to_bar    t_from_k      t_to_k  t_outlet_k  mdot_from_kg_per_s  mdot_to_kg_per_s  vdot_m3_per_s
+0         NaN       NaN         NaN         NaN         NaN                 NaN               NaN            NaN
+1         NaN       NaN         NaN         NaN         NaN                 NaN               NaN            NaN
+2         NaN       NaN         NaN         NaN         NaN                 NaN               NaN            NaN
+3      2.5037  5.000000  304.723055  304.723055  304.723055                 0.5              -0.5       0.000502
+4         NaN       NaN         NaN         NaN         NaN                 NaN               NaN            NaN
+5      5.0000  2.996218  362.459300  360.492434  362.459300                 0.5              -0.5       0.000518
+
+TABLA 3 antes
+                          name  return_junction  flow_junction  p_flow_bar   t_flow_k  mdot_flow_kg_per_s  in_service type
+0     Circ_pump_charge_storage                6              7         5.0  332.06437                 0.0        True   pt
+1  Circ_pump_discharge_storage                7              6         5.0  362.45930                 0.5        True   pt
+
+TABLA 4 antes
+   p_from_bar  p_to_bar    t_from_k      t_to_k  t_outlet_k  mdot_from_kg_per_s  mdot_to_kg_per_s  vdot_m3_per_s   deltat_k         qext_w
+0         5.0       5.0  362.459300  304.723055   332.06437                 0.0              -0.0        0.00000  30.394930      -0.000000
+1         5.0       5.0  304.723055  362.459300   362.45930                 0.5              -0.5        0.00051 -57.736246  121027.579024
+
+TABLA 5 antes
+       p_bar         t_k
+0   3.000000  360.000000
+1   2.996218  360.492434
+2   2.993371  360.058363
+3   2.993165  359.237882
+4   2.992725  359.724963
+5   2.995284  360.001143
+6   5.000000  362.459300
+7   5.000000  304.723055
+8   2.500000  304.586328
+9   2.503700  304.723055
+10  2.511355  304.818309
+11  2.511560  305.000000
+12  2.511990  305.000000
+13  2.512274  305.000000
+
+iteration10
+
+
+TABLA 1 despues
+                             name  from_junction  to_junction  controlled_mdot_kg_per_s  control_active  in_service type
+0             Flow_control_charge              1            6                  0.750000            True       False   fc
+1      Flow_control_bypass_charge              6            1                  0.000000            True       False   fc
+2     Flow_control_charge_storage              7            9                  0.750000            True       False   fc
+3          Flow_control_discharge              9            7                  0.500000            True        True   fc
+4   Flow_control_bypass_discharge              7            9                  0.332003            True        True   fc
+5  Flow_control_discharge_storage              6            1                  0.167997            True        True   fc
+
+TABLA 2 despues
+   p_from_bar  p_to_bar    t_from_k      t_to_k  t_outlet_k  mdot_from_kg_per_s  mdot_to_kg_per_s  vdot_m3_per_s
+0         NaN       NaN         NaN         NaN         NaN                 NaN               NaN            NaN
+1         NaN       NaN         NaN         NaN         NaN                 NaN               NaN            NaN
+2         NaN       NaN         NaN         NaN         NaN                 NaN               NaN            NaN
+3    2.506292  5.000000  304.725529  304.725529  304.725529            0.500000         -0.500000       0.000502
+4    5.000000  2.506292  304.725529  304.725529  304.725529            0.332003         -0.332003       0.000334
+5    5.000000  2.993560  362.459300  359.992809  362.459300            0.167997         -0.167997       0.000174
+
+TABLA 3 despues
+                          name  return_junction  flow_junction  p_flow_bar   t_flow_k  mdot_flow_kg_per_s  in_service type
+0     Circ_pump_charge_storage                6              7         5.0  332.06437            0.000000        True   pt
+1  Circ_pump_discharge_storage                7              6         5.0  362.45930            0.167997        True   pt
+
+TABLA 4 despues
+   p_from_bar  p_to_bar    t_from_k      t_to_k  t_outlet_k  mdot_from_kg_per_s  mdot_to_kg_per_s  vdot_m3_per_s   deltat_k        qext_w
+0         5.0       5.0  362.459300  304.725529   332.06437            0.000000         -0.000000       0.000000  30.394930     -0.000000
+1         5.0       5.0  304.725529  362.459300   362.45930            0.167997         -0.167997       0.000171 -57.733771  40662.698147
+
+TABLA 5 antes
+       p_bar         t_k
+0   3.000000  360.000000
+1   2.993560  359.992809
+2   2.990663  359.565036
+3   2.990452  358.756384
+4   2.990005  359.236468
+5   2.992609  359.508667
+6   5.000000  362.459300
+7   5.000000  304.725529
+8   2.500000  304.620750
+9   2.506292  304.725529
+10  2.514085  304.819934
+11  2.514294  305.000000
+12  2.514732  305.000000
+13  2.515020  305.000000
+
+iteration11
+
+
+TABLA 1 antes
+                             name  from_junction  to_junction  controlled_mdot_kg_per_s  control_active  in_service type
+0             Flow_control_charge              1            6                  0.750000            True       False   fc
+1      Flow_control_bypass_charge              6            1                  0.000000            True       False   fc
+2     Flow_control_charge_storage              7            9                  0.750000            True       False   fc
+3          Flow_control_discharge              9            7                  0.500000            True        True   fc
+4   Flow_control_bypass_discharge              7            9                  0.332003            True       False   fc
+5  Flow_control_discharge_storage              6            1                  0.500000            True        True   fc
+
+TABLA 2 antes
+   p_from_bar  p_to_bar    t_from_k      t_to_k  t_outlet_k  mdot_from_kg_per_s  mdot_to_kg_per_s  vdot_m3_per_s
+0         NaN       NaN         NaN         NaN         NaN                 NaN               NaN            NaN
+1         NaN       NaN         NaN         NaN         NaN                 NaN               NaN            NaN
+2         NaN       NaN         NaN         NaN         NaN                 NaN               NaN            NaN
+3    2.500299  5.000000  304.546093  304.546093  304.546093                 0.5              -0.5       0.000502
+4         NaN       NaN         NaN         NaN         NaN                 NaN               NaN            NaN
+5    5.000000  2.999699  362.342087  360.915031  362.342087                 0.5              -0.5       0.000518
+
+TABLA 3 antes
+                          name  return_junction  flow_junction  p_flow_bar    t_flow_k  mdot_flow_kg_per_s  in_service type
+0     Circ_pump_charge_storage                6              7         5.0  332.064370                 0.0        True   pt
+1  Circ_pump_discharge_storage                7              6         5.0  362.342087                 0.5        True   pt
+
+TABLA 4 antes
+   p_from_bar  p_to_bar    t_from_k      t_to_k  t_outlet_k  mdot_from_kg_per_s  mdot_to_kg_per_s  vdot_m3_per_s   deltat_k         qext_w
+0         5.0       5.0  362.342087  304.546093  332.064370                 0.0              -0.0        0.00000  30.277717      -0.000000
+1         5.0       5.0  304.546093  362.342087  362.342087                 0.5              -0.5        0.00051 -57.795995  121151.531386
+
+TABLA 5 antes
+       p_bar         t_k
+0   3.000000  360.000000
+1   2.999699  360.915031
+2   2.999609  358.454096
+3   2.999552  356.918731
+4   2.999609  293.150000
+5   2.998778  360.417655
+6   5.000000  362.342087
+7   5.000000  304.546093
+8   2.500000  304.063904
+9   2.500299  304.546093
+10  2.502232  304.735621
+11  2.502290  305.000000
+12  2.502232  293.150000
+13  2.503137  305.000000
+
+iteration11
+
+
+TABLA 1 despues
+                             name  from_junction  to_junction  controlled_mdot_kg_per_s  control_active  in_service type
+0             Flow_control_charge              1            6                      0.75            True       False   fc
+1      Flow_control_bypass_charge              6            1                      0.00            True       False   fc
+2     Flow_control_charge_storage              7            9                      0.75            True       False   fc
+3          Flow_control_discharge              9            7                      0.50            True        True   fc
+4   Flow_control_bypass_discharge              7            9                      0.50            True        True   fc
+5  Flow_control_discharge_storage              6            1                      0.00            True        True   fc
+
+TABLA 2 despues
+   p_from_bar  p_to_bar    t_from_k      t_to_k  t_outlet_k  mdot_from_kg_per_s  mdot_to_kg_per_s  vdot_m3_per_s
+0         NaN       NaN         NaN         NaN         NaN                 NaN               NaN            NaN
+1         NaN       NaN         NaN         NaN         NaN                 NaN               NaN            NaN
+2         NaN       NaN         NaN         NaN         NaN                 NaN               NaN            NaN
+3    2.502033  5.000000  304.557446  304.557446  304.557446                 0.5              -0.5       0.000502
+4    5.000000  2.502033  304.557446  304.557446  304.557446                 0.5              -0.5       0.000502
+5    5.000000  2.997927  293.150000  359.494166  293.150000                 0.0              -0.0       0.000000
+
+TABLA 3 despues
+                          name  return_junction  flow_junction  p_flow_bar    t_flow_k  mdot_flow_kg_per_s  in_service type
+0     Circ_pump_charge_storage                6              7         5.0  332.064370                 0.0        True   pt
+1  Circ_pump_discharge_storage                7              6         5.0  362.342087                 0.0        True   pt
+
+TABLA 4 despues
+   p_from_bar  p_to_bar    t_from_k      t_to_k  t_outlet_k  mdot_from_kg_per_s  mdot_to_kg_per_s  vdot_m3_per_s   deltat_k  qext_w
+0         5.0       5.0  293.150000  304.557446  332.064370                 0.0              -0.0            0.0 -38.914370     0.0
+1         5.0       5.0  304.557446  293.150000  362.342087                 0.0              -0.0            0.0 -57.784642     0.0
+
+TABLA 5 antes
+       p_bar         t_k
+0   3.000000  360.000000
+1   2.997927  359.494166
+2   2.997833  357.130840
+3   2.997773  355.655563
+4   2.997833  293.150000
+5   2.996959  359.017111
+6   5.000000  293.150000
+7   5.000000  304.557446
+8   2.500000  304.373725
+9   2.502033  304.557446
+10  2.504066  304.742249
+11  2.504127  305.000000
+12  2.504066  293.150000
+13  2.505018  305.000000
+
+iteration0
+
+
+TABLA 1 antes
+                             name  from_junction  to_junction  controlled_mdot_kg_per_s  control_active  in_service type
+0             Flow_control_charge              1            6                      -0.0            True        True   fc
+1      Flow_control_bypass_charge              6            1                       0.1            True       False   fc
+2     Flow_control_charge_storage              7            9                      -0.0            True        True   fc
+3          Flow_control_discharge              9            7                       0.1            True       False   fc
+4   Flow_control_bypass_discharge              7            9                       0.1            True       False   fc
+5  Flow_control_discharge_storage              6            1                       0.1            True       False   fc
+
+TABLA 2 antes
+   p_from_bar  p_to_bar    t_from_k      t_to_k  t_outlet_k  mdot_from_kg_per_s  mdot_to_kg_per_s  vdot_m3_per_s
+0     2.98848  5.000000  359.785475  293.150000      293.15                -0.0               0.0           -0.0
+1         NaN       NaN         NaN         NaN         NaN                 NaN               NaN            NaN
+2     5.00000  2.511241  293.150000  304.771407      293.15                -0.0               0.0           -0.0
+3         NaN       NaN         NaN         NaN         NaN                 NaN               NaN            NaN
+4         NaN       NaN         NaN         NaN         NaN                 NaN               NaN            NaN
+5         NaN       NaN         NaN         NaN         NaN                 NaN               NaN            NaN
+
+TABLA 3 antes
+                          name  return_junction  flow_junction  p_flow_bar  t_flow_k  mdot_flow_kg_per_s  in_service type
+0     Circ_pump_charge_storage                6              7         5.0     313.0                -0.0        True   pt
+1  Circ_pump_discharge_storage                7              6         5.0     300.0                 0.0        True   pt
+
+TABLA 4 antes
+   p_from_bar  p_to_bar  t_from_k  t_to_k  t_outlet_k  mdot_from_kg_per_s  mdot_to_kg_per_s  vdot_m3_per_s  deltat_k  qext_w
+0         5.0       5.0    293.15  293.15       313.0                -0.0               0.0           -0.0    -19.85    -0.0
+1         5.0       5.0    293.15  293.15       300.0                 0.0              -0.0            0.0     -6.85     0.0
+
+TABLA 5 antes
+       p_bar         t_k
+0   3.000000  360.000000
+1   2.988480  359.785475
+2   2.983340  359.465073
+3   2.982516  359.057995
+4   2.982680  359.137479
+5   2.987521  359.304286
+6   5.000000  293.150000
+7   5.000000  293.150000
+8   2.500000  304.692955
+9   2.511241  304.771407
+10  2.522483  304.850053
+11  2.523294  305.000000
+12  2.523132  305.000000
+13  2.523425  305.000000
+
+iteration0
+
+
+TABLA 1 despues
+                             name  from_junction  to_junction  controlled_mdot_kg_per_s  control_active  in_service type
+0             Flow_control_charge              1            6                      -0.0            True       False   fc
+1      Flow_control_bypass_charge              6            1                       0.0            True       False   fc
+2     Flow_control_charge_storage              7            9                      -0.0            True       False   fc
+3          Flow_control_discharge              9            7                       0.0            True        True   fc
+4   Flow_control_bypass_discharge              7            9                       0.0            True        True   fc
+5  Flow_control_discharge_storage              6            1                       0.0            True        True   fc
+
+TABLA 2 despues
+   p_from_bar  p_to_bar    t_from_k      t_to_k  t_outlet_k  mdot_from_kg_per_s  mdot_to_kg_per_s  vdot_m3_per_s
+0         NaN       NaN         NaN         NaN         NaN                 NaN               NaN            NaN
+1         NaN       NaN         NaN         NaN         NaN                 NaN               NaN            NaN
+2         NaN       NaN         NaN         NaN         NaN                 NaN               NaN            NaN
+3    2.511241  5.000000  304.771407  293.150000      293.15                 0.0              -0.0            0.0
+4    5.000000  2.511241  293.150000  304.771407      293.15                 0.0              -0.0            0.0
+5    5.000000  2.988480  293.150000  359.785475      293.15                 0.0              -0.0            0.0
+
+TABLA 3 despues
+                          name  return_junction  flow_junction  p_flow_bar  t_flow_k  mdot_flow_kg_per_s  in_service type
+0     Circ_pump_charge_storage                6              7         5.0     313.0                 0.0        True   pt
+1  Circ_pump_discharge_storage                7              6         5.0     354.0                 0.0        True   pt
+
+TABLA 4 despues
+   p_from_bar  p_to_bar  t_from_k  t_to_k  t_outlet_k  mdot_from_kg_per_s  mdot_to_kg_per_s  vdot_m3_per_s  deltat_k  qext_w
+0         5.0       5.0    293.15  293.15       313.0                 0.0              -0.0            0.0    -19.85     0.0
+1         5.0       5.0    293.15  293.15       354.0                 0.0              -0.0            0.0    -60.85     0.0
+
+TABLA 5 antes
+       p_bar         t_k
+0   3.000000  360.000000
+1   2.988480  359.785475
+2   2.983340  359.465073
+3   2.982516  359.057995
+4   2.982680  359.137479
+5   2.987521  359.304286
+6   5.000000  293.150000
+7   5.000000  293.150000
+8   2.500000  304.692955
+9   2.511241  304.771407
+10  2.522483  304.850053
+11  2.523294  305.000000
+12  2.523132  305.000000
+13  2.523425  305.000000
+
+iteration1
+
+
+TABLA 1 antes
+                             name  from_junction  to_junction  controlled_mdot_kg_per_s  control_active  in_service type
+0             Flow_control_charge              1            6                      0.88            True        True   fc
+1      Flow_control_bypass_charge              6            1                      0.00            True       False   fc
+2     Flow_control_charge_storage              7            9                      0.88            True        True   fc
+3          Flow_control_discharge              9            7                      0.00            True       False   fc
+4   Flow_control_bypass_discharge              7            9                      0.00            True       False   fc
+5  Flow_control_discharge_storage              6            1                      0.00            True       False   fc
+
+TABLA 2 antes
+   p_from_bar  p_to_bar    t_from_k      t_to_k  t_outlet_k  mdot_from_kg_per_s  mdot_to_kg_per_s  vdot_m3_per_s
+0     2.97604  5.000000  359.851252  359.851252  359.851252                0.88             -0.88       0.000910
+1         NaN       NaN         NaN         NaN         NaN                 NaN               NaN            NaN
+2     5.00000  2.523366  312.947736  307.287070  312.947736                0.88             -0.88       0.000887
+3         NaN       NaN         NaN         NaN         NaN                 NaN               NaN            NaN
+4         NaN       NaN         NaN         NaN         NaN                 NaN               NaN            NaN
+5         NaN       NaN         NaN         NaN         NaN                 NaN               NaN            NaN
+
+TABLA 3 antes
+                          name  return_junction  flow_junction  p_flow_bar    t_flow_k  mdot_flow_kg_per_s  in_service type
+0     Circ_pump_charge_storage                6              7         5.0  312.947736                0.88        True   pt
+1  Circ_pump_discharge_storage                7              6         5.0  354.000000                0.00        True   pt
+
+TABLA 4 antes
+   p_from_bar  p_to_bar    t_from_k      t_to_k  t_outlet_k  mdot_from_kg_per_s  mdot_to_kg_per_s  vdot_m3_per_s   deltat_k         qext_w
+0         5.0       5.0  359.851252  312.947736  312.947736                0.88             -0.88       0.000898  46.903516 -172989.237407
+1         5.0       5.0  312.947736  359.851252  354.000000                0.00             -0.00       0.000000 -41.052264       0.000000
+
+TABLA 5 antes
+       p_bar         t_k
+0   3.000000  360.000000
+1   2.976040  359.851252
+2   2.970913  359.530227
+3   2.970090  359.122360
+4   2.970254  359.201998
+5   2.975084  359.369127
+6   5.000000  359.851252
+7   5.000000  312.947736
+8   2.500000  307.228336
+9   2.523366  307.287070
+10  2.534581  304.849874
+11  2.535390  305.000000
+12  2.535229  305.000000
+13  2.535521  305.000000
+
+iteration1
+
+
+TABLA 1 despues
+                             name  from_junction  to_junction  controlled_mdot_kg_per_s  control_active  in_service type
+0             Flow_control_charge              1            6                      0.88            True        True   fc
+1      Flow_control_bypass_charge              6            1                      0.00            True        True   fc
+2     Flow_control_charge_storage              7            9                      0.88            True        True   fc
+3          Flow_control_discharge              9            7                      0.00            True       False   fc
+4   Flow_control_bypass_discharge              7            9                      0.00            True       False   fc
+5  Flow_control_discharge_storage              6            1                      0.00            True       False   fc
+
+TABLA 2 despues
+   p_from_bar  p_to_bar    t_from_k      t_to_k  t_outlet_k  mdot_from_kg_per_s  mdot_to_kg_per_s  vdot_m3_per_s
+0     2.97604  5.000000  359.851252  359.851252  359.851252                0.88             -0.88       0.000910
+1     5.00000  2.976040  359.851252  359.851252  293.150000                0.00             -0.00       0.000000
+2     5.00000  2.523366  312.947736  307.287070  312.947736                0.88             -0.88       0.000887
+3         NaN       NaN         NaN         NaN         NaN                 NaN               NaN            NaN
+4         NaN       NaN         NaN         NaN         NaN                 NaN               NaN            NaN
+5         NaN       NaN         NaN         NaN         NaN                 NaN               NaN            NaN
+
+TABLA 3 despues
+                          name  return_junction  flow_junction  p_flow_bar    t_flow_k  mdot_flow_kg_per_s  in_service type
+0     Circ_pump_charge_storage                6              7         5.0  312.947736                0.88        True   pt
+1  Circ_pump_discharge_storage                7              6         5.0  354.000000                0.00        True   pt
+
+TABLA 4 despues
+   p_from_bar  p_to_bar    t_from_k      t_to_k  t_outlet_k  mdot_from_kg_per_s  mdot_to_kg_per_s  vdot_m3_per_s   deltat_k         qext_w
+0         5.0       5.0  359.851252  312.947736  312.947736                0.88             -0.88       0.000898  46.903516 -172989.237407
+1         5.0       5.0  312.947736  359.851252  354.000000                0.00             -0.00       0.000000 -41.052264       0.000000
+
+TABLA 5 antes
+       p_bar         t_k
+0   3.000000  360.000000
+1   2.976040  359.851252
+2   2.970913  359.530227
+3   2.970090  359.122360
+4   2.970254  359.201998
+5   2.975084  359.369127
+6   5.000000  359.851252
+7   5.000000  312.947736
+8   2.500000  307.228336
+9   2.523366  307.287070
+10  2.534581  304.849874
+11  2.535390  305.000000
+12  2.535229  305.000000
+13  2.535521  305.000000
+
+iteration2
+
+
+TABLA 1 antes
+                             name  from_junction  to_junction  controlled_mdot_kg_per_s  control_active  in_service type
+0             Flow_control_charge              1            6                      0.88            True       False   fc
+1      Flow_control_bypass_charge              6            1                      0.00            True       False   fc
+2     Flow_control_charge_storage              7            9                      0.88            True       False   fc
+3          Flow_control_discharge              9            7                      0.15            True        True   fc
+4   Flow_control_bypass_discharge              7            9                      0.00            True       False   fc
+5  Flow_control_discharge_storage              6            1                      0.15            True        True   fc
+
+TABLA 2 antes
+   p_from_bar  p_to_bar    t_from_k      t_to_k  t_outlet_k  mdot_from_kg_per_s  mdot_to_kg_per_s  vdot_m3_per_s
+0         NaN       NaN         NaN         NaN         NaN                 NaN               NaN            NaN
+1         NaN       NaN         NaN         NaN         NaN                 NaN               NaN            NaN
+2         NaN       NaN         NaN         NaN         NaN                 NaN               NaN            NaN
+3    2.509513  5.000000  304.770337  304.770337  304.770337                0.15             -0.15       0.000151
+4         NaN       NaN         NaN         NaN         NaN                 NaN               NaN            NaN
+5    5.000000  2.990254  363.402569  360.043220  363.402569                0.15             -0.15       0.000155
+
+TABLA 3 antes
+                          name  return_junction  flow_junction  p_flow_bar    t_flow_k  mdot_flow_kg_per_s  in_service type
+0     Circ_pump_charge_storage                6              7         5.0  312.947736                0.00        True   pt
+1  Circ_pump_discharge_storage                7              6         5.0  363.402569                0.15        True   pt
+
+TABLA 4 antes
+   p_from_bar  p_to_bar    t_from_k      t_to_k  t_outlet_k  mdot_from_kg_per_s  mdot_to_kg_per_s  vdot_m3_per_s   deltat_k        qext_w
+0         5.0       5.0  363.402569  304.770337  312.947736                0.00             -0.00       0.000000  50.454833     -0.000000
+1         5.0       5.0  304.770337  363.402569  363.402569                0.15             -0.15       0.000153 -58.632232  36875.201653
+
+TABLA 5 antes
+       p_bar         t_k
+0   3.000000  360.000000
+1   2.990254  360.043220
+2   2.985162  359.720375
+3   2.984345  359.310203
+4   2.984508  359.390289
+5   2.989304  359.558360
+6   5.000000  363.402569
+7   5.000000  304.770337
+8   2.500000  304.685044
+9   2.509513  304.770337
+10  2.520650  304.849350
+11  2.521453  305.000000
+12  2.521293  305.000000
+13  2.521584  305.000000
+
+iteration2
+
+
+TABLA 1 despues
+                             name  from_junction  to_junction  controlled_mdot_kg_per_s  control_active  in_service type
+0             Flow_control_charge              1            6                      0.88            True       False   fc
+1      Flow_control_bypass_charge              6            1                      0.00            True       False   fc
+2     Flow_control_charge_storage              7            9                      0.88            True       False   fc
+3          Flow_control_discharge              9            7                      0.15            True        True   fc
+4   Flow_control_bypass_discharge              7            9                      0.00            True        True   fc
+5  Flow_control_discharge_storage              6            1                      0.15            True        True   fc
+
+TABLA 2 despues
+   p_from_bar  p_to_bar    t_from_k      t_to_k  t_outlet_k  mdot_from_kg_per_s  mdot_to_kg_per_s  vdot_m3_per_s
+0         NaN       NaN         NaN         NaN         NaN                 NaN               NaN            NaN
+1         NaN       NaN         NaN         NaN         NaN                 NaN               NaN            NaN
+2         NaN       NaN         NaN         NaN         NaN                 NaN               NaN            NaN
+3    2.509513  5.000000  304.770337  304.770337  304.770337                0.15             -0.15       0.000151
+4    5.000000  2.509513  304.770337  304.770337  293.150000                0.00             -0.00       0.000000
+5    5.000000  2.990254  363.402569  360.043220  363.402569                0.15             -0.15       0.000155
+
+TABLA 3 despues
+                          name  return_junction  flow_junction  p_flow_bar    t_flow_k  mdot_flow_kg_per_s  in_service type
+0     Circ_pump_charge_storage                6              7         5.0  312.947736                0.00        True   pt
+1  Circ_pump_discharge_storage                7              6         5.0  363.402569                0.15        True   pt
+
+TABLA 4 despues
+   p_from_bar  p_to_bar    t_from_k      t_to_k  t_outlet_k  mdot_from_kg_per_s  mdot_to_kg_per_s  vdot_m3_per_s   deltat_k        qext_w
+0         5.0       5.0  363.402569  304.770337  312.947736                0.00             -0.00       0.000000  50.454833     -0.000000
+1         5.0       5.0  304.770337  363.402569  363.402569                0.15             -0.15       0.000153 -58.632232  36875.201653
+
+TABLA 5 antes
+       p_bar         t_k
+0   3.000000  360.000000
+1   2.990254  360.043220
+2   2.985162  359.720375
+3   2.984345  359.310203
+4   2.984508  359.390289
+5   2.989304  359.558360
+6   5.000000  363.402569
+7   5.000000  304.770337
+8   2.500000  304.685044
+9   2.509513  304.770337
+10  2.520650  304.849350
+11  2.521453  305.000000
+12  2.521293  305.000000
+13  2.521584  305.000000
+
+iteration3
+
+
+TABLA 1 antes
+                             name  from_junction  to_junction  controlled_mdot_kg_per_s  control_active  in_service type
+0             Flow_control_charge              1            6                      0.88            True       False   fc
+1      Flow_control_bypass_charge              6            1                      0.00            True       False   fc
+2     Flow_control_charge_storage              7            9                      0.88            True       False   fc
+3          Flow_control_discharge              9            7                      0.18            True        True   fc
+4   Flow_control_bypass_discharge              7            9                      0.00            True       False   fc
+5  Flow_control_discharge_storage              6            1                      0.18            True        True   fc
+
+TABLA 2 antes
+   p_from_bar  p_to_bar    t_from_k      t_to_k  t_outlet_k  mdot_from_kg_per_s  mdot_to_kg_per_s  vdot_m3_per_s
+0         NaN       NaN         NaN         NaN         NaN                 NaN               NaN            NaN
+1         NaN       NaN         NaN         NaN         NaN                 NaN               NaN            NaN
+2         NaN       NaN         NaN         NaN         NaN                 NaN               NaN            NaN
+3    2.506164  5.000000  304.724994  304.724994  304.724994                0.18             -0.18       0.000181
+4         NaN       NaN         NaN         NaN         NaN                 NaN               NaN            NaN
+5    5.000000  2.993692  363.284117  360.100948  363.284117                0.18             -0.18       0.000187
+
+TABLA 3 antes
+                          name  return_junction  flow_junction  p_flow_bar    t_flow_k  mdot_flow_kg_per_s  in_service type
+0     Circ_pump_charge_storage                6              7         5.0  312.947736                0.00        True   pt
+1  Circ_pump_discharge_storage                7              6         5.0  363.284117                0.18        True   pt
+
+TABLA 4 antes
+   p_from_bar  p_to_bar    t_from_k      t_to_k  t_outlet_k  mdot_from_kg_per_s  mdot_to_kg_per_s  vdot_m3_per_s   deltat_k        qext_w
+0         5.0       5.0  363.284117  304.724994  312.947736                0.00             -0.00       0.000000  50.336382     -0.000000
+1         5.0       5.0  304.724994  363.284117  363.284117                0.18             -0.18       0.000184 -58.559124  44194.553966
+
+TABLA 5 antes
+       p_bar         t_k
+0   3.000000  360.000000
+1   2.993692  360.100948
+2   2.990805  359.671815
+3   2.990596  358.860610
+4   2.990150  359.342204
+5   2.992744  359.615263
+6   5.000000  363.284117
+7   5.000000  304.724994
+8   2.500000  304.619130
+9   2.506164  304.724994
+10  2.513926  304.819582
+11  2.514135  305.000000
+12  2.514571  305.000000
+13  2.514858  305.000000
+
+iteration3
+
+
+TABLA 1 despues
+                             name  from_junction  to_junction  controlled_mdot_kg_per_s  control_active  in_service type
+0             Flow_control_charge              1            6                      0.88            True       False   fc
+1      Flow_control_bypass_charge              6            1                      0.00            True       False   fc
+2     Flow_control_charge_storage              7            9                      0.88            True       False   fc
+3          Flow_control_discharge              9            7                      0.18            True        True   fc
+4   Flow_control_bypass_discharge              7            9                      0.00            True        True   fc
+5  Flow_control_discharge_storage              6            1                      0.18            True        True   fc
+
+TABLA 2 despues
+   p_from_bar  p_to_bar    t_from_k      t_to_k  t_outlet_k  mdot_from_kg_per_s  mdot_to_kg_per_s  vdot_m3_per_s
+0         NaN       NaN         NaN         NaN         NaN                 NaN               NaN            NaN
+1         NaN       NaN         NaN         NaN         NaN                 NaN               NaN            NaN
+2         NaN       NaN         NaN         NaN         NaN                 NaN               NaN            NaN
+3    2.506164  5.000000  304.724994  304.724994  304.724994                0.18             -0.18       0.000181
+4    5.000000  2.506164  304.724994  304.724994  293.150000                0.00             -0.00       0.000000
+5    5.000000  2.993692  363.284117  360.100948  363.284117                0.18             -0.18       0.000187
+
+TABLA 3 despues
+                          name  return_junction  flow_junction  p_flow_bar    t_flow_k  mdot_flow_kg_per_s  in_service type
+0     Circ_pump_charge_storage                6              7         5.0  312.947736                0.00        True   pt
+1  Circ_pump_discharge_storage                7              6         5.0  363.284117                0.18        True   pt
+
+TABLA 4 despues
+   p_from_bar  p_to_bar    t_from_k      t_to_k  t_outlet_k  mdot_from_kg_per_s  mdot_to_kg_per_s  vdot_m3_per_s   deltat_k        qext_w
+0         5.0       5.0  363.284117  304.724994  312.947736                0.00             -0.00       0.000000  50.336382     -0.000000
+1         5.0       5.0  304.724994  363.284117  363.284117                0.18             -0.18       0.000184 -58.559124  44194.553966
+
+TABLA 5 antes
+       p_bar         t_k
+0   3.000000  360.000000
+1   2.993692  360.100948
+2   2.990805  359.671815
+3   2.990596  358.860610
+4   2.990150  359.342204
+5   2.992744  359.615263
+6   5.000000  363.284117
+7   5.000000  304.724994
+8   2.500000  304.619130
+9   2.506164  304.724994
+10  2.513926  304.819582
+11  2.514135  305.000000
+12  2.514571  305.000000
+13  2.514858  305.000000
+
+iteration4
+
+
+TABLA 1 antes
+                             name  from_junction  to_junction  controlled_mdot_kg_per_s  control_active  in_service type
+0             Flow_control_charge              1            6                      0.88            True        True   fc
+1      Flow_control_bypass_charge              6            1                      0.00            True       False   fc
+2     Flow_control_charge_storage              7            9                      0.88            True        True   fc
+3          Flow_control_discharge              9            7                      0.18            True       False   fc
+4   Flow_control_bypass_discharge              7            9                      0.00            True       False   fc
+5  Flow_control_discharge_storage              6            1                      0.18            True       False   fc
+
+TABLA 2 antes
+   p_from_bar  p_to_bar    t_from_k      t_to_k  t_outlet_k  mdot_from_kg_per_s  mdot_to_kg_per_s  vdot_m3_per_s
+0    2.983521  5.000000  359.820637  359.820637  359.820637                0.88             -0.88       0.000910
+1         NaN       NaN         NaN         NaN         NaN                 NaN               NaN            NaN
+2    5.000000  2.516078  310.964933  307.023002  310.964933                0.88             -0.88       0.000886
+3         NaN       NaN         NaN         NaN         NaN                 NaN               NaN            NaN
+4         NaN       NaN         NaN         NaN         NaN                 NaN               NaN            NaN
+5         NaN       NaN         NaN         NaN         NaN                 NaN               NaN            NaN
+
+TABLA 3 antes
+                          name  return_junction  flow_junction  p_flow_bar    t_flow_k  mdot_flow_kg_per_s  in_service type
+0     Circ_pump_charge_storage                6              7         5.0  310.964933                0.88        True   pt
+1  Circ_pump_discharge_storage                7              6         5.0  363.284117                0.00        True   pt
+
+TABLA 4 antes
+   p_from_bar  p_to_bar    t_from_k      t_to_k  t_outlet_k  mdot_from_kg_per_s  mdot_to_kg_per_s  vdot_m3_per_s   deltat_k         qext_w
+0         5.0       5.0  359.820637  310.964933  310.964933                0.88             -0.88       0.000898  48.855704 -180190.861634
+1         5.0       5.0  310.964933  359.820637  363.284117                0.00             -0.00       0.000000 -52.319185       0.000000
+
+TABLA 5 antes
+       p_bar         t_k
+0   3.000000  360.000000
+1   2.983521  359.820637
+2   2.978388  359.499901
+3   2.977564  359.092402
+4   2.977728  359.171968
+5   2.983456  357.957929
+6   5.000000  359.820637
+7   5.000000  310.964933
+8   2.500000  306.952729
+9   2.516078  307.023002
+10  2.522454  304.801326
+11  2.523264  305.000000
+12  2.523103  305.000000
+13  2.522519  305.000000
+
+iteration4
+
+
+TABLA 1 despues
+                             name  from_junction  to_junction  controlled_mdot_kg_per_s  control_active  in_service type
+0             Flow_control_charge              1            6                      0.88            True        True   fc
+1      Flow_control_bypass_charge              6            1                      0.00            True        True   fc
+2     Flow_control_charge_storage              7            9                      0.88            True        True   fc
+3          Flow_control_discharge              9            7                      0.18            True       False   fc
+4   Flow_control_bypass_discharge              7            9                      0.00            True       False   fc
+5  Flow_control_discharge_storage              6            1                      0.18            True       False   fc
+
+TABLA 2 despues
+   p_from_bar  p_to_bar    t_from_k      t_to_k  t_outlet_k  mdot_from_kg_per_s  mdot_to_kg_per_s  vdot_m3_per_s
+0    2.983521  5.000000  359.820637  359.820637  359.820637                0.88             -0.88       0.000910
+1    5.000000  2.983521  359.820637  359.820637  293.150000                0.00             -0.00       0.000000
+2    5.000000  2.516078  310.964933  307.023002  310.964933                0.88             -0.88       0.000886
+3         NaN       NaN         NaN         NaN         NaN                 NaN               NaN            NaN
+4         NaN       NaN         NaN         NaN         NaN                 NaN               NaN            NaN
+5         NaN       NaN         NaN         NaN         NaN                 NaN               NaN            NaN
+
+TABLA 3 despues
+                          name  return_junction  flow_junction  p_flow_bar    t_flow_k  mdot_flow_kg_per_s  in_service type
+0     Circ_pump_charge_storage                6              7         5.0  310.964933                0.88        True   pt
+1  Circ_pump_discharge_storage                7              6         5.0  363.284117                0.00        True   pt
+
+TABLA 4 despues
+   p_from_bar  p_to_bar    t_from_k      t_to_k  t_outlet_k  mdot_from_kg_per_s  mdot_to_kg_per_s  vdot_m3_per_s   deltat_k         qext_w
+0         5.0       5.0  359.820637  310.964933  310.964933                0.88             -0.88       0.000898  48.855704 -180190.861634
+1         5.0       5.0  310.964933  359.820637  363.284117                0.00             -0.00       0.000000 -52.319185       0.000000
+
+TABLA 5 antes
+       p_bar         t_k
+0   3.000000  360.000000
+1   2.983521  359.820637
+2   2.978388  359.499901
+3   2.977564  359.092402
+4   2.977728  359.171968
+5   2.983456  357.957929
+6   5.000000  359.820637
+7   5.000000  310.964933
+8   2.500000  306.952729
+9   2.516078  307.023002
+10  2.522454  304.801326
+11  2.523264  305.000000
+12  2.523103  305.000000
+13  2.522519  305.000000
+
+iteration5
+
+
+TABLA 1 antes
+                             name  from_junction  to_junction  controlled_mdot_kg_per_s  control_active  in_service type
+0             Flow_control_charge              1            6                      0.75            True        True   fc
+1      Flow_control_bypass_charge              6            1                      0.00            True       False   fc
+2     Flow_control_charge_storage              7            9                      0.75            True        True   fc
+3          Flow_control_discharge              9            7                      0.18            True       False   fc
+4   Flow_control_bypass_discharge              7            9                      0.00            True       False   fc
+5  Flow_control_discharge_storage              6            1                      0.18            True       False   fc
+
+TABLA 2 antes
+   p_from_bar  p_to_bar    t_from_k      t_to_k  t_outlet_k  mdot_from_kg_per_s  mdot_to_kg_per_s  vdot_m3_per_s
+0    2.987333  5.000000  359.795419  359.795419  359.795419                0.75             -0.75       0.000775
+1         NaN       NaN         NaN         NaN         NaN                 NaN               NaN            NaN
+2    5.000000  2.512396  337.274636  316.430187  337.274636                0.75             -0.75       0.000765
+3         NaN       NaN         NaN         NaN         NaN                 NaN               NaN            NaN
+4         NaN       NaN         NaN         NaN         NaN                 NaN               NaN            NaN
+5         NaN       NaN         NaN         NaN         NaN                 NaN               NaN            NaN
+
+TABLA 3 antes
+                          name  return_junction  flow_junction  p_flow_bar    t_flow_k  mdot_flow_kg_per_s  in_service type
+0     Circ_pump_charge_storage                6              7         5.0  337.274636                0.75        True   pt
+1  Circ_pump_discharge_storage                7              6         5.0  363.284117                0.00        True   pt
+
+TABLA 4 antes
+   p_from_bar  p_to_bar    t_from_k      t_to_k  t_outlet_k  mdot_from_kg_per_s  mdot_to_kg_per_s  vdot_m3_per_s   deltat_k        qext_w
+0         5.0       5.0  359.795419  337.274636  337.274636                0.75             -0.75        0.00077  22.520783 -70855.070664
+1         5.0       5.0  337.274636  359.795419  363.284117                0.00             -0.00        0.00000 -26.009481      0.000000
+
+TABLA 5 antes
+       p_bar         t_k
+0   3.000000  360.000000
+1   2.987333  359.795419
+2   2.984415  359.370124
+3   2.984203  358.566123
+4   2.983752  359.043455
+5   2.987087  358.843702
+6   5.000000  359.795419
+7   5.000000  337.274636
+8   2.500000  316.327750
+9   2.512396  316.430187
+10  2.517463  304.776719
+11  2.517673  305.000000
+12  2.518114  305.000000
+13  2.517707  305.000000
+
+iteration5
+
+
+TABLA 1 despues
+                             name  from_junction  to_junction  controlled_mdot_kg_per_s  control_active  in_service type
+0             Flow_control_charge              1            6                      0.75            True        True   fc
+1      Flow_control_bypass_charge              6            1                      0.00            True        True   fc
+2     Flow_control_charge_storage              7            9                      0.75            True        True   fc
+3          Flow_control_discharge              9            7                      0.18            True       False   fc
+4   Flow_control_bypass_discharge              7            9                      0.00            True       False   fc
+5  Flow_control_discharge_storage              6            1                      0.18            True       False   fc
+
+TABLA 2 despues
+   p_from_bar  p_to_bar    t_from_k      t_to_k  t_outlet_k  mdot_from_kg_per_s  mdot_to_kg_per_s  vdot_m3_per_s
+0    2.987333  5.000000  359.795419  359.795419  359.795419                0.75             -0.75       0.000775
+1    5.000000  2.987333  359.795419  359.795419  293.150000                0.00             -0.00       0.000000
+2    5.000000  2.512396  337.274636  316.430187  337.274636                0.75             -0.75       0.000765
+3         NaN       NaN         NaN         NaN         NaN                 NaN               NaN            NaN
+4         NaN       NaN         NaN         NaN         NaN                 NaN               NaN            NaN
+5         NaN       NaN         NaN         NaN         NaN                 NaN               NaN            NaN
+
+TABLA 3 despues
+                          name  return_junction  flow_junction  p_flow_bar    t_flow_k  mdot_flow_kg_per_s  in_service type
+0     Circ_pump_charge_storage                6              7         5.0  337.274636                0.75        True   pt
+1  Circ_pump_discharge_storage                7              6         5.0  363.284117                0.00        True   pt
+
+TABLA 4 despues
+   p_from_bar  p_to_bar    t_from_k      t_to_k  t_outlet_k  mdot_from_kg_per_s  mdot_to_kg_per_s  vdot_m3_per_s   deltat_k        qext_w
+0         5.0       5.0  359.795419  337.274636  337.274636                0.75             -0.75        0.00077  22.520783 -70855.070664
+1         5.0       5.0  337.274636  359.795419  363.284117                0.00             -0.00        0.00000 -26.009481      0.000000
+
+TABLA 5 antes
+       p_bar         t_k
+0   3.000000  360.000000
+1   2.987333  359.795419
+2   2.984415  359.370124
+3   2.984203  358.566123
+4   2.983752  359.043455
+5   2.987087  358.843702
+6   5.000000  359.795419
+7   5.000000  337.274636
+8   2.500000  316.327750
+9   2.512396  316.430187
+10  2.517463  304.776719
+11  2.517673  305.000000
+12  2.518114  305.000000
+13  2.517707  305.000000
+
+iteration6
+
+
+TABLA 1 antes
+                             name  from_junction  to_junction  controlled_mdot_kg_per_s  control_active  in_service type
+0             Flow_control_charge              1            6                      0.75            True        True   fc
+1      Flow_control_bypass_charge              6            1                      0.00            True       False   fc
+2     Flow_control_charge_storage              7            9                      0.75            True        True   fc
+3          Flow_control_discharge              9            7                      0.18            True       False   fc
+4   Flow_control_bypass_discharge              7            9                      0.00            True       False   fc
+5  Flow_control_discharge_storage              6            1                      0.18            True       False   fc
+
+TABLA 2 antes
+   p_from_bar  p_to_bar    t_from_k      t_to_k  t_outlet_k  mdot_from_kg_per_s  mdot_to_kg_per_s  vdot_m3_per_s
+0    2.987381  5.000000  359.795030  359.795030  359.795030                0.75             -0.75       0.000775
+1         NaN       NaN         NaN         NaN         NaN                 NaN               NaN            NaN
+2    5.000000  2.512364  347.546222  320.207574  347.546222                0.75             -0.75       0.000769
+3         NaN       NaN         NaN         NaN         NaN                 NaN               NaN            NaN
+4         NaN       NaN         NaN         NaN         NaN                 NaN               NaN            NaN
+5         NaN       NaN         NaN         NaN         NaN                 NaN               NaN            NaN
+
+TABLA 3 antes
+                          name  return_junction  flow_junction  p_flow_bar    t_flow_k  mdot_flow_kg_per_s  in_service type
+0     Circ_pump_charge_storage                6              7         5.0  347.546222                0.75        True   pt
+1  Circ_pump_discharge_storage                7              6         5.0  363.284117                0.00        True   pt
+
+TABLA 4 antes
+   p_from_bar  p_to_bar    t_from_k      t_to_k  t_outlet_k  mdot_from_kg_per_s  mdot_to_kg_per_s  vdot_m3_per_s   deltat_k        qext_w
+0         5.0       5.0  359.795030  347.546222  347.546222                0.75             -0.75       0.000772  12.248808 -38564.699705
+1         5.0       5.0  347.546222  359.795030  363.284117                0.00             -0.00       0.000000 -15.737895      0.000000
+
+TABLA 5 antes
+       p_bar         t_k
+0   3.000000  360.000000
+1   2.987381  359.795030
+2   2.986074  359.159369
+3   2.985240  358.755982
+4   2.986074  293.150000
+5   2.986423  359.313705
+6   5.000000  359.795030
+7   5.000000  347.546222
+8   2.500000  320.095993
+9   2.512364  320.207574
+10  2.517401  304.836217
+11  2.518221  305.000000
+12  2.517401  293.150000
+13  2.518344  305.000000
+
+iteration6
+
+
+TABLA 1 despues
+                             name  from_junction  to_junction  controlled_mdot_kg_per_s  control_active  in_service type
+0             Flow_control_charge              1            6                      0.75            True        True   fc
+1      Flow_control_bypass_charge              6            1                      0.00            True        True   fc
+2     Flow_control_charge_storage              7            9                      0.75            True        True   fc
+3          Flow_control_discharge              9            7                      0.18            True       False   fc
+4   Flow_control_bypass_discharge              7            9                      0.00            True       False   fc
+5  Flow_control_discharge_storage              6            1                      0.18            True       False   fc
+
+TABLA 2 despues
+   p_from_bar  p_to_bar    t_from_k      t_to_k  t_outlet_k  mdot_from_kg_per_s  mdot_to_kg_per_s  vdot_m3_per_s
+0    2.987381  5.000000  359.795030  359.795030  359.795030                0.75             -0.75       0.000775
+1    5.000000  2.987381  359.795030  359.795030  293.150000                0.00             -0.00       0.000000
+2    5.000000  2.512364  347.546222  320.207574  347.546222                0.75             -0.75       0.000769
+3         NaN       NaN         NaN         NaN         NaN                 NaN               NaN            NaN
+4         NaN       NaN         NaN         NaN         NaN                 NaN               NaN            NaN
+5         NaN       NaN         NaN         NaN         NaN                 NaN               NaN            NaN
+
+TABLA 3 despues
+                          name  return_junction  flow_junction  p_flow_bar    t_flow_k  mdot_flow_kg_per_s  in_service type
+0     Circ_pump_charge_storage                6              7         5.0  347.546222                0.75        True   pt
+1  Circ_pump_discharge_storage                7              6         5.0  363.284117                0.00        True   pt
+
+TABLA 4 despues
+   p_from_bar  p_to_bar    t_from_k      t_to_k  t_outlet_k  mdot_from_kg_per_s  mdot_to_kg_per_s  vdot_m3_per_s   deltat_k        qext_w
+0         5.0       5.0  359.795030  347.546222  347.546222                0.75             -0.75       0.000772  12.248808 -38564.699705
+1         5.0       5.0  347.546222  359.795030  363.284117                0.00             -0.00       0.000000 -15.737895      0.000000
+
+TABLA 5 antes
+       p_bar         t_k
+0   3.000000  360.000000
+1   2.987381  359.795030
+2   2.986074  359.159369
+3   2.985240  358.755982
+4   2.986074  293.150000
+5   2.986423  359.313705
+6   5.000000  359.795030
+7   5.000000  347.546222
+8   2.500000  320.095993
+9   2.512364  320.207574
+10  2.517401  304.836217
+11  2.518221  305.000000
+12  2.517401  293.150000
+13  2.518344  305.000000
+
+iteration7
+
+
+TABLA 1 antes
+                             name  from_junction  to_junction  controlled_mdot_kg_per_s  control_active  in_service type
+0             Flow_control_charge              1            6                      0.75            True       False   fc
+1      Flow_control_bypass_charge              6            1                      0.00            True       False   fc
+2     Flow_control_charge_storage              7            9                      0.75            True       False   fc
+3          Flow_control_discharge              9            7                      0.40            True        True   fc
+4   Flow_control_bypass_discharge              7            9                      0.00            True       False   fc
+5  Flow_control_discharge_storage              6            1                      0.40            True        True   fc
+
+TABLA 2 antes
+   p_from_bar  p_to_bar    t_from_k      t_to_k  t_outlet_k  mdot_from_kg_per_s  mdot_to_kg_per_s  vdot_m3_per_s
+0         NaN       NaN         NaN         NaN         NaN                 NaN               NaN            NaN
+1         NaN       NaN         NaN         NaN         NaN                 NaN               NaN            NaN
+2         NaN       NaN         NaN         NaN         NaN                 NaN               NaN            NaN
+3    2.502372   5.00000  304.714889  304.714889  304.714889                 0.4              -0.4       0.000402
+4         NaN       NaN         NaN         NaN         NaN                 NaN               NaN            NaN
+5    5.000000   2.99758  362.811865  360.535705  362.811865                 0.4              -0.4       0.000414
+
+TABLA 3 antes
+                          name  return_junction  flow_junction  p_flow_bar    t_flow_k  mdot_flow_kg_per_s  in_service type
+0     Circ_pump_charge_storage                6              7         5.0  347.546222                 0.0        True   pt
+1  Circ_pump_discharge_storage                7              6         5.0  362.811865                 0.4        True   pt
+
+TABLA 4 antes
+   p_from_bar  p_to_bar    t_from_k      t_to_k  t_outlet_k  mdot_from_kg_per_s  mdot_to_kg_per_s  vdot_m3_per_s   deltat_k        qext_w
+0         5.0       5.0  362.811865  304.714889  347.546222                 0.0              -0.0       0.000000  15.265642     -0.000000
+1         5.0       5.0  304.714889  362.811865  362.811865                 0.4              -0.4       0.000408 -58.096975  97430.442559
+
+TABLA 5 antes
+       p_bar         t_k
+0   3.000000  360.000000
+1   2.997580  360.535705
+2   2.996307  359.886124
+3   2.995494  359.473937
+4   2.996307  293.150000
+5   2.996646  360.043792
+6   5.000000  362.811865
+7   5.000000  304.714889
+8   2.500000  304.544024
+9   2.502372  304.714889
+10  2.507277  304.834016
+11  2.508076  305.000000
+12  2.507277  293.150000
+13  2.508195  305.000000
+
+iteration7
+
+
+TABLA 1 despues
+                             name  from_junction  to_junction  controlled_mdot_kg_per_s  control_active  in_service type
+0             Flow_control_charge              1            6                      0.75            True       False   fc
+1      Flow_control_bypass_charge              6            1                      0.00            True       False   fc
+2     Flow_control_charge_storage              7            9                      0.75            True       False   fc
+3          Flow_control_discharge              9            7                      0.40            True        True   fc
+4   Flow_control_bypass_discharge              7            9                      0.00            True        True   fc
+5  Flow_control_discharge_storage              6            1                      0.40            True        True   fc
+
+TABLA 2 despues
+   p_from_bar  p_to_bar    t_from_k      t_to_k  t_outlet_k  mdot_from_kg_per_s  mdot_to_kg_per_s  vdot_m3_per_s
+0         NaN       NaN         NaN         NaN         NaN                 NaN               NaN            NaN
+1         NaN       NaN         NaN         NaN         NaN                 NaN               NaN            NaN
+2         NaN       NaN         NaN         NaN         NaN                 NaN               NaN            NaN
+3    2.502372  5.000000  304.714889  304.714889  304.714889                 0.4              -0.4       0.000402
+4    5.000000  2.502372  304.714889  304.714889  293.150000                 0.0              -0.0       0.000000
+5    5.000000  2.997580  362.811865  360.535705  362.811865                 0.4              -0.4       0.000414
+
+TABLA 3 despues
+                          name  return_junction  flow_junction  p_flow_bar    t_flow_k  mdot_flow_kg_per_s  in_service type
+0     Circ_pump_charge_storage                6              7         5.0  347.546222                 0.0        True   pt
+1  Circ_pump_discharge_storage                7              6         5.0  362.811865                 0.4        True   pt
+
+TABLA 4 despues
+   p_from_bar  p_to_bar    t_from_k      t_to_k  t_outlet_k  mdot_from_kg_per_s  mdot_to_kg_per_s  vdot_m3_per_s   deltat_k        qext_w
+0         5.0       5.0  362.811865  304.714889  347.546222                 0.0              -0.0       0.000000  15.265642     -0.000000
+1         5.0       5.0  304.714889  362.811865  362.811865                 0.4              -0.4       0.000408 -58.096975  97430.442559
+
+TABLA 5 antes
+       p_bar         t_k
+0   3.000000  360.000000
+1   2.997580  360.535705
+2   2.996307  359.886124
+3   2.995494  359.473937
+4   2.996307  293.150000
+5   2.996646  360.043792
+6   5.000000  362.811865
+7   5.000000  304.714889
+8   2.500000  304.544024
+9   2.502372  304.714889
+10  2.507277  304.834016
+11  2.508076  305.000000
+12  2.507277  293.150000
+13  2.508195  305.000000
+
+iteration8
+
+
+TABLA 1 antes
+                             name  from_junction  to_junction  controlled_mdot_kg_per_s  control_active  in_service type
+0             Flow_control_charge              1            6                      0.75            True       False   fc
+1      Flow_control_bypass_charge              6            1                      0.00            True       False   fc
+2     Flow_control_charge_storage              7            9                      0.75            True       False   fc
+3          Flow_control_discharge              9            7                      0.50            True        True   fc
+4   Flow_control_bypass_discharge              7            9                      0.00            True       False   fc
+5  Flow_control_discharge_storage              6            1                      0.50            True        True   fc
+
+TABLA 2 antes
+   p_from_bar  p_to_bar    t_from_k      t_to_k  t_outlet_k  mdot_from_kg_per_s  mdot_to_kg_per_s  vdot_m3_per_s
+0         NaN       NaN         NaN         NaN         NaN                 NaN               NaN            NaN
+1         NaN       NaN         NaN         NaN         NaN                 NaN               NaN            NaN
+2         NaN       NaN         NaN         NaN         NaN                 NaN               NaN            NaN
+3    2.501863  5.000000  304.714011  304.714011  304.714011                 0.5              -0.5       0.000502
+4         NaN       NaN         NaN         NaN         NaN                 NaN               NaN            NaN
+5    5.000000  2.998101  362.694189  360.708108  362.694189                 0.5              -0.5       0.000518
+
+TABLA 3 antes
+                          name  return_junction  flow_junction  p_flow_bar    t_flow_k  mdot_flow_kg_per_s  in_service type
+0     Circ_pump_charge_storage                6              7         5.0  347.546222                 0.0        True   pt
+1  Circ_pump_discharge_storage                7              6         5.0  362.694189                 0.5        True   pt
+
+TABLA 4 antes
+   p_from_bar  p_to_bar    t_from_k      t_to_k  t_outlet_k  mdot_from_kg_per_s  mdot_to_kg_per_s  vdot_m3_per_s   deltat_k         qext_w
+0         5.0       5.0  362.694189  304.714011  347.546222                 0.0              -0.0        0.00000  15.147967      -0.000000
+1         5.0       5.0  304.714011  362.694189  362.694189                 0.5              -0.5        0.00051 -57.980177  121541.779284
+
+TABLA 5 antes
+       p_bar         t_k
+0   3.000000  360.000000
+1   2.998101  360.708108
+2   2.996836  360.055268
+3   2.996029  359.641019
+4   2.996836  293.150000
+5   2.997174  360.213715
+6   5.000000  362.694189
+7   5.000000  304.714011
+8   2.500000  304.521087
+9   2.501863  304.714011
+10  2.506737  304.833504
+11  2.507531  305.000000
+12  2.506737  293.150000
+13  2.507649  305.000000
+
+iteration8
+
+
+TABLA 1 despues
+                             name  from_junction  to_junction  controlled_mdot_kg_per_s  control_active  in_service type
+0             Flow_control_charge              1            6                      0.75            True       False   fc
+1      Flow_control_bypass_charge              6            1                      0.00            True       False   fc
+2     Flow_control_charge_storage              7            9                      0.75            True       False   fc
+3          Flow_control_discharge              9            7                      0.50            True        True   fc
+4   Flow_control_bypass_discharge              7            9                      0.00            True        True   fc
+5  Flow_control_discharge_storage              6            1                      0.50            True        True   fc
+
+TABLA 2 despues
+   p_from_bar  p_to_bar    t_from_k      t_to_k  t_outlet_k  mdot_from_kg_per_s  mdot_to_kg_per_s  vdot_m3_per_s
+0         NaN       NaN         NaN         NaN         NaN                 NaN               NaN            NaN
+1         NaN       NaN         NaN         NaN         NaN                 NaN               NaN            NaN
+2         NaN       NaN         NaN         NaN         NaN                 NaN               NaN            NaN
+3    2.501863  5.000000  304.714011  304.714011  304.714011                 0.5              -0.5       0.000502
+4    5.000000  2.501863  304.714011  304.714011  293.150000                 0.0              -0.0       0.000000
+5    5.000000  2.998101  362.694189  360.708108  362.694189                 0.5              -0.5       0.000518
+
+TABLA 3 despues
+                          name  return_junction  flow_junction  p_flow_bar    t_flow_k  mdot_flow_kg_per_s  in_service type
+0     Circ_pump_charge_storage                6              7         5.0  347.546222                 0.0        True   pt
+1  Circ_pump_discharge_storage                7              6         5.0  362.694189                 0.5        True   pt
+
+TABLA 4 despues
+   p_from_bar  p_to_bar    t_from_k      t_to_k  t_outlet_k  mdot_from_kg_per_s  mdot_to_kg_per_s  vdot_m3_per_s   deltat_k         qext_w
+0         5.0       5.0  362.694189  304.714011  347.546222                 0.0              -0.0        0.00000  15.147967      -0.000000
+1         5.0       5.0  304.714011  362.694189  362.694189                 0.5              -0.5        0.00051 -57.980177  121541.779284
+
+TABLA 5 antes
+       p_bar         t_k
+0   3.000000  360.000000
+1   2.998101  360.708108
+2   2.996836  360.055268
+3   2.996029  359.641019
+4   2.996836  293.150000
+5   2.997174  360.213715
+6   5.000000  362.694189
+7   5.000000  304.714011
+8   2.500000  304.521087
+9   2.501863  304.714011
+10  2.506737  304.833504
+11  2.507531  305.000000
+12  2.506737  293.150000
+13  2.507649  305.000000
+
+iteration9
+
+
+TABLA 1 antes
+                             name  from_junction  to_junction  controlled_mdot_kg_per_s  control_active  in_service type
+0             Flow_control_charge              1            6                      0.75            True        True   fc
+1      Flow_control_bypass_charge              6            1                      0.00            True       False   fc
+2     Flow_control_charge_storage              7            9                      0.75            True        True   fc
+3          Flow_control_discharge              9            7                      0.50            True       False   fc
+4   Flow_control_bypass_discharge              7            9                      0.00            True       False   fc
+5  Flow_control_discharge_storage              6            1                      0.50            True       False   fc
+
+TABLA 2 antes
+   p_from_bar  p_to_bar   t_from_k      t_to_k  t_outlet_k  mdot_from_kg_per_s  mdot_to_kg_per_s  vdot_m3_per_s
+0     2.99103  5.000000  359.75688  359.756880   359.75688                0.75             -0.75       0.000775
+1         NaN       NaN        NaN         NaN         NaN                 NaN               NaN            NaN
+2     5.00000  2.508781  332.06437  316.395801   332.06437                0.75             -0.75       0.000762
+3         NaN       NaN        NaN         NaN         NaN                 NaN               NaN            NaN
+4         NaN       NaN        NaN         NaN         NaN                 NaN               NaN            NaN
+5         NaN       NaN        NaN         NaN         NaN                 NaN               NaN            NaN
+
+TABLA 3 antes
+                          name  return_junction  flow_junction  p_flow_bar    t_flow_k  mdot_flow_kg_per_s  in_service type
+0     Circ_pump_charge_storage                6              7         5.0  332.064370                0.75        True   pt
+1  Circ_pump_discharge_storage                7              6         5.0  362.694189                0.00        True   pt
+
+TABLA 4 antes
+   p_from_bar  p_to_bar   t_from_k     t_to_k  t_outlet_k  mdot_from_kg_per_s  mdot_to_kg_per_s  vdot_m3_per_s   deltat_k        qext_w
+0         5.0       5.0  359.75688  332.06437  332.064370                0.75             -0.75       0.000769  27.692510 -87099.925603
+1         5.0       5.0  332.06437  359.75688  362.694189                0.00             -0.00       0.000000 -30.629819      0.000000
+
+TABLA 5 antes
+       p_bar         t_k
+0   3.000000  360.000000
+1   2.991030  359.756880
+2   2.990688  358.514790
+3   2.990470  357.731057
+4   2.990688  293.150000
+5   2.990070  359.276098
+6   5.000000  359.756880
+7   5.000000  332.064370
+8   2.500000  316.274164
+9   2.508781  316.395801
+10  2.511654  304.782996
+11  2.511871  305.000000
+12  2.511654  293.150000
+13  2.512597  305.000000
+
+iteration9
+
+
+TABLA 1 despues
+                             name  from_junction  to_junction  controlled_mdot_kg_per_s  control_active  in_service type
+0             Flow_control_charge              1            6                      0.75            True        True   fc
+1      Flow_control_bypass_charge              6            1                      0.00            True        True   fc
+2     Flow_control_charge_storage              7            9                      0.75            True        True   fc
+3          Flow_control_discharge              9            7                      0.50            True       False   fc
+4   Flow_control_bypass_discharge              7            9                      0.00            True       False   fc
+5  Flow_control_discharge_storage              6            1                      0.50            True       False   fc
+
+TABLA 2 despues
+   p_from_bar  p_to_bar   t_from_k      t_to_k  t_outlet_k  mdot_from_kg_per_s  mdot_to_kg_per_s  vdot_m3_per_s
+0     2.99103  5.000000  359.75688  359.756880   359.75688                0.75             -0.75       0.000775
+1     5.00000  2.991030  359.75688  359.756880   293.15000                0.00             -0.00       0.000000
+2     5.00000  2.508781  332.06437  316.395801   332.06437                0.75             -0.75       0.000762
+3         NaN       NaN        NaN         NaN         NaN                 NaN               NaN            NaN
+4         NaN       NaN        NaN         NaN         NaN                 NaN               NaN            NaN
+5         NaN       NaN        NaN         NaN         NaN                 NaN               NaN            NaN
+
+TABLA 3 despues
+                          name  return_junction  flow_junction  p_flow_bar    t_flow_k  mdot_flow_kg_per_s  in_service type
+0     Circ_pump_charge_storage                6              7         5.0  332.064370                0.75        True   pt
+1  Circ_pump_discharge_storage                7              6         5.0  362.694189                0.00        True   pt
+
+TABLA 4 despues
+   p_from_bar  p_to_bar   t_from_k     t_to_k  t_outlet_k  mdot_from_kg_per_s  mdot_to_kg_per_s  vdot_m3_per_s   deltat_k        qext_w
+0         5.0       5.0  359.75688  332.06437  332.064370                0.75             -0.75       0.000769  27.692510 -87099.925603
+1         5.0       5.0  332.06437  359.75688  362.694189                0.00             -0.00       0.000000 -30.629819      0.000000
+
+TABLA 5 antes
+       p_bar         t_k
+0   3.000000  360.000000
+1   2.991030  359.756880
+2   2.990688  358.514790
+3   2.990470  357.731057
+4   2.990688  293.150000
+5   2.990070  359.276098
+6   5.000000  359.756880
+7   5.000000  332.064370
+8   2.500000  316.274164
+9   2.508781  316.395801
+10  2.511654  304.782996
+11  2.511871  305.000000
+12  2.511654  293.150000
+13  2.512597  305.000000
+
+iteration10
+
+
+TABLA 1 antes
+                             name  from_junction  to_junction  controlled_mdot_kg_per_s  control_active  in_service type
+0             Flow_control_charge              1            6                      0.75            True       False   fc
+1      Flow_control_bypass_charge              6            1                      0.00            True       False   fc
+2     Flow_control_charge_storage              7            9                      0.75            True       False   fc
+3          Flow_control_discharge              9            7                      0.50            True        True   fc
+4   Flow_control_bypass_discharge              7            9                      0.00            True       False   fc
+5  Flow_control_discharge_storage              6            1                      0.50            True        True   fc
+
+TABLA 2 antes
+   p_from_bar  p_to_bar    t_from_k      t_to_k  t_outlet_k  mdot_from_kg_per_s  mdot_to_kg_per_s  vdot_m3_per_s
+0         NaN       NaN         NaN         NaN         NaN                 NaN               NaN            NaN
+1         NaN       NaN         NaN         NaN         NaN                 NaN               NaN            NaN
+2         NaN       NaN         NaN         NaN         NaN                 NaN               NaN            NaN
+3      2.5037  5.000000  304.723055  304.723055  304.723055                 0.5              -0.5       0.000502
+4         NaN       NaN         NaN         NaN         NaN                 NaN               NaN            NaN
+5      5.0000  2.996218  362.459300  360.492434  362.459300                 0.5              -0.5       0.000518
+
+TABLA 3 antes
+                          name  return_junction  flow_junction  p_flow_bar   t_flow_k  mdot_flow_kg_per_s  in_service type
+0     Circ_pump_charge_storage                6              7         5.0  332.06437                 0.0        True   pt
+1  Circ_pump_discharge_storage                7              6         5.0  362.45930                 0.5        True   pt
+
+TABLA 4 antes
+   p_from_bar  p_to_bar    t_from_k      t_to_k  t_outlet_k  mdot_from_kg_per_s  mdot_to_kg_per_s  vdot_m3_per_s   deltat_k         qext_w
+0         5.0       5.0  362.459300  304.723055   332.06437                 0.0              -0.0        0.00000  30.394930      -0.000000
+1         5.0       5.0  304.723055  362.459300   362.45930                 0.5              -0.5        0.00051 -57.736246  121027.579024
+
+TABLA 5 antes
+       p_bar         t_k
+0   3.000000  360.000000
+1   2.996218  360.492434
+2   2.993371  360.058363
+3   2.993165  359.237882
+4   2.992725  359.724963
+5   2.995284  360.001143
+6   5.000000  362.459300
+7   5.000000  304.723055
+8   2.500000  304.586328
+9   2.503700  304.723055
+10  2.511355  304.818309
+11  2.511560  305.000000
+12  2.511990  305.000000
+13  2.512274  305.000000
+
+iteration10
+
+
+TABLA 1 despues
+                             name  from_junction  to_junction  controlled_mdot_kg_per_s  control_active  in_service type
+0             Flow_control_charge              1            6                  0.750000            True       False   fc
+1      Flow_control_bypass_charge              6            1                  0.000000            True       False   fc
+2     Flow_control_charge_storage              7            9                  0.750000            True       False   fc
+3          Flow_control_discharge              9            7                  0.500000            True        True   fc
+4   Flow_control_bypass_discharge              7            9                  0.332003            True        True   fc
+5  Flow_control_discharge_storage              6            1                  0.167997            True        True   fc
+
+TABLA 2 despues
+   p_from_bar  p_to_bar    t_from_k      t_to_k  t_outlet_k  mdot_from_kg_per_s  mdot_to_kg_per_s  vdot_m3_per_s
+0         NaN       NaN         NaN         NaN         NaN                 NaN               NaN            NaN
+1         NaN       NaN         NaN         NaN         NaN                 NaN               NaN            NaN
+2         NaN       NaN         NaN         NaN         NaN                 NaN               NaN            NaN
+3    2.506292  5.000000  304.725529  304.725529  304.725529            0.500000         -0.500000       0.000502
+4    5.000000  2.506292  304.725529  304.725529  304.725529            0.332003         -0.332003       0.000334
+5    5.000000  2.993560  362.459300  359.992809  362.459300            0.167997         -0.167997       0.000174
+
+TABLA 3 despues
+                          name  return_junction  flow_junction  p_flow_bar   t_flow_k  mdot_flow_kg_per_s  in_service type
+0     Circ_pump_charge_storage                6              7         5.0  332.06437            0.000000        True   pt
+1  Circ_pump_discharge_storage                7              6         5.0  362.45930            0.167997        True   pt
+
+TABLA 4 despues
+   p_from_bar  p_to_bar    t_from_k      t_to_k  t_outlet_k  mdot_from_kg_per_s  mdot_to_kg_per_s  vdot_m3_per_s   deltat_k        qext_w
+0         5.0       5.0  362.459300  304.725529   332.06437            0.000000         -0.000000       0.000000  30.394930     -0.000000
+1         5.0       5.0  304.725529  362.459300   362.45930            0.167997         -0.167997       0.000171 -57.733771  40662.698147
+
+TABLA 5 antes
+       p_bar         t_k
+0   3.000000  360.000000
+1   2.993560  359.992809
+2   2.990663  359.565036
+3   2.990452  358.756384
+4   2.990005  359.236468
+5   2.992609  359.508667
+6   5.000000  362.459300
+7   5.000000  304.725529
+8   2.500000  304.620750
+9   2.506292  304.725529
+10  2.514085  304.819934
+11  2.514294  305.000000
+12  2.514732  305.000000
+13  2.515020  305.000000
+
+iteration11
+
+
+TABLA 1 antes
+                             name  from_junction  to_junction  controlled_mdot_kg_per_s  control_active  in_service type
+0             Flow_control_charge              1            6                  0.750000            True       False   fc
+1      Flow_control_bypass_charge              6            1                  0.000000            True       False   fc
+2     Flow_control_charge_storage              7            9                  0.750000            True       False   fc
+3          Flow_control_discharge              9            7                  0.500000            True        True   fc
+4   Flow_control_bypass_discharge              7            9                  0.332003            True       False   fc
+5  Flow_control_discharge_storage              6            1                  0.500000            True        True   fc
+
+TABLA 2 antes
+   p_from_bar  p_to_bar    t_from_k      t_to_k  t_outlet_k  mdot_from_kg_per_s  mdot_to_kg_per_s  vdot_m3_per_s
+0         NaN       NaN         NaN         NaN         NaN                 NaN               NaN            NaN
+1         NaN       NaN         NaN         NaN         NaN                 NaN               NaN            NaN
+2         NaN       NaN         NaN         NaN         NaN                 NaN               NaN            NaN
+3    2.500299  5.000000  304.546093  304.546093  304.546093                 0.5              -0.5       0.000502
+4         NaN       NaN         NaN         NaN         NaN                 NaN               NaN            NaN
+5    5.000000  2.999699  362.342087  360.915031  362.342087                 0.5              -0.5       0.000518
+
+TABLA 3 antes
+                          name  return_junction  flow_junction  p_flow_bar    t_flow_k  mdot_flow_kg_per_s  in_service type
+0     Circ_pump_charge_storage                6              7         5.0  332.064370                 0.0        True   pt
+1  Circ_pump_discharge_storage                7              6         5.0  362.342087                 0.5        True   pt
+
+TABLA 4 antes
+   p_from_bar  p_to_bar    t_from_k      t_to_k  t_outlet_k  mdot_from_kg_per_s  mdot_to_kg_per_s  vdot_m3_per_s   deltat_k         qext_w
+0         5.0       5.0  362.342087  304.546093  332.064370                 0.0              -0.0        0.00000  30.277717      -0.000000
+1         5.0       5.0  304.546093  362.342087  362.342087                 0.5              -0.5        0.00051 -57.795995  121151.531386
+
+TABLA 5 antes
+       p_bar         t_k
+0   3.000000  360.000000
+1   2.999699  360.915031
+2   2.999609  358.454096
+3   2.999552  356.918731
+4   2.999609  293.150000
+5   2.998778  360.417655
+6   5.000000  362.342087
+7   5.000000  304.546093
+8   2.500000  304.063904
+9   2.500299  304.546093
+10  2.502232  304.735621
+11  2.502290  305.000000
+12  2.502232  293.150000
+13  2.503137  305.000000
+
+iteration11
+
+
+TABLA 1 despues
+                             name  from_junction  to_junction  controlled_mdot_kg_per_s  control_active  in_service type
+0             Flow_control_charge              1            6                      0.75            True       False   fc
+1      Flow_control_bypass_charge              6            1                      0.00            True       False   fc
+2     Flow_control_charge_storage              7            9                      0.75            True       False   fc
+3          Flow_control_discharge              9            7                      0.50            True        True   fc
+4   Flow_control_bypass_discharge              7            9                      0.50            True        True   fc
+5  Flow_control_discharge_storage              6            1                      0.00            True        True   fc
+
+TABLA 2 despues
+   p_from_bar  p_to_bar    t_from_k      t_to_k  t_outlet_k  mdot_from_kg_per_s  mdot_to_kg_per_s  vdot_m3_per_s
+0         NaN       NaN         NaN         NaN         NaN                 NaN               NaN            NaN
+1         NaN       NaN         NaN         NaN         NaN                 NaN               NaN            NaN
+2         NaN       NaN         NaN         NaN         NaN                 NaN               NaN            NaN
+3    2.502033  5.000000  304.557446  304.557446  304.557446                 0.5              -0.5       0.000502
+4    5.000000  2.502033  304.557446  304.557446  304.557446                 0.5              -0.5       0.000502
+5    5.000000  2.997927  293.150000  359.494166  293.150000                 0.0              -0.0       0.000000
+
+TABLA 3 despues
+                          name  return_junction  flow_junction  p_flow_bar    t_flow_k  mdot_flow_kg_per_s  in_service type
+0     Circ_pump_charge_storage                6              7         5.0  332.064370                 0.0        True   pt
+1  Circ_pump_discharge_storage                7              6         5.0  362.342087                 0.0        True   pt
+
+TABLA 4 despues
+   p_from_bar  p_to_bar    t_from_k      t_to_k  t_outlet_k  mdot_from_kg_per_s  mdot_to_kg_per_s  vdot_m3_per_s   deltat_k  qext_w
+0         5.0       5.0  293.150000  304.557446  332.064370                 0.0              -0.0            0.0 -38.914370     0.0
+1         5.0       5.0  304.557446  293.150000  362.342087                 0.0              -0.0            0.0 -57.784642     0.0
+
+TABLA 5 antes
+       p_bar         t_k
+0   3.000000  360.000000
+1   2.997927  359.494166
+2   2.997833  357.130840
+3   2.997773  355.655563
+4   2.997833  293.150000
+5   2.996959  359.017111
+6   5.000000  293.150000
+7   5.000000  304.557446
+8   2.500000  304.373725
+9   2.502033  304.557446
+10  2.504066  304.742249
+11  2.504127  305.000000
+12  2.504066  293.150000
+13  2.505018  305.000000
+
