@@ -1,10 +1,14 @@
 #!/usr/bin/env python
 # coding: utf-8
 
+# In[13]:
+
+
 # In this notebook each one of the exterior objetc's class will be gathered. As some of them need some iterations according to the net conditions, there will be two network actors: 
 # - Static actors: Only describe boundary conditions and make calculations after the convergence of the network. 
 # - Network actor Objects that iterates according to initial suppositions until convergence. Their main characteristics are that the boundary conditions imposed are dynamic and dependent of exterior factors. 
 #   
+
 
 # In[14]:
 
@@ -24,6 +28,7 @@ from tespy.tools import UserDefinedEquation
 # 
 # Normally is composed by the slack plant and heat consumers. They only imposed boundary conditions and read results after convergence
 
+
 # In[ ]:
 
 
@@ -31,17 +36,23 @@ class StaticActor(ABC):
     name: str
 
     @abstractmethod
-    def Boundary_condition(self,t):
+    def Def_input_variables(self,input_variables):
+        raise NotImplementedError
+    def Boundary_condition(self,t,):
         raise NotImplementedError
 
 @dataclass
 class ConsumerActor(StaticActor):
     name:str
     net:object
-    heat_consumer_id= int
+    heat_consumer_id:int
     T_return_design= float #Kelvin
     Q_building_profile: list=field(default_factory=list)
-    
+
+    def Def_input_variables(self,input_variables):
+        self.Q_building_profile=input_variables["Q_building_profile"]
+        self.T_return_design=input_variables["T_return_design"]
+
 
     def Boundary_condition(self,t):
         Q=self.Q_building_profile[t]
@@ -62,16 +73,18 @@ class Slack_Central_production(StaticActor):
     P_lift_design: float #bar
     type: str='pt' 
 
+    def Def_input_variables(self,input_variables):
+        self.T_out_design=input_variables["T_out_design"]
+        self.P_out_design=input_variables["P_out_design"]
+        self.P_lift_design= input_variables["P_lift_design"]
     def Boundary_condition(self,t):
         self.net.circ_pump_pressure.at[self.Circ_pump_id, "t_flow_k"] = self.T_out_design
         self.net.circ_pump_pressure.at[self.Circ_pump_id, "p_flow_bar"] = self.P_out_design
         self.net.circ_pump_pressure.at[self.Circ_pump_id, "plift_bar"] = self.P_lift_design
     def Recover_information(self):
-            self.Q_net_delivered=self.net.res_circ_pump_pressure.at[self.Circ_pump_id, "qext_w"]
-
+        self.Q_net_delivered=self.net.res_circ_pump_pressure.at[self.Circ_pump_id, "qext_w"]
     def Consumption_Fuel(self):
         self.Q_cons=self.Q_net_delivered/self.Nominal_efficiency
-
     def CO2_emissions(self):
         CO2=self.Emission_factor*self.Q_cons
         return CO2
@@ -84,13 +97,16 @@ class Slack_Central_production(StaticActor):
 # 
 # This class will change boundary conditions and everything according to the convergence method defined by the class 
 
+
 # In[ ]:
 
 
 class NetworkActor(ABC):
     name:str
     @abstractmethod
-    def Boundary_condition(self,t_guess,t):
+    def Def_input_variables(self,input_variables):
+        raise NotImplementedError
+    def Boundary_condition(self,t_guess,t,input_variable):
         raise NotImplementedError
     def read_T_result(self,t):
         raise NotImplementedError
@@ -144,7 +160,7 @@ class Bidirectional_W_to_WHeatPump(NetworkActor):
 
         #Heating net 
         self.nw_Heating_net = Network()
-        self.nw_Heating_net.units.set_defaults(temperature="degC", pressure="bar",pressure_difference="bar",  enthalpy="J/kg", heat="W", power="W")
+        self.nw_Heating_net.units.set_defaults(temperature="K", pressure="bar",pressure_difference="bar",  enthalpy="J/kg", heat="W", power="W")
         self.Heating_net_compressor = Compressor("compresor")
         self.Heating_net_condenser = Condenser("condensador")
         self.Heating_net_valve = Valve("valvula_expansion")
@@ -170,11 +186,10 @@ class Bidirectional_W_to_WHeatPump(NetworkActor):
 
     def solve_cycle(self,mode,t,T_estimate_in,T_cons):
         #The pressure values for the consumer and district heating side in the heating pump are arbitrary values
-        self.mode=mode
         T_cons_in = T_cons[0]
         T_cons_out = T_cons[1]
         T_DH_in = T_estimate_in
-        if self.mode[t]=="COOLING_NET":
+        if mode=="COOLING_NET":
             self.Cooling_net_evaporator.set_attr(pr1=1, pr2=1, ttd_l=5)
             self.Cooling_net_condenser.set_attr(pr1=1, pr2=1, ttd_u=5,Q=self.Q_consumer[t])
             self.Cooling_net_compressor.set_attr(eta_s=self.eta_s)
@@ -195,7 +210,7 @@ class Bidirectional_W_to_WHeatPump(NetworkActor):
             h_max = CP.PropsSI("H", "T", T_max_K, "P", p_high, self.refrigerant)
             self.nw_Cooling_net._set_p_range([p_triple, p_high])
             self.nw_Cooling_net._set_h_range([h_min,h_max])
-            self.Cooling_ude.params['dt'] = self.dT_water
+            self.Cooling_ude.params['dt'] = abs(self.dT_water[t])
             self.nw_Cooling_net.solve('design')        
         elif self.mode[t]=="HEATING_NET":
             self.Heating_net_evaporator.set_attr(pr1=1, pr2=1, ttd_l=5,Q=self.Q_consumer[t])
@@ -218,18 +233,23 @@ class Bidirectional_W_to_WHeatPump(NetworkActor):
             h_max = CP.PropsSI("H", "T", T_max_K, "P", p_high, self.refrigerant)
             self.nw_Heating_net._set_p_range([p_triple, p_high])
             self.nw_Heating_net._set_h_range([h_min,h_max])
-            self.Heating_ude.params['dt'] = self.dT_water
+            self.Heating_ude.params['dt'] = abs(self.dT_water[t])
             self.nw_Heating_net.solve('design')
+    def Def_input_variables(self,input_variables):
+            self.mode=input_variables["mode"]
+            self.Q_consumer=input_variables["Q_consumer"]
+            self.T_cons=input_variables["T_cons"]
+            self.dT_water=input_variables["dT_water"]
     def Boundary_condition(self,t_guess,t):
         self.T_estimate=t_guess
         self.solve_cycle(self.mode[t],t,self.T_estimate,self.T_cons[t])
         if self.mode[t]=="COOLING_NET":
             self.net.heat_consumer.at[self.HP_heat_consumer_id, "qext_w"] =abs(self.Cooling_net_evaporator.Q.val)
-            self.net.heat_consumer.at[self.HP_heat_consumer_id,"deltat_k"]=self.dT_water
+            self.net.heat_consumer.at[self.HP_heat_consumer_id,"deltat_k"]=self.dT_water[t]
 
         elif self.mode[t]=="HEATING_NET":
             self.net.heat_consumer.at[self.HP_heat_consumer_id, "qext_w"] = self.Heating_net_condenser.Q.val
-            self.net.heat_consumer.at[self.HP_heat_consumer_id,"deltat_k"]=self.dT_water
+            self.net.heat_consumer.at[self.HP_heat_consumer_id,"deltat_k"]=self.dT_water[t]
 
         else: 
             self.net.heat_consumer.at[self.HP_heat_consumer_id, "in_service"] =False
@@ -261,8 +281,7 @@ class Bidirectional_W_to_WHeatPump(NetworkActor):
         else:
             return None   
     def read_T_result(self,t):
-        active_id = self.HC_inj_id if self.mode[t] == "HEATING_NET" else self.HC_ext_id
-        return self.net.res_heat_consumer.at[active_id, "t_from_k"]
+        return self.net.res_heat_consumer.at[self.HP_heat_consumer_id, "t_from_k"]
     def log_hour(self, t, t_real_k):
         self.log[t] = {"T_source_k": t_real_k, **self.get_main_results()}
 
@@ -313,26 +332,26 @@ class ThermoclineTwoLayer(NetworkActor):
         self.density = np.mean([self.fluid.get_density(T) for T in T_samples])
         self.heat_capacity = np.mean([self.fluid.get_heat_capacity(T) for T in T_samples]) 
 
-    def evaluate_bypass(self, dt_s,T_net): 
+    def evaluate_bypass(self, mass_flow,dt_s,T_net): 
         bypass,mdot_entering,mdot_bypass,v_in=False,0.0,0.0,0.0
-        if self.mass_flow > 0:  
+        if mass_flow > 0:  
             if T_net < self.T_hot:
                 self.direction = "to_Tcold"
-                mdot_entering=self.mass_flow
+                mdot_entering=mass_flow
             else:
                 self.direction = "to_Thot"
                 v_available = max(0.0, self.V_cold - self.V_MIN)
                 Dv_requested = (self.mass_flow * dt_s) / self.density
                 v_in = min(Dv_requested, v_available)
                 mdot_entering = (v_in * self.density) / dt_s if dt_s > 0 else 0.0
-                mdot_bypass = self.mass_flow - mdot_entering
+                mdot_bypass = mass_flow - mdot_entering
                 if mdot_bypass > 1e-6 or v_available <= 0:
                     bypass = True
                     print(f"  ⚠ [{self.name}] Tanque saturado de calor: "f"{Dv_requested - v_in:.2f} m3 no se pudieron cargar")
                     print(f"  ⚠ [{self.name}] Tanque saturado de calor: "f"{mdot_bypass:.2f} kg/s no se pudieron cargar")
-        elif self.mass_flow < 0: # Discharge
+        elif mass_flow < 0: # Discharge
             self.direction = "discharge"
-            abs_mass_flow = abs(self.mass_flow)
+            abs_mass_flow = abs(mass_flow)
             v_available = max(0.0, self.V_hot - self.V_MIN)
             Dv_requested = (abs_mass_flow * dt_s) / self.density
             v_in = min(Dv_requested, v_available)
@@ -342,15 +361,16 @@ class ThermoclineTwoLayer(NetworkActor):
                 bypass = True
                 print(f"  ⚠ [{self.name}] Tanque saturado de frio: "f"{Dv_requested - v_in:.2f} m3 no se pudieron descargar")
                 print(f"  ⚠ [{self.name}] Tanque saturado de frio: "f"{mdot_bypass:.2f} kg/s no se pudieron descargar")
-        elif self.mass_flow == 0:
+        elif mass_flow == 0:
             self.direction = "static"
         self.bypass,self.mdot_entering,self.mdot_bypass,self.v_in= bypass,mdot_entering,mdot_bypass,v_in
 
-
+    def Def_input_variables(self,input_variables):
+        self.mass_flow=input_variables["mass_flow"]
     def Boundary_condition(self,t_guess,t):
         self.T_estimate=t_guess
         mass_flow=self.mass_flow[t]
-        self.evaluate_bypass(dt_s=3600,T_net=t_guess)
+        self.evaluate_bypass(mass_flow,dt_s=3600,T_net=t_guess)
         if mass_flow >= 0:
             self.net.flow_control.at[self.fc_discharge_storage, "in_service"] = False
             self.net.flow_control.at[self.fc_discharge, "in_service"] = False
@@ -362,7 +382,7 @@ class ThermoclineTwoLayer(NetworkActor):
             self.net.flow_control.at[self.fc_bypass_charge, "controlled_mdot_kg_per_s"] = self.mdot_bypass
             self.net.circ_pump_mass.at[self.cp_charge_storage, "mdot_flow_kg_per_s"] = self.mdot_entering
             self.net.flow_control.at[self.fc_charge_storage, "controlled_mdot_kg_per_s"] = self.mdot_entering
-            self.net.flow_control.at[self.fc_charge, "controlled_mdot_kg_per_s"] = self.mass_flow
+            self.net.flow_control.at[self.fc_charge, "controlled_mdot_kg_per_s"] = mass_flow
             self.net.circ_pump_mass.at[self.cp_charge_storage, "t_flow_k"] = self.T_cold
         else:
             self.net.flow_control.at[self.fc_charge_storage, "in_service"] = False
@@ -375,13 +395,15 @@ class ThermoclineTwoLayer(NetworkActor):
             self.net.flow_control.at[self.fc_bypass_discharge, "controlled_mdot_kg_per_s"] = self.mdot_bypass
             self.net.circ_pump_mass.at[self.cp_discharge_storage, "mdot_flow_kg_per_s"] = self.mdot_entering
             self.net.flow_control.at[self.fc_discharge_storage, "controlled_mdot_kg_per_s"] = self.mdot_entering
-            self.net.flow_control.at[self.fc_discharge, "controlled_mdot_kg_per_s"] = abs(self.mass_flow)
+            self.net.flow_control.at[self.fc_discharge, "controlled_mdot_kg_per_s"] = abs(mass_flow)
             self.net.circ_pump_mass.at[self.cp_discharge_storage, "t_flow_k"] = self.T_hot
 
     def read_T_result(self,t):
         fc = self.fc_charge if self.mass_flow[t] >= 0 else self.fc_discharge
         return self.net.res_flow_control.at[fc, "t_from_k"]
-
+    def log_hour(self, t, t_real_k):
+        self.log[t] = {"T_source_k": t_real_k}
+    
     def V_dis(self,dt_s,T_net_k,t):
         mass_flow=self.mass_flow[t]
         self.UA_hot_layer = self.UA_loss * (self.V_hot / self.V_tot)
@@ -428,6 +450,9 @@ class Central_production (NetworkActor):
     log: dict=field(default_factory=dict)
     def _post_init(self):
         self.fluid = get_fluid(self.net)
+    def Def_input_variables(self,input_variables):
+        self.T_out_design=input_variables['T_out_design']
+        self.Q_nominal=input_variables["Q_nominal"]
     def Boundary_condition(self,T_guess,t):
         self.net.circ_pump_pressure.at[self.Circ_mass_id, "t_flow_k"] = self.T_out_design
         self.T_estimate=T_guess
