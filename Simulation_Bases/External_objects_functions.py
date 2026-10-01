@@ -40,6 +40,18 @@ class StaticActor(ABC):
         raise NotImplementedError
     def Boundary_condition(self,t,):
         raise NotImplementedError
+@dataclass
+class Pipe_class(StaticActor):
+    name:str
+    net: object
+    pipe_id:int
+    T_amb: list=field(default_factory=list)
+    def Def_input_variables(self,input_variables):
+        self.T_amb=input_variables["T_amb"]
+    def Boundary_condition(self,t):
+        self.net.pipe.at[self.pipe_id, "text_k"] = self.T_amb[t]
+
+    
 
 @dataclass
 class ConsumerActor(StaticActor):
@@ -317,8 +329,8 @@ class ThermoclineTwoLayer(NetworkActor):
     mdot_entering: float=0.0
     mdot_bypass: float= 0.0
     v_in =float =0.0
-
     dt_s: float=3600
+
     def _post_init(self):
         self.V_hot= self.V_tot * self.v_hot_fraction
         self.V_cold=self.V_tot - self.V_hot
@@ -367,6 +379,7 @@ class ThermoclineTwoLayer(NetworkActor):
 
     def Def_input_variables(self,input_variables):
         self.mass_flow=input_variables["mass_flow"]
+        self.T_amb=input_variables["T_amb"]
     def Boundary_condition(self,t_guess,t):
         self.T_estimate=t_guess
         mass_flow=self.mass_flow[t]
@@ -427,13 +440,13 @@ class ThermoclineTwoLayer(NetworkActor):
             self.V_hot -= self.v_in
         self.v_hot_fraction = self.V_hot / self.V_tot
 
-    def finaliza_hour(self,t_real_k,t):
-        self.evaluate_bypass(dt_s=self.dt_s, T_net_k=t_real_k,t=t)
+    def finalize_hour(self,t_real_k,t):
+        mass_flow=self.mass_flow[t]
+        self.evaluate_bypass(mass_flow,dt_s=3600,T_net=t_real_k)
         self.V_dis(dt_s=self.dt_s,T_net_k=t_real_k,t=t)
 
 
-# In[ ]:
-
+# In[ ):
 
 @dataclass
 class Central_production (NetworkActor):
@@ -475,4 +488,5 @@ class Central_production (NetworkActor):
     def Operation_cost(self):
         Euros=self.cost_constant*self.Q_cons
         return Euros    
+
 
