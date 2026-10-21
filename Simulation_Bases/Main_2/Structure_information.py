@@ -122,7 +122,6 @@ class DHN ():
             self.plant_support_charateristics["Nominal_efficiency"]=self.plant_support_charateristics_excel.iloc[1,:].tolist()
             self.plant_support_charateristics["Emission_factor"]=self.plant_support_charateristics_excel.iloc[2, :].tolist()
             self.plant_support_charateristics["cost_constant"]=self.plant_support_charateristics_excel.iloc[3, :].tolist()
-            self.plant_support_charateristics["T_out_design"]=self.plant_support_charateristics_excel.iloc[4, :].tolist()
 
         if self.type_Graph== "Undirected":
             self.graph=nx.Graph()
@@ -161,6 +160,7 @@ class DHN ():
                 "storage": "#f39c12",
                 "prosumer": "#5dade2",
                 "consumer": "#2ecc71",
+                "plant_support": "#FF00F7"
             }
 
             A = nx.nx_agraph.to_agraph(self.graph)
@@ -245,11 +245,6 @@ class DHN ():
                 pp.create_junction(self.net,pn_bar=5,tfluid_k=353.15, name=self.Nodes[i] + '_inter_1')
                 pp.create_junction(self.net,pn_bar=5,tfluid_k=353.15, name=self.Nodes[i] + '_inter_2')
                 pp.create_junction(self.net,pn_bar=5,tfluid_k=353.15, name=self.Nodes[i] + '_lowp')
-
-            elif self.Type_Nodes[i]=="Plant_support":
-                pp.create_junction(self.net,pn_bar=5,tfluid_k=353.15, name=self.Nodes[i] + '_highp')
-                pp.create_junction(self.net,pn_bar=5,tfluid_k=353.15, name=self.Nodes[i] + '_inter')
-                pp.create_junction(self.net,pn_bar=5,tfluid_k=353.15, name=self.Nodes[i] + '_lowp')
             else:
                 pp.create_junction(self.net,pn_bar=5,tfluid_k=353.15, name=self.Nodes[i] + '_highp')
                 pp.create_junction(self.net,pn_bar=5,tfluid_k=353.15, name=self.Nodes[i] + '_lowp')
@@ -307,13 +302,11 @@ class DHN ():
             elif self.Type_Nodes[i]=="Plant_support":
                 pp.create_circ_pump_const_mass_flow(
                     self.net, return_junction=self.net.junction[self.net.junction["name"]==self.Nodes[i] + '_lowp'].index[0], 
-                    flow_junction=self.net.junction[self.net.junction["name"]==self.Nodes[i] + '_inter'].index[0],
-                    mdot_flow_kg_per_s=0.5, t_flow_k=0.5, p_flow_bar=2.5,name="Plant_support_circ_pump_"+self.Nodes[i])
-                pp.create_flow_control(self.net, from_junction=self.net.junction[self.net.junction["name"]==self.Nodes[i] + '_inter'].index[0], 
-                                    to_junction=self.net.junction[self.net.junction["name"]==self.Nodes[i] + '_highp'].index[0],
-                                    controlled_mdot_kg_per_s=0.1,name="Flow_control_support_plant"+ self.Nodes[i])
+                    flow_junction=self.net.junction[self.net.junction["name"]==self.Nodes[i] + '_highp'].index[0],
+                    mdot_flow_kg_per_s=0.5, t_flow_k=305, p_flow_bar=None,type="t",name="Plant_support_circ_pump_"+self.Nodes[i])
 
             elif self.Type_Nodes[i]=="Plant":
+                print("im here ")
                 pp.create_circ_pump_const_pressure(
                                     self.net,flow_junction=self.net.junction[self.net.junction["name"]==self.Nodes[i] + '_highp'].index[0],
                                     return_junction=self.net.junction[self.net.junction["name"]==self.Nodes[i] + '_lowp'].index[0],
@@ -370,13 +363,11 @@ class DHN ():
 
             elif self.Type_Nodes[i]=="Plant_support":
                 Plant_support=Central_production(net=self.net,name='Central_Production'+self.Nodes[i],
-                                      flow_control_id=self.net.flow_control[self.net.heat_consumer["name"]=="Flow_control_support_plant"+ self.Nodes[i]].index[0],
                                       Circ_mass_id=self.net.circ_pump_mass[self.net.circ_pump_mass["name"]=="Plant_support_circ_pump_"+self.Nodes[i]].index[0],
                                       Fuel_type=self.plant_support_charateristics["Fuel_type"][self.plant_support_charateristics["node"].index(self.Nodes[i])],
                                       Nominal_efficiency=self.plant_support_charateristics["Nominal_efficiency"][self.plant_support_charateristics["node"].index(self.Nodes[i])],
                                       Emission_factor=self.plant_support_charateristics["Emission_factor"][self.plant_support_charateristics["node"].index(self.Nodes[i])],
-                                      cost_constant=self.plant_support_charateristics["cost_constant"][self.plant_support_charateristics["node"].index(self.Nodes[i])],
-                                      T_out_design=self.plant_support_charateristics["T_out_design"][self.plant_support_charateristics["node"].index(self.Nodes[i])])
+                                      cost_constant=self.plant_support_charateristics["cost_constant"][self.plant_support_charateristics["node"].index(self.Nodes[i])])
                 Plant_support._post_init()
                 self.multi_plant_actors["Node"].append(self.Nodes[i])
                 self.multi_plant_actors["name"].append(Plant_support.name)
@@ -608,7 +599,7 @@ class DHN ():
         for n in range(n_Storage_actors):
             self.output_variables["Storage_actors"].append({"name": [], 'hour': [], "T_hot": [], "T_cold": [], "V_hot": [], "V_cold": [], "by_pass": [],"direction": []})
         for n in range(n_multi_plant_actors):
-            self.output_variables["multi_plant"].append({"name": [], 'hour': [], "mdot_kg_s":[],"Q_net": [],"Delta_k":[],"Delta_P":[]})
+            self.output_variables["multi_plant"].append({"name": [], 'hour': [], "mdot_kg_s":[],"Q_net": [],"Delta_k":[],"Pin":[],"Pout":[]})
         for n in range(n_pipe_objects):
             self.output_variables["pipe_objects"].append({"name": [], 'hour': [], "mdot_kg_s": [], "Tin": [], "Tout": [],"P_in": [],"P_out": []})
     def organize_output_variables_objects(self, consumer_actors, slack_plant, HP_actors, Storage_actors, multi_plant_actors, pipe_objects):
@@ -664,10 +655,11 @@ class DHN ():
         for i in range(len(multi_plant_actors["Object"])):
             m = multi_plant_actors["Object"][i]
             self.output_variables["multi_plant"][i]["hour"].append(hour+1)
-            self.output_variables["multi_plant"][i]["mdot_kg_s"].append(self.net.res_flow_control.at[m.flow_control_id, "mdot_from_kg_per_s"])
-            self.output_variables["multi_plant"][i]["Q_net"].append(self.net.res_flow_control.at[m.flow_control_id, "qext_w"])
-            self.output_variables["multi_plant"][i]["Delta_k"].append(self.net.res_flow_control.at[m.flow_control_id, "deltat_k"])
-            self.output_variables["multi_plant"][i]["Delta_P"].append(self.net.res_flow_control.at[m.flow_control_id, "p_from_bar"]-self.net.res_flow_control.at[m.flow_control_id, "p_to_bar"])
+            self.output_variables["multi_plant"][i]["mdot_kg_s"].append(self.net.res_circ_pump_mass.at[m.Circ_mass_id, "mdot_from_kg_per_s"])
+            self.output_variables["multi_plant"][i]["Q_net"].append(self.net.res_circ_pump_mass.at[m.Circ_mass_id, "qext_w"])
+            self.output_variables["multi_plant"][i]["Delta_k"].append(self.net.res_circ_pump_mass.at[m.Circ_mass_id, "deltat_k"])
+            self.output_variables["multi_plant"][i]["Pin"].append(self.net.res_circ_pump_mass.at[m.Circ_mass_id, "p_from_bar"])
+            self.output_variables["multi_plant"][i]["Pout"].append(self.net.res_circ_pump_mass.at[m.Circ_mass_id, "p_to_bar"])
         for i in range(len(pipe_objects["Object"])):
             p = pipe_objects["Object"][i]
             self.output_variables["pipe_objects"][i]["hour"].append(hour+ 1)

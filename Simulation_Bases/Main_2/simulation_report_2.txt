@@ -92,25 +92,25 @@ T_cold_init=313.0
 v_hot_fraction=0.2
 ==================================================
 
-Total simulation time: 0.60 seconds
+Total simulation time: 0.61 seconds
 Average time per step: 0.05 seconds
 Number of hours simulated: 12 hours
 ==================================================
 
 Time per step (seconds):
 ==================================================
-Hour 0: 0.04867 seconds
-Hour 1: 0.03638 seconds
-Hour 2: 0.03994 seconds
-Hour 3: 0.04289 seconds
-Hour 4: 0.03948 seconds
-Hour 5: 0.05269 seconds
-Hour 6: 0.06281 seconds
-Hour 7: 0.05542 seconds
-Hour 8: 0.05445 seconds
-Hour 9: 0.05723 seconds
-Hour 10: 0.04658 seconds
-Hour 11: 0.06354 seconds
+Hour 0: 0.04984 seconds
+Hour 1: 0.03886 seconds
+Hour 2: 0.04392 seconds
+Hour 3: 0.04209 seconds
+Hour 4: 0.04612 seconds
+Hour 5: 0.05252 seconds
+Hour 6: 0.06933 seconds
+Hour 7: 0.05803 seconds
+Hour 8: 0.05517 seconds
+Hour 9: 0.05012 seconds
+Hour 10: 0.04575 seconds
+Hour 11: 0.05575 seconds
 ==================================================
 
 𝐓𝐡𝐞 𝐫𝐞𝐬𝐮𝐥𝐭𝐬 𝐨𝐟 𝐭𝐡𝐞 𝐬𝐢𝐦𝐮𝐥𝐚𝐭𝐢𝐨𝐧 𝐟𝐨𝐫 𝐞𝐚𝐜𝐡 𝐨𝐛𝐣𝐞𝐜𝐭 𝐚𝐫𝐞:

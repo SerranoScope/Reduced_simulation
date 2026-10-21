@@ -469,7 +469,6 @@ class Central_production (NetworkActor):
     name:str
     net:object
     Circ_mass_id : int
-    flow_control_id : int
     Fuel_type: str
     Nominal_efficiency: float 
     Emission_factor: float 
@@ -491,7 +490,6 @@ class Central_production (NetworkActor):
         cp_supply = self.fluid.get_heat_capacity(self.T_out_design)
         cp_return = self.fluid.get_heat_capacity(self.T_estimate)
         M_dot_estimative=self.Q_nominal[t]/(((cp_supply+cp_return)/2)*delta_t)
-        self.net.flow_control.at[self.flow_control_id,'controlled_mdot_kg_per_s']= M_dot_estimative
         self.net.circ_pump_mass.at[self.Circ_mass_id,'mdot_flow_kg_per_s']=M_dot_estimative
     def read_T_result(self, t):
         T_result=self.net.res_circ_pump_mass.at[self.Circ_mass_id, "t_from_k"]

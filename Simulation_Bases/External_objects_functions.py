@@ -469,33 +469,33 @@ class Central_production (NetworkActor):
     name:str
     net:object
     Circ_mass_id : int
-    flow_control_id : int
     Fuel_type: str
     Nominal_efficiency: float 
     Emission_factor: float 
     cost_constant: float 
-    T_out_design: float 
     Q_nominal: list=field(default_factory=list) #W
+    T_out_design: float=305
     log: dict=field(default_factory=dict)
     def _post_init(self):
         self.fluid = get_fluid(self.net)
     def Def_input_variables(self,input_variables):
         self.T_out_design=input_variables['T_out_design']
         self.Q_nominal=input_variables["Q_nominal"]
+    def log_hour(self, t, t_real_k):
+            self.log[t] = {"T_source_k": t_real_k}
     def Boundary_condition(self,T_guess,t):
-        self.net.circ_pump_pressure.at[self.Circ_mass_id, "t_flow_k"] = self.T_out_design
+        self.net.circ_pump_mass.at[self.Circ_mass_id, "t_flow_k"] = self.T_out_design
         self.T_estimate=T_guess
-        delta_t=self.T_out_design- T_guess
+        delta_t=self.T_out_design- self.T_estimate
         cp_supply = self.fluid.get_heat_capacity(self.T_out_design)
         cp_return = self.fluid.get_heat_capacity(self.T_estimate)
         M_dot_estimative=self.Q_nominal[t]/(((cp_supply+cp_return)/2)*delta_t)
-        self.net.flow_control.at[self.flow_control_id,'controlled_mdot_kg_per_s']= M_dot_estimative
         self.net.circ_pump_mass.at[self.Circ_mass_id,'mdot_flow_kg_per_s']=M_dot_estimative
     def read_T_result(self, t):
         T_result=self.net.res_circ_pump_mass.at[self.Circ_mass_id, "t_from_k"]
         return T_result
     def Recover_information(self):
-        self.Q_net_delivered=self.net.res_circ_pump_mass.at[self.Circ_pump_id, "qext_w"]
+        self.Q_net_delivered=self.net.res_circ_pump_mass.at[self.Circ_mass_id, "qext_w"]
     def Consumption_Fuel(self):
         self.Q_cons=self.Q_net_delivered/self.Nominal_efficiency
     def CO2_emissions(self):
