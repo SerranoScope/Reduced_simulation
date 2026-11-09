@@ -303,54 +303,85 @@ class Bidirectional_W_to_WHeatPump(NetworkActor):
 # In[ ]:
 
 
+
 @dataclass
 class ThermoclineTwoLayer(NetworkActor):
-    "fc= flow control and cp= circ pump mass"
-    net: object 
+    """
+    Almacenamiento termoclina de dos capas con UNA sola bomba reversible
+    (circ_pump_mass), sin flow controls.
+ 
+    Convención de signo de mass_flow[t]:
+        > 0 : carga     (toma de j_supply, inyecta en j_return a T_cold)
+        < 0 : descarga  (toma de j_return, inyecta en j_supply a T_hot)
+        = 0 : estático
+ 
+    Protocolo con el orquestador (igual que los demás NetworkActor):
+        Def_input_variables(...)            una vez
+        Boundary_condition(T_guess, t)      en cada iteración
+        pp.pipeflow(net, mode="bidirectional")
+        read_T_result(t)                    -> nuevo T_guess hasta converger
+        log_hour(t, T_real) / finalize_hour(T_real, t)   tras converger
+    """
+    net: object
     name: str
-    fc_charge : int 
-    fc_bypass_charge : int 
-    cp_charge_storage : int 
-    fc_charge_storage : int 
-    fc_discharge : int 
-    fc_bypass_discharge : int 
-    cp_discharge_storage : int 
-    fc_discharge_storage : int  
+    Circ_pump_id_charge: int
+    Circ_pump_id_discharge: int
+    j_supply: int
+    j_return: int
     V_tot: float
-    T_hot: float       # Kelvin
-    T_cold: float     # Kelvin
+    T_hot: float              # K
+    T_cold: float             # K
     v_hot_fraction: float
     UA_loss: float
-    UA_interface: float
-    T_amb: list=field(default_factory=list)
-    log: dict=field(default_factory=dict)
-    mass_flow : list=field(default_factory=list)
-    bypass: bool=False
-    direction : str | bool=False
-    mdot_entering: float=0.0
-    mdot_bypass: float= 0.0
-    v_in =float =0.0
-    dt_s: float=3600
-
+    UA_interface: float = 0.0
+    T_amb: list = field(default_factory=list)
+    mass_flow: list = field(default_factory=list)   # perfil horario (kg/s)
+    log: dict = field(default_factory=dict)
+    dt_s: float = 3600
+    # --- estado operativo (no son parámetros de entrada) ---
+    mass_flow_t: float = 0.0
+    bypass: bool = False
+    direction: str = "static"
+    mdot_entering: float = 0.0
+    mdot_bypass: float = 0.0
+    v_in: float = 0.0
+ 
     def _post_init(self):
-        self.V_hot= self.V_tot * self.v_hot_fraction
-        self.V_cold=self.V_tot - self.V_hot
-        self.V_MIN=self.V_tot * 0.01
+        self.V_hot = self.V_tot * self.v_hot_fraction
+        self.V_cold = self.V_tot - self.V_hot
+        self.V_MIN = self.V_tot * 0.01
         self.fluid = get_fluid(self.net)
         self.density_average_heat_capacity()
-
+ 
+    # ------------------------------------------------------------------
     def density_average_heat_capacity(self):
-        T_min_K, T_max_K = 273.15 + 20, 273.15 + 100
-        T_samples = np.linspace(T_min_K, T_max_K, 100)
-        self.density = np.mean([self.fluid.get_density(T) for T in T_samples])
-        self.heat_capacity = np.mean([self.fluid.get_heat_capacity(T) for T in T_samples]) 
-
-    def evaluate_bypass(self, mass_flow,dt_s,T_net): 
-        bypass,mdot_entering,mdot_bypass,v_in=False,0.0,0.0,0.0
-        if mass_flow > 0:  
+        T_samples = np.linspace(273.15 + 20, 273.15 + 100, 100)
+        self.density = float(np.mean([self.fluid.get_density(T) for T in T_samples]))
+        self.heat_capacity = float(np.mean([self.fluid.get_heat_capacity(T) for T in T_samples]))
+ 
+    def Def_input_variables(self, input_variables):
+        self.mass_flow = input_variables["mass_flow"]   # ya con el signo carga(+)/descarga(-)
+        self.T_amb = input_variables["T_amb"]
+ 
+    def _set_pump(self, mdot):
+        if self.mass_flow_t >= 0:
+            n, on , off = self.net, self.Circ_pump_id_charge,self.Circ_pump_id_discharge
+            n.circ_pump_mass.at[on, "t_flow_k"] = self.T_cold  
+        else: 
+            n, on , off = self.net, self.Circ_pump_id_discharge,self.Circ_pump_id_charge
+            n.circ_pump_mass.at[on, "t_flow_k"] = self.T_hot
+        self.net.circ_pump_mass.at[on, "in_service"] =True
+        self.net.circ_pump_mass.at[off, "in_service"] =False   
+        n.circ_pump_mass.at[on, "mdot_flow_kg_per_s"] = mdot
+        
+ 
+    # ------------------------------------------------------------------
+    def evaluate_bypass(self, mass_flow, dt_s, T_net, verbose=False):
+        bypass, mdot_entering, mdot_bypass, v_in = False, 0.0, 0.0, 0.0
+        if mass_flow > 0:                                   # carga
             if T_net < self.T_hot:
                 self.direction = "to_Tcold"
-                mdot_entering=mass_flow
+                mdot_entering = mass_flow
             else:
                 self.direction = "to_Thot"
                 v_available = max(0.0, self.V_cold - self.V_MIN)
@@ -360,106 +391,108 @@ class ThermoclineTwoLayer(NetworkActor):
                 mdot_bypass = mass_flow - mdot_entering
                 if mdot_bypass > 1e-6 or v_available <= 0:
                     bypass = True
-                    print(f"  ⚠ [{self.name}] Tanque saturado de calor: "f"{Dv_requested - v_in:.2f} m3 no se pudieron cargar")
-                    print(f"  ⚠ [{self.name}] Tanque saturado de calor: "f"{mdot_bypass:.2f} kg/s no se pudieron cargar")
-        elif mass_flow < 0: # Discharge
+                    if verbose:
+                        print(f"  ⚠ [{self.name}] Tanque saturado de calor: "
+                              f"{Dv_requested - v_in:.2f} m3 / {mdot_bypass:.2f} kg/s no se pudieron cargar")
+        elif mass_flow < 0:                                 # descarga
             self.direction = "discharge"
-            abs_mass_flow = abs(mass_flow)
+            abs_mf = abs(mass_flow)
             v_available = max(0.0, self.V_hot - self.V_MIN)
-            Dv_requested = (abs_mass_flow * dt_s) / self.density
+            Dv_requested = (abs_mf * dt_s) / self.density
             v_in = min(Dv_requested, v_available)
             mdot_entering = (v_in * self.density) / dt_s if dt_s > 0 else 0.0
-            mdot_bypass = abs_mass_flow - mdot_entering
+            mdot_bypass = abs_mf - mdot_entering
             if mdot_bypass > 1e-6 or v_available <= 0:
                 bypass = True
-                print(f"  ⚠ [{self.name}] Tanque saturado de frio: "f"{Dv_requested - v_in:.2f} m3 no se pudieron descargar")
-                print(f"  ⚠ [{self.name}] Tanque saturado de frio: "f"{mdot_bypass:.2f} kg/s no se pudieron descargar")
-        elif mass_flow == 0:
-            self.direction = "static"
-        self.bypass,self.mdot_entering,self.mdot_bypass,self.v_in= bypass,mdot_entering,mdot_bypass,v_in
-
-    def Def_input_variables(self,input_variables):
-        self.mass_flow=input_variables["mass_flow"]
-        self.T_amb=input_variables["T_amb"]
-    def Boundary_condition(self,t_guess,t):
-        self.T_estimate=t_guess
-        mass_flow=self.mass_flow[t]
-        self.evaluate_bypass(mass_flow,dt_s=3600,T_net=t_guess)
-        if mass_flow >= 0:
-            self.net.flow_control.at[self.fc_discharge_storage, "in_service"] = False
-            self.net.flow_control.at[self.fc_discharge, "in_service"] = False
-            self.net.flow_control.at[self.fc_bypass_discharge, "in_service"] = False
-            self.net.flow_control.at[self.fc_charge_storage, "in_service"] = True
-            self.net.flow_control.at[self.fc_charge, "in_service"] = True
-            self.net.flow_control.at[self.fc_bypass_charge, "in_service"] = True
-            self.net.circ_pump_mass.at[self.cp_discharge_storage, "mdot_flow_kg_per_s"] = 0
-            self.net.flow_control.at[self.fc_bypass_charge, "controlled_mdot_kg_per_s"] = self.mdot_bypass
-            self.net.circ_pump_mass.at[self.cp_charge_storage, "mdot_flow_kg_per_s"] = self.mdot_entering
-            self.net.flow_control.at[self.fc_charge_storage, "controlled_mdot_kg_per_s"] = self.mdot_entering
-            self.net.flow_control.at[self.fc_charge, "controlled_mdot_kg_per_s"] = mass_flow
-            self.net.circ_pump_mass.at[self.cp_charge_storage, "t_flow_k"] = self.T_cold
+                if verbose:
+                    print(f"  ⚠ [{self.name}] Tanque saturado de frío: "
+                          f"{Dv_requested - v_in:.2f} m3 / {mdot_bypass:.2f} kg/s no se pudieron descargar")
         else:
-            self.net.flow_control.at[self.fc_charge_storage, "in_service"] = False
-            self.net.flow_control.at[self.fc_charge, "in_service"] = False
-            self.net.flow_control.at[self.fc_bypass_charge, "in_service"] = False
-            self.net.flow_control.at[self.fc_discharge_storage, "in_service"] = True
-            self.net.flow_control.at[self.fc_discharge, "in_service"] = True
-            self.net.flow_control.at[self.fc_bypass_discharge, "in_service"] = True
-            self.net.circ_pump_mass.at[self.cp_charge_storage, "mdot_flow_kg_per_s"] = 0
-            self.net.flow_control.at[self.fc_bypass_discharge, "controlled_mdot_kg_per_s"] = self.mdot_bypass
-            self.net.circ_pump_mass.at[self.cp_discharge_storage, "mdot_flow_kg_per_s"] = self.mdot_entering
-            self.net.flow_control.at[self.fc_discharge_storage, "controlled_mdot_kg_per_s"] = self.mdot_entering
-            self.net.flow_control.at[self.fc_discharge, "controlled_mdot_kg_per_s"] = abs(mass_flow)
-            self.net.circ_pump_mass.at[self.cp_discharge_storage, "t_flow_k"] = self.T_hot
-
-    def read_T_result(self,t):
-        fc = self.fc_charge if self.mass_flow[t] >= 0 else self.fc_discharge
-        return self.net.res_flow_control.at[fc, "t_from_k"]
+            self.direction = "static"
+        self.bypass, self.mdot_entering = bypass, mdot_entering
+        self.mdot_bypass, self.v_in = mdot_bypass, v_in
+ 
+    # ------------------------------------------------------------------
+    # Interfaz NetworkActor
+    # ------------------------------------------------------------------
+    def Boundary_condition(self, t_guess, t):
+        mf = float(self.mass_flow[t])
+        self.mass_flow_t = mf    # elimina el -0.0
+        self.T_estimate = t_guess
+        self.evaluate_bypass(self.mass_flow_t, self.dt_s, t_guess)
+        self._set_pump(self.mdot_entering)
+ 
+    def read_T_result(self, t):
+        if self.mass_flow_t>= 0:
+            return float(self.net.res_circ_pump_mass.at[self.Circ_pump_id_charge, "t_from_k"])
+        else:
+            return float(self.net.res_circ_pump_mass.at[self.Circ_pump_id_discharge, "t_from_k"])
+ 
+    def Recover_information(self):
+        if self.mass_flow_t>= 0:
+            self.Q_net_delivered = float(self.net.res_circ_pump_mass.at[self.Circ_pump_id_charge, "qext_w"])
+        else: 
+            self.Q_net_delivered = float(self.net.res_circ_pump_mass.at[self.Circ_pump_id_discharge, "qext_w"])
+       
+ 
+    def Estimate_loss_ambient(self, T_amb):
+        UA_hot = self.UA_loss * (self.V_hot / self.V_tot)
+        UA_cold = self.UA_loss * (self.V_cold / self.V_tot)
+        return UA_hot * (self.T_hot - T_amb), UA_cold * (self.T_cold - T_amb)
+ 
     def log_hour(self, t, t_real_k):
-        self.log[t] = {"T_source_k": t_real_k}
-    def V_dis(self, dt_s, T_net,t):
-        "The resolution of the equation will be done with euler implicit"
-        mass_flow=self.mass_flow[t]
+        self.Recover_information()
+        self.log.setdefault(t, {}).update({
+            "T_source_k": t_real_k,
+            "Q_storage_w": self.Q_net_delivered,
+            "direction": self.direction,
+            "bypass": self.bypass,
+            "mdot_entering": self.mdot_entering,
+            "mdot_bypass": self.mdot_bypass,
+        })
+ 
+    # ------------------------------------------------------------------
+    def V_dis(self, dt_s, T_net, t):
+        "Evolución del tanque con Euler implícito"
         rho, cp = self.density, self.heat_capacity
-        b=(dt_s*self.UA_loss)/(rho*cp*self.V_tot)
-        #Euler implicit volume
-        if mass_flow >= 0:
-            if self.direction=='to_Thot':
+        T_amb = self.T_amb[t]
+        b = (dt_s * self.UA_loss) / (rho * cp * self.V_tot)
+        if self.mass_flow_t >= 0:
+            if self.direction == "to_Thot":
                 self.V_cold -= self.v_in
                 self.V_hot += self.v_in
                 self.v_hot_fraction = self.V_hot / self.V_tot
-                self.UA_hot_layer = self.UA_loss * (self.V_hot / self.V_tot)
-                self.UA_cold_layer = self.UA_loss * (self.V_cold / self.V_tot)
                 a_h = dt_s * self.mdot_entering / (rho * self.V_hot)
+                self.T_hot = (self.T_hot + a_h * T_net + b * T_amb) / (1 + a_h + b)
+                self.T_cold = (self.T_cold + b * T_amb) / (1 + b)
+            elif self.direction == "to_Tcold":
                 a_c = dt_s * self.mdot_entering / (rho * self.V_cold)
-                self.T_hot  = (self.T_hot + a_h * T_net + b * self.T_amb[t]) / (1 + a_h + b)
-                self.T_cold = (self.T_cold + b * self.T_amb[t]) / (1 + b)
-            elif self.direction=='to_Tcold':
-                self.UA_hot_layer = self.UA_loss * (self.V_hot / self.V_tot)
-                self.UA_cold_layer = self.UA_loss * (self.V_cold / self.V_tot)
-                a_h = dt_s * self.mdot_entering / (rho * self.V_hot)
-                a_c = dt_s * self.mdot_entering / (rho * self.V_cold)
-                self.T_cold  = (self.T_cold + a_c * T_net + b * self.T_amb[t]) / (1 + a_c + b)
-                self.T_hot = (self.T_hot + b * self.T_amb[t]) / (1 + b)
-            else:
-                self.UA_hot_layer = self.UA_loss * (self.V_hot / self.V_tot)
-                self.UA_cold_layer = self.UA_loss * (self.V_cold / self.V_tot)
-                self.T_hot = (self.T_hot + b * self.T_amb[t]) / (1 + b)
-                self.T_cold = (self.T_cold + b * self.T_amb[t]) / (1 + b)
-        else:
+                self.T_cold = (self.T_cold + a_c * T_net + b * T_amb) / (1 + a_c + b)
+                self.T_hot = (self.T_hot + b * T_amb) / (1 + b)
+            else:  # estático
+                self.T_hot = (self.T_hot + b * T_amb) / (1 + b)
+                self.T_cold = (self.T_cold + b * T_amb) / (1 + b)
+        else:  # descarga
             self.V_cold += self.v_in
             self.V_hot -= self.v_in
-            self.UA_hot_layer = self.UA_loss * (self.V_hot / self.V_tot)
-            self.UA_cold_layer = self.UA_loss * (self.V_cold / self.V_tot)
-            a_h = dt_s * self.mdot_entering / (rho * self.V_hot)
+            self.v_hot_fraction = self.V_hot / self.V_tot
             a_c = dt_s * self.mdot_entering / (rho * self.V_cold)
-            self.T_cold  = (self.T_cold + a_c * T_net + b * self.T_amb[t]) / (1 + a_c + b)
-            self.T_hot = (self.T_hot + b * self.T_amb[t]) / (1 + b)
-
-    def finalize_hour(self,t_real_k,t):
-        mass_flow=self.mass_flow[t]
-        self.evaluate_bypass(mass_flow,dt_s=self.dt_s,T_net=t_real_k)
-        self.V_dis(dt_s=self.dt_s,T_net=t_real_k,t=t)
+            self.T_cold = (self.T_cold + a_c * T_net + b * T_amb) / (1 + a_c + b)
+            self.T_hot = (self.T_hot + b * T_amb) / (1 + b)
+ 
+    def finalize_hour(self, t_real_k, t):
+        # Recalcula con la T real convergida (misma lógica que el script suelto)
+        self.evaluate_bypass(self.mass_flow_t, self.dt_s, t_real_k, verbose=True)
+        Q_loss_hot, Q_loss_cold = self.Estimate_loss_ambient(self.T_amb[t])
+        self.V_dis(self.dt_s, t_real_k, t)
+        # setdefault: funciona aunque log_hour se llame antes o después
+        self.log.setdefault(t, {}).update({
+            "Q_loss_storage": Q_loss_hot + Q_loss_cold,
+            "T_hot_storage": self.T_hot,
+            "T_cold_storage": self.T_cold,
+            "V_hot": self.V_hot,
+            "V_cold": self.V_cold,
+        })
 
 
 # In[ ):

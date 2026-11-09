@@ -18,6 +18,7 @@ import networkx as nx
 import pandas as pd
 import numpy as np
 import pandapipes as pp 
+import pandapipes_patch  
 from External_objects_functions import Bidirectional_W_to_WHeatPump,ThermoclineTwoLayer,ConsumerActor,Slack_Central_production,Central_production,Pipe_class
 import time
 
@@ -240,14 +241,8 @@ class DHN ():
         self.net=pp.create_empty_network(fluid=fluid)
         # Creation of pairs of nodes
         for i in range(len(self.Nodes)):
-            if self.Type_Nodes[i]=="Storage":
-                pp.create_junction(self.net,pn_bar=5,tfluid_k=353.15, name=self.Nodes[i] + '_highp')
-                pp.create_junction(self.net,pn_bar=5,tfluid_k=353.15, name=self.Nodes[i] + '_inter_1')
-                pp.create_junction(self.net,pn_bar=5,tfluid_k=353.15, name=self.Nodes[i] + '_inter_2')
-                pp.create_junction(self.net,pn_bar=5,tfluid_k=353.15, name=self.Nodes[i] + '_lowp')
-            else:
-                pp.create_junction(self.net,pn_bar=5,tfluid_k=353.15, name=self.Nodes[i] + '_highp')
-                pp.create_junction(self.net,pn_bar=5,tfluid_k=353.15, name=self.Nodes[i] + '_lowp')
+            pp.create_junction(self.net,pn_bar=5,tfluid_k=353.15, name=self.Nodes[i] + '_highp')
+            pp.create_junction(self.net,pn_bar=5,tfluid_k=353.15, name=self.Nodes[i] + '_lowp')
         #Creation of pipes 
         for u, v in self.graph.edges():
             name=self.graph.edges[u, v].get("name", "")
@@ -265,53 +260,25 @@ class DHN ():
         #Creation of elements in pandapipes and elements
         for i in range(len(self.Nodes)):
             if self.Type_Nodes[i]=="Storage":
-                #Charging part
-                pp.create_flow_control(
-                    self.net, from_junction=self.net.junction[self.net.junction["name"]==self.Nodes[i] + '_highp'].index[0], 
-                    to_junction=self.net.junction[self.net.junction["name"]==self.Nodes[i] + '_inter_1'].index[0],
-                    controlled_mdot_kg_per_s=0.1,name="Flow_control_charge__input_Storage_"+self.Nodes[i])
-                pp.create_flow_control(
-                    self.net, from_junction=self.net.junction[self.net.junction["name"]==self.Nodes[i] + '_inter_1'].index[0], 
-                    to_junction=self.net.junction[self.net.junction["name"]==self.Nodes[i] + '_highp'].index[0],
-                    controlled_mdot_kg_per_s=0.1,name="Flow_control_bypass_charge_Storage_"+self.Nodes[i])
                 pp.create_circ_pump_const_mass_flow(
-                    self.net, return_junction=self.net.junction[self.net.junction["name"]==self.Nodes[i] + '_inter_1'].index[0],
-                    flow_junction=self.net.junction[self.net.junction["name"]==self.Nodes[i] + '_inter_2'].index[0],
-                    mdot_flow_kg_per_s=0.1, t_flow_k=300, p_flow_bar=5 ,name="Circ_pump_charge_Storage_"+ self.Nodes[i])
-                pp.create_flow_control(
-                    self.net, from_junction=self.net.junction[self.net.junction["name"]==self.Nodes[i] + '_inter_2'].index[0],
-                    to_junction=self.net.junction[self.net.junction["name"]==self.Nodes[i] + '_lowp'].index[0],
-                    controlled_mdot_kg_per_s=0.1,name="Flow_control_charge_output_Storage_"+ self.Nodes[i])
-                #discharging part 
-                pp.create_flow_control(
-                    self.net, from_junction=self.net.junction[self.net.junction["name"]==self.Nodes[i] + '_lowp'].index[0], 
-                    to_junction=self.net.junction[self.net.junction["name"]==self.Nodes[i] + '_inter_2'].index[0],
-                    controlled_mdot_kg_per_s=0.1, name="Flow_control_discharge_input_Storage_"+ self.Nodes[i])
-                pp.create_flow_control(
-                    self.net, from_junction=self.net.junction[self.net.junction["name"]==self.Nodes[i] + '_inter_2'].index[0], 
-                    to_junction=self.net.junction[self.net.junction["name"]==self.Nodes[i] + '_lowp'].index[0],
-                    controlled_mdot_kg_per_s=0.1,name="Flow_control_bypass_discharge_Storage"+ self.Nodes[i])
+                    self.net, return_junction=self.net.junction[self.net.junction["name"]==self.Nodes[i] + '_highp'].index[0], 
+                    flow_junction=self.net.junction[self.net.junction["name"]==self.Nodes[i] + '_lowp'].index[0],
+                    mdot_flow_kg_per_s=0.1, t_flow_k=300, p_flow_bar=None,type="t",name="Circ_pump_Storage_charge"+ self.Nodes[i])
                 pp.create_circ_pump_const_mass_flow(
-                    self.net, return_junction=self.net.junction[self.net.junction["name"]==self.Nodes[i] + '_inter_2'].index[0], 
-                    flow_junction=self.net.junction[self.net.junction["name"]==self.Nodes[i] + '_inter_1'].index[0],
-                    mdot_flow_kg_per_s=0.1, t_flow_k=300, p_flow_bar=5 ,name="Circ_pump_discharge_Storage_"+ self.Nodes[i])
-                pp.create_flow_control(
-                    self.net, from_junction=self.net.junction[self.net.junction["name"]==self.Nodes[i] + '_inter_1'].index[0], 
-                    to_junction=self.net.junction[self.net.junction["name"]==self.Nodes[i] + '_highp'].index[0],
-                    controlled_mdot_kg_per_s=0.1,name="Flow_control_discharge_output_Storage"+ self.Nodes[i])
+                                    self.net, return_junction=self.net.junction[self.net.junction["name"]==self.Nodes[i] + '_highp'].index[0], 
+                                    flow_junction=self.net.junction[self.net.junction["name"]==self.Nodes[i] + '_lowp'].index[0],
+                                    mdot_flow_kg_per_s=0.1, t_flow_k=300, p_flow_bar=None,type="t",name="Circ_pump_Storage_discharge"+ self.Nodes[i])
+                
             elif self.Type_Nodes[i]=="Plant_support":
                 pp.create_circ_pump_const_mass_flow(
                     self.net, return_junction=self.net.junction[self.net.junction["name"]==self.Nodes[i] + '_lowp'].index[0], 
                     flow_junction=self.net.junction[self.net.junction["name"]==self.Nodes[i] + '_highp'].index[0],
                     mdot_flow_kg_per_s=0.5, t_flow_k=305, p_flow_bar=None,type="t",name="Plant_support_circ_pump_"+self.Nodes[i])
-
             elif self.Type_Nodes[i]=="Plant":
-                print("im here ")
                 pp.create_circ_pump_const_pressure(
                                     self.net,flow_junction=self.net.junction[self.net.junction["name"]==self.Nodes[i] + '_highp'].index[0],
                                     return_junction=self.net.junction[self.net.junction["name"]==self.Nodes[i] + '_lowp'].index[0],
                                     p_flow_bar=5,plift_bar=5,t_flow_k=333 ,name='Central_plant')
-
             elif self.Type_Nodes[i]=="Prosumer":
                 pp.create_heat_consumer(
                                     self.net,from_junction=self.net.junction[self.net.junction["name"]==self.Nodes[i] + '_highp'].index[0],
@@ -334,14 +301,10 @@ class DHN ():
         for i in range(len(self.Nodes)):
             if self.Type_Nodes[i]=="Storage":
                 Storage=ThermoclineTwoLayer(net=self.net,name="Storage_"+ self.Nodes[i],
-                                            fc_charge=self.net.flow_control[self.net.flow_control["name"]=="Flow_control_charge__input_Storage_"+self.Nodes[i]].index[0],
-                                            fc_bypass_charge=self.net.flow_control[self.net.flow_control["name"]=="Flow_control_bypass_charge_Storage_"+ self.Nodes[i]].index[0],
-                                            cp_charge_storage=self.net.circ_pump_mass[self.net.circ_pump_mass["name"]=="Circ_pump_charge_Storage_"+ self.Nodes[i]].index[0],
-                                            fc_charge_storage=self.net.flow_control[self.net.flow_control["name"]=="Flow_control_charge_output_Storage_"+ self.Nodes[i]].index[0],
-                                            fc_discharge=self.net.flow_control[self.net.flow_control["name"]=="Flow_control_discharge_input_Storage_"+ self.Nodes[i]].index[0],
-                                            fc_bypass_discharge=self.net.flow_control[self.net.flow_control["name"]=="Flow_control_bypass_discharge_Storage"+ self.Nodes[i]].index[0],
-                                            cp_discharge_storage=self.net.circ_pump_mass[self.net.circ_pump_mass["name"]=="Circ_pump_discharge_Storage_"+ self.Nodes[i]].index[0],
-                                            fc_discharge_storage=self.net.flow_control[self.net.flow_control["name"]=="Flow_control_discharge_output_Storage"+ self.Nodes[i]].index[0],
+                                            Circ_pump_id_charge=self.net.circ_pump_mass[self.net.circ_pump_mass["name"]=="Circ_pump_Storage_charge"+ self.Nodes[i]].index[0],
+                                            Circ_pump_id_discharge=self.net.circ_pump_mass[self.net.circ_pump_mass["name"]=="Circ_pump_Storage_discharge" + self.Nodes[i]].index[0],
+                                            j_supply=self.net.junction[self.net.junction["name"]==self.Nodes[i] + '_highp'].index[0],
+                                            j_return=self.net.junction[self.net.junction["name"]==self.Nodes[i] + '_lowp'].index[0],
                                             V_tot=self.Storage_characteristics["V_tot"][self.Storage_characteristics["node"].index(self.Nodes[i])],
                                             T_hot=self.Storage_characteristics["T_hot_init"][self.Storage_characteristics["node"].index(self.Nodes[i])],
                                             T_cold=self.Storage_characteristics["T_cold_init"][self.Storage_characteristics["node"].index(self.Nodes[i])],

@@ -27358,3 +27358,1803 @@ TABLA 5 antes
 12  2.500143  293.150000
 13  2.500201  305.000000
 
+iteration 0 - antes
+
+circ_pump_mass
+                name  return_junction  flow_junction  p_flow_bar  t_flow_k  mdot_flow_kg_per_s  in_service type
+0  Circ_pump_storage                1              7         NaN     313.0              0.0001        True    t
+
+res_circ_pump_mass
+   p_from_bar  p_to_bar    t_from_k      t_to_k  t_outlet_k  mdot_from_kg_per_s  mdot_to_kg_per_s  vdot_m3_per_s   deltat_k     qext_w
+0    2.999513  2.500515  359.785486  304.771822       313.0              0.0001           -0.0001   1.020590e-07  46.785486 -19.608265
+
+res_junction
+       p_bar         t_k
+0   3.000000  360.000000
+1   2.999513  359.785486
+2   2.999289  359.465083
+3   2.999250  359.058005
+4   2.999258  359.137490
+5   2.999468  359.304297
+6   2.500000  304.693373
+7   2.500515  304.771822
+8   2.501030  304.850053
+9   2.501077  305.000000
+10  2.501068  305.000000
+11  2.501085  305.000000
+
+iteration 0 - despues
+
+circ_pump_mass
+                name  return_junction  flow_junction  p_flow_bar  t_flow_k  mdot_flow_kg_per_s  in_service type
+0  Circ_pump_storage                1              7         NaN     313.0              0.0001        True    t
+
+res_circ_pump_mass
+   p_from_bar  p_to_bar    t_from_k      t_to_k  t_outlet_k  mdot_from_kg_per_s  mdot_to_kg_per_s  vdot_m3_per_s   deltat_k     qext_w
+0    2.999513  2.500515  359.785486  304.771822       313.0              0.0001           -0.0001   1.020590e-07  46.785486 -19.608265
+
+res_junction
+       p_bar         t_k
+0   3.000000  360.000000
+1   2.999513  359.785486
+2   2.999289  359.465083
+3   2.999250  359.058005
+4   2.999258  359.137490
+5   2.999468  359.304297
+6   2.500000  304.693373
+7   2.500515  304.771822
+8   2.501030  304.850053
+9   2.501077  305.000000
+10  2.501068  305.000000
+11  2.501085  305.000000
+
+iteration 1 - antes
+
+circ_pump_mass
+                name  return_junction  flow_junction  p_flow_bar    t_flow_k  mdot_flow_kg_per_s  in_service type
+0  Circ_pump_storage                1              7         NaN  312.947804                0.88        True    t
+
+res_circ_pump_mass
+   p_from_bar  p_to_bar    t_from_k      t_to_k  t_outlet_k  mdot_from_kg_per_s  mdot_to_kg_per_s  vdot_m3_per_s   deltat_k        qext_w
+0    2.999007  2.501021  359.851252  307.287091  312.947804                0.88             -0.88       0.000898  46.903448 -172988.98454
+
+res_junction
+       p_bar         t_k
+0   3.000000  360.000000
+1   2.999007  359.851252
+2   2.998784  359.530227
+3   2.998744  359.122360
+4   2.998752  359.201998
+5   2.998962  359.369127
+6   2.500000  307.228357
+7   2.501021  307.287091
+8   2.501535  304.849874
+9   2.501582  305.000000
+10  2.501573  305.000000
+11  2.501590  305.000000
+
+iteration 1 - despues
+
+circ_pump_mass
+                name  return_junction  flow_junction  p_flow_bar    t_flow_k  mdot_flow_kg_per_s  in_service type
+0  Circ_pump_storage                1              7         NaN  312.947804                0.88        True    t
+
+res_circ_pump_mass
+   p_from_bar  p_to_bar    t_from_k      t_to_k  t_outlet_k  mdot_from_kg_per_s  mdot_to_kg_per_s  vdot_m3_per_s   deltat_k        qext_w
+0    2.999007  2.501021  359.851252  307.287091  312.947804                0.88             -0.88       0.000898  46.903448 -172988.98454
+
+res_junction
+       p_bar         t_k
+0   3.000000  360.000000
+1   2.999007  359.851252
+2   2.998784  359.530227
+3   2.998744  359.122360
+4   2.998752  359.201998
+5   2.998962  359.369127
+6   2.500000  307.228357
+7   2.501021  307.287091
+8   2.501535  304.849874
+9   2.501582  305.000000
+10  2.501573  305.000000
+11  2.501590  305.000000
+
+iteration 2 - antes
+
+circ_pump_mass
+                name  return_junction  flow_junction  p_flow_bar    t_flow_k  mdot_flow_kg_per_s  in_service type
+0  Circ_pump_storage                7              1         NaN  356.100811                0.15        True    t
+
+res_circ_pump_mass
+   p_from_bar  p_to_bar   t_from_k      t_to_k  t_outlet_k  mdot_from_kg_per_s  mdot_to_kg_per_s  vdot_m3_per_s   deltat_k        qext_w
+0     2.50045  2.999577  304.77262  359.493197  356.100811                0.15             -0.15       0.000153 -51.328192  32257.905508
+
+res_junction
+       p_bar         t_k
+0   3.000000  360.000000
+1   2.999577  359.493197
+2   2.999351  359.175554
+3   2.999311  358.771972
+4   2.999319  358.850776
+5   2.999531  359.016156
+6   2.500000  304.688240
+7   2.500450  304.772620
+8   2.500970  304.850850
+9   2.501018  305.000000
+10  2.501008  305.000000
+11  2.501026  305.000000
+
+iteration 2 - despues
+
+circ_pump_mass
+                name  return_junction  flow_junction  p_flow_bar    t_flow_k  mdot_flow_kg_per_s  in_service type
+0  Circ_pump_storage                7              1         NaN  356.100811                0.15        True    t
+
+res_circ_pump_mass
+   p_from_bar  p_to_bar   t_from_k      t_to_k  t_outlet_k  mdot_from_kg_per_s  mdot_to_kg_per_s  vdot_m3_per_s   deltat_k        qext_w
+0     2.50045  2.999577  304.77262  359.493197  356.100811                0.15             -0.15       0.000153 -51.328192  32257.905508
+
+res_junction
+       p_bar         t_k
+0   3.000000  360.000000
+1   2.999577  359.493197
+2   2.999351  359.175554
+3   2.999311  358.771972
+4   2.999319  358.850776
+5   2.999531  359.016156
+6   2.500000  304.688240
+7   2.500450  304.772620
+8   2.500970  304.850850
+9   2.501018  305.000000
+10  2.501008  305.000000
+11  2.501026  305.000000
+
+iteration 3 - antes
+
+circ_pump_mass
+                name  return_junction  flow_junction  p_flow_bar    t_flow_k  mdot_flow_kg_per_s  in_service type
+0  Circ_pump_storage                7              1         NaN  355.992091                0.18        True    t
+
+res_circ_pump_mass
+   p_from_bar  p_to_bar    t_from_k      t_to_k  t_outlet_k  mdot_from_kg_per_s  mdot_to_kg_per_s  vdot_m3_per_s   deltat_k        qext_w
+0    2.500305  2.999719  304.728894  359.313519  355.992091                0.18             -0.18       0.000183 -51.263197  38660.059056
+
+res_junction
+       p_bar         t_k
+0   3.000000  360.000000
+1   2.999719  359.313519
+2   2.999586  358.894242
+3   2.999574  358.101547
+4   2.999554  358.572189
+5   2.999673  358.839019
+6   2.500000  304.624705
+7   2.500305  304.728894
+8   2.500680  304.822145
+9   2.500696  305.000000
+10  2.500718  305.000000
+11  2.500735  305.000000
+
+iteration 3 - despues
+
+circ_pump_mass
+                name  return_junction  flow_junction  p_flow_bar    t_flow_k  mdot_flow_kg_per_s  in_service type
+0  Circ_pump_storage                7              1         NaN  355.992091                0.18        True    t
+
+res_circ_pump_mass
+   p_from_bar  p_to_bar    t_from_k      t_to_k  t_outlet_k  mdot_from_kg_per_s  mdot_to_kg_per_s  vdot_m3_per_s   deltat_k        qext_w
+0    2.500305  2.999719  304.728894  359.313519  355.992091                0.18             -0.18       0.000183 -51.263197  38660.059056
+
+res_junction
+       p_bar         t_k
+0   3.000000  360.000000
+1   2.999719  359.313519
+2   2.999586  358.894242
+3   2.999574  358.101547
+4   2.999554  358.572189
+5   2.999673  358.839019
+6   2.500000  304.624705
+7   2.500305  304.728894
+8   2.500680  304.822145
+9   2.500696  305.000000
+10  2.500718  305.000000
+11  2.500735  305.000000
+
+iteration 4 - antes
+
+circ_pump_mass
+                name  return_junction  flow_junction  p_flow_bar    t_flow_k  mdot_flow_kg_per_s  in_service type
+0  Circ_pump_storage                1              7         NaN  311.311818                0.88        True    t
+
+res_circ_pump_mass
+   p_from_bar  p_to_bar    t_from_k      t_to_k  t_outlet_k  mdot_from_kg_per_s  mdot_to_kg_per_s  vdot_m3_per_s   deltat_k         qext_w
+0    2.999311  2.500717  359.820637  307.151728  311.311818                0.88             -0.88       0.000898  48.508818 -178911.099315
+
+res_junction
+       p_bar         t_k
+0   3.000000  360.000000
+1   2.999311  359.820637
+2   2.999087  359.499901
+3   2.999048  359.092402
+4   2.999056  359.171968
+5   2.999306  357.957929
+6   2.500000  307.081188
+7   2.500717  307.151728
+8   2.501022  304.801326
+9   2.501069  305.000000
+10  2.501059  305.000000
+11  2.501029  305.000000
+
+iteration 4 - despues
+
+circ_pump_mass
+                name  return_junction  flow_junction  p_flow_bar    t_flow_k  mdot_flow_kg_per_s  in_service type
+0  Circ_pump_storage                1              7         NaN  311.311818                0.88        True    t
+
+res_circ_pump_mass
+   p_from_bar  p_to_bar    t_from_k      t_to_k  t_outlet_k  mdot_from_kg_per_s  mdot_to_kg_per_s  vdot_m3_per_s   deltat_k         qext_w
+0    2.999311  2.500717  359.820637  307.151728  311.311818                0.88             -0.88       0.000898  48.508818 -178911.099315
+
+res_junction
+       p_bar         t_k
+0   3.000000  360.000000
+1   2.999311  359.820637
+2   2.999087  359.499901
+3   2.999048  359.092402
+4   2.999056  359.171968
+5   2.999306  357.957929
+6   2.500000  307.081188
+7   2.500717  307.151728
+8   2.501022  304.801326
+9   2.501069  305.000000
+10  2.501059  305.000000
+11  2.501029  305.000000
+
+iteration 5 - antes
+
+circ_pump_mass
+                name  return_junction  flow_junction  p_flow_bar    t_flow_k  mdot_flow_kg_per_s  in_service type
+0  Circ_pump_storage                1              7         NaN  311.261836                0.75        True    t
+
+res_circ_pump_mass
+   p_from_bar  p_to_bar    t_from_k      t_to_k  t_outlet_k  mdot_from_kg_per_s  mdot_to_kg_per_s  vdot_m3_per_s   deltat_k         qext_w
+0    2.999466   2.50056  359.795419  307.041724  311.261836                0.75             -0.75       0.000765  48.533583 -152558.554464
+
+res_junction
+       p_bar         t_k
+0   3.000000  360.000000
+1   2.999466  359.795419
+2   2.999335  359.370124
+3   2.999324  358.566123
+4   2.999304  359.043455
+5   2.999453  358.843702
+6   2.500000  306.961528
+7   2.500560  307.041724
+8   2.500807  304.776719
+9   2.500823  305.000000
+10  2.500845  305.000000
+11  2.500826  305.000000
+
+iteration 5 - despues
+
+circ_pump_mass
+                name  return_junction  flow_junction  p_flow_bar    t_flow_k  mdot_flow_kg_per_s  in_service type
+0  Circ_pump_storage                1              7         NaN  311.261836            0.723775        True    t
+
+res_circ_pump_mass
+   p_from_bar  p_to_bar    t_from_k      t_to_k  t_outlet_k  mdot_from_kg_per_s  mdot_to_kg_per_s  vdot_m3_per_s   deltat_k         qext_w
+0    2.999479  2.500547  359.792815  306.987744  311.261836            0.723775         -0.723775       0.000738  48.530978 -147216.212848
+
+res_junction
+       p_bar         t_k
+0   3.000000  360.000000
+1   2.999479  359.792815
+2   2.999348  359.367552
+3   2.999337  358.563613
+4   2.999317  359.040908
+5   2.999466  358.841171
+6   2.500000  306.906656
+7   2.500547  306.987744
+8   2.500794  304.776730
+9   2.500810  305.000000
+10  2.500832  305.000000
+11  2.500813  305.000000
+
+iteration 6 - antes
+
+circ_pump_mass
+                name  return_junction  flow_junction  p_flow_bar   t_flow_k  mdot_flow_kg_per_s  in_service type
+0  Circ_pump_storage                1              7         NaN  311.21192                0.75        True    t
+
+res_circ_pump_mass
+   p_from_bar  p_to_bar   t_from_k      t_to_k  t_outlet_k  mdot_from_kg_per_s  mdot_to_kg_per_s  vdot_m3_per_s  deltat_k         qext_w
+0    2.999468  2.500558  359.79503  307.065847   311.21192                0.75             -0.75       0.000765  48.58311 -152714.274487
+
+res_junction
+       p_bar         t_k
+0   3.000000  360.000000
+1   2.999468  359.795030
+2   2.999406  359.159369
+3   2.999367  358.755982
+4   2.999406  293.150000
+5   2.999423  359.313705
+6   2.500000  306.985441
+7   2.500558  307.065847
+8   2.500804  304.836217
+9   2.500851  305.000000
+10  2.500804  293.150000
+11  2.500859  305.000000
+
+iteration 6 - despues
+
+circ_pump_mass
+                name  return_junction  flow_junction  p_flow_bar   t_flow_k  mdot_flow_kg_per_s  in_service type
+0  Circ_pump_storage                1              7         NaN  311.21192              0.0001        True    t
+
+res_circ_pump_mass
+   p_from_bar  p_to_bar    t_from_k      t_to_k  t_outlet_k  mdot_from_kg_per_s  mdot_to_kg_per_s  vdot_m3_per_s   deltat_k     qext_w
+0    2.999775  2.500247  359.679895  304.719738   311.21192              0.0001           -0.0001   1.020216e-07  48.467975 -20.313414
+
+res_junction
+       p_bar         t_k
+0   3.000000  360.000000
+1   2.999775  359.679895
+2   2.999712  359.046385
+3   2.999673  358.644359
+4   2.999712  293.150000
+5   2.999729  359.200207
+6   2.500000  304.602870
+7   2.500247  304.719738
+8   2.500494  304.836559
+9   2.500542  305.000000
+10  2.500494  293.150000
+11  2.500549  305.000000
+
+iteration 7 - antes
+
+circ_pump_mass
+                name  return_junction  flow_junction  p_flow_bar    t_flow_k  mdot_flow_kg_per_s  in_service type
+0  Circ_pump_storage                7              1         NaN  357.409067                 0.4        True    t
+
+res_circ_pump_mass
+   p_from_bar  p_to_bar    t_from_k      t_to_k  t_outlet_k  mdot_from_kg_per_s  mdot_to_kg_per_s  vdot_m3_per_s  deltat_k        qext_w
+0    2.500136  2.999881  304.723147  358.914838  357.409067                 0.4              -0.4       0.000407 -52.68592  88308.107736
+
+res_junction
+       p_bar         t_k
+0   3.000000  360.000000
+1   2.999881  358.914838
+2   2.999817  358.295537
+3   2.999776  357.902496
+4   2.999817  293.150000
+5   2.999834  358.445955
+6   2.500000  304.559293
+7   2.500136  304.723147
+8   2.500389  304.838833
+9   2.500438  305.000000
+10  2.500389  293.150000
+11  2.500445  305.000000
+
+iteration 7 - despues
+
+circ_pump_mass
+                name  return_junction  flow_junction  p_flow_bar    t_flow_k  mdot_flow_kg_per_s  in_service type
+0  Circ_pump_storage                7              1         NaN  357.409067                 0.4        True    t
+
+res_circ_pump_mass
+   p_from_bar  p_to_bar    t_from_k      t_to_k  t_outlet_k  mdot_from_kg_per_s  mdot_to_kg_per_s  vdot_m3_per_s  deltat_k        qext_w
+0    2.500136  2.999881  304.723147  358.914838  357.409067                 0.4              -0.4       0.000407 -52.68592  88308.107736
+
+res_junction
+       p_bar         t_k
+0   3.000000  360.000000
+1   2.999881  358.914838
+2   2.999817  358.295537
+3   2.999776  357.902496
+4   2.999817  293.150000
+5   2.999834  358.445955
+6   2.500000  304.559293
+7   2.500136  304.723147
+8   2.500389  304.838833
+9   2.500438  305.000000
+10  2.500389  293.150000
+11  2.500445  305.000000
+
+iteration 8 - antes
+
+circ_pump_mass
+                name  return_junction  flow_junction  p_flow_bar    t_flow_k  mdot_flow_kg_per_s  in_service type
+0  Circ_pump_storage                7              1         NaN  357.298631                 0.5        True    t
+
+res_circ_pump_mass
+   p_from_bar  p_to_bar    t_from_k      t_to_k  t_outlet_k  mdot_from_kg_per_s  mdot_to_kg_per_s  vdot_m3_per_s   deltat_k         qext_w
+0    2.500113  2.999902  304.724308  358.687031  357.298631                 0.5              -0.5       0.000509 -52.574323  110150.101771
+
+res_junction
+       p_bar         t_k
+0   3.000000  360.000000
+1   2.999902  358.687031
+2   2.999838  358.071932
+3   2.999797  357.681549
+4   2.999838  293.150000
+5   2.999855  358.221344
+6   2.500000  304.542363
+7   2.500113  304.724308
+8   2.500369  304.839510
+9   2.500418  305.000000
+10  2.500369  293.150000
+11  2.500425  305.000000
+
+iteration 8 - despues
+
+circ_pump_mass
+                name  return_junction  flow_junction  p_flow_bar    t_flow_k  mdot_flow_kg_per_s  in_service type
+0  Circ_pump_storage                7              1         NaN  357.298631                 0.5        True    t
+
+res_circ_pump_mass
+   p_from_bar  p_to_bar    t_from_k      t_to_k  t_outlet_k  mdot_from_kg_per_s  mdot_to_kg_per_s  vdot_m3_per_s   deltat_k         qext_w
+0    2.500113  2.999902  304.724308  358.687031  357.298631                 0.5              -0.5       0.000509 -52.574323  110150.101771
+
+res_junction
+       p_bar         t_k
+0   3.000000  360.000000
+1   2.999902  358.687031
+2   2.999838  358.071932
+3   2.999797  357.681549
+4   2.999838  293.150000
+5   2.999855  358.221344
+6   2.500000  304.542363
+7   2.500113  304.724308
+8   2.500369  304.839510
+9   2.500418  305.000000
+10  2.500369  293.150000
+11  2.500425  305.000000
+
+iteration 9 - antes
+
+circ_pump_mass
+                name  return_junction  flow_junction  p_flow_bar    t_flow_k  mdot_flow_kg_per_s  in_service type
+0  Circ_pump_storage                1              7         NaN  306.840057                0.75        True    t
+
+res_circ_pump_mass
+   p_from_bar  p_to_bar   t_from_k      t_to_k  t_outlet_k  mdot_from_kg_per_s  mdot_to_kg_per_s  vdot_m3_per_s   deltat_k        qext_w
+0    2.999618  2.500408  359.75688  305.576334  306.840057                0.75             -0.75       0.000765  52.916823 -166340.40492
+
+res_junction
+       p_bar         t_k
+0   3.000000  360.000000
+1   2.999618  359.756880
+2   2.999599  358.514790
+3   2.999587  357.731057
+4   2.999599  293.150000
+5   2.999572  359.276098
+6   2.500000  305.485159
+7   2.500408  305.576334
+8   2.500557  304.782996
+9   2.500573  305.000000
+10  2.500557  293.150000
+11  2.500611  305.000000
+
+iteration 9 - despues
+
+circ_pump_mass
+                name  return_junction  flow_junction  p_flow_bar    t_flow_k  mdot_flow_kg_per_s  in_service type
+0  Circ_pump_storage                1              7         NaN  306.840057                0.75        True    t
+
+res_circ_pump_mass
+   p_from_bar  p_to_bar   t_from_k      t_to_k  t_outlet_k  mdot_from_kg_per_s  mdot_to_kg_per_s  vdot_m3_per_s   deltat_k        qext_w
+0    2.999618  2.500408  359.75688  305.576334  306.840057                0.75             -0.75       0.000765  52.916823 -166340.40492
+
+res_junction
+       p_bar         t_k
+0   3.000000  360.000000
+1   2.999618  359.756880
+2   2.999599  358.514790
+3   2.999587  357.731057
+4   2.999599  293.150000
+5   2.999572  359.276098
+6   2.500000  305.485159
+7   2.500408  305.576334
+8   2.500557  304.782996
+9   2.500573  305.000000
+10  2.500557  293.150000
+11  2.500611  305.000000
+
+iteration 10 - antes
+
+circ_pump_mass
+                name  return_junction  flow_junction  p_flow_bar    t_flow_k  mdot_flow_kg_per_s  in_service type
+0  Circ_pump_storage                7              1         NaN  357.686547                 0.5        True    t
+
+res_circ_pump_mass
+   p_from_bar  p_to_bar    t_from_k      t_to_k  t_outlet_k  mdot_from_kg_per_s  mdot_to_kg_per_s  vdot_m3_per_s   deltat_k         qext_w
+0      2.5002   2.99982  304.730163  359.057388  357.686547                 0.5              -0.5       0.000509 -52.956384  110954.879238
+
+res_junction
+       p_bar         t_k
+0   3.000000  360.000000
+1   2.999820  359.057388
+2   2.999686  358.641293
+3   2.999674  357.854577
+4   2.999654  358.321682
+5   2.999774  358.586500
+6   2.500000  304.598418
+7   2.500200  304.730163
+8   2.500578  304.822978
+9   2.500594  305.000000
+10  2.500617  305.000000
+11  2.500634  305.000000
+
+iteration 10 - despues
+
+circ_pump_mass
+                name  return_junction  flow_junction  p_flow_bar    t_flow_k  mdot_flow_kg_per_s  in_service type
+0  Circ_pump_storage                7              1         NaN  357.686547                 0.5        True    t
+
+res_circ_pump_mass
+   p_from_bar  p_to_bar    t_from_k      t_to_k  t_outlet_k  mdot_from_kg_per_s  mdot_to_kg_per_s  vdot_m3_per_s   deltat_k         qext_w
+0      2.5002   2.99982  304.730163  359.057388  357.686547                 0.5              -0.5       0.000509 -52.956384  110954.879238
+
+res_junction
+       p_bar         t_k
+0   3.000000  360.000000
+1   2.999820  359.057388
+2   2.999686  358.641293
+3   2.999674  357.854577
+4   2.999654  358.321682
+5   2.999774  358.586500
+6   2.500000  304.598418
+7   2.500200  304.730163
+8   2.500578  304.822978
+9   2.500594  305.000000
+10  2.500617  305.000000
+11  2.500634  305.000000
+
+iteration 11 - antes
+
+circ_pump_mass
+                name  return_junction  flow_junction  p_flow_bar    t_flow_k  mdot_flow_kg_per_s  in_service type
+0  Circ_pump_storage                7              1         NaN  357.575747                 0.5        True    t
+
+res_circ_pump_mass
+   p_from_bar  p_to_bar    t_from_k      t_to_k  t_outlet_k  mdot_from_kg_per_s  mdot_to_kg_per_s  vdot_m3_per_s   deltat_k         qext_w
+0    2.500028  2.999979  304.568584  358.101277  357.575747                 0.5              -0.5       0.000509 -53.007163  111060.146858
+
+res_junction
+       p_bar         t_k
+0   3.000000  360.000000
+1   2.999979  358.101277
+2   2.999972  355.831969
+3   2.999968  354.414614
+4   2.999972  293.150000
+5   2.999931  357.643760
+6   2.500000  304.143107
+7   2.500028  304.568584
+8   2.500143  304.748751
+9   2.500150  305.000000
+10  2.500143  293.150000
+11  2.500201  305.000000
+
+iteration 11 - despues
+
+circ_pump_mass
+                name  return_junction  flow_junction  p_flow_bar    t_flow_k  mdot_flow_kg_per_s  in_service type
+0  Circ_pump_storage                7              1         NaN  357.575747                 0.5        True    t
+
+res_circ_pump_mass
+   p_from_bar  p_to_bar    t_from_k      t_to_k  t_outlet_k  mdot_from_kg_per_s  mdot_to_kg_per_s  vdot_m3_per_s   deltat_k         qext_w
+0    2.500028  2.999979  304.568584  358.101277  357.575747                 0.5              -0.5       0.000509 -53.007163  111060.146858
+
+res_junction
+       p_bar         t_k
+0   3.000000  360.000000
+1   2.999979  358.101277
+2   2.999972  355.831969
+3   2.999968  354.414614
+4   2.999972  293.150000
+5   2.999931  357.643760
+6   2.500000  304.143107
+7   2.500028  304.568584
+8   2.500143  304.748751
+9   2.500150  305.000000
+10  2.500143  293.150000
+11  2.500201  305.000000
+
+iteration 0 - antes
+
+circ_pump_mass
+                name  return_junction  flow_junction  p_flow_bar  t_flow_k  mdot_flow_kg_per_s  in_service type
+0  Circ_pump_storage                1              7         NaN     313.0              0.0001        True    t
+
+res_circ_pump_mass
+   p_from_bar  p_to_bar    t_from_k      t_to_k  t_outlet_k  mdot_from_kg_per_s  mdot_to_kg_per_s  vdot_m3_per_s   deltat_k     qext_w
+0    2.999513  2.500515  359.785486  304.771822       313.0              0.0001           -0.0001   1.020590e-07  46.785486 -19.608265
+
+res_junction
+       p_bar         t_k
+0   3.000000  360.000000
+1   2.999513  359.785486
+2   2.999289  359.465083
+3   2.999250  359.058005
+4   2.999258  359.137490
+5   2.999468  359.304297
+6   2.500000  304.693373
+7   2.500515  304.771822
+8   2.501030  304.850053
+9   2.501077  305.000000
+10  2.501068  305.000000
+11  2.501085  305.000000
+
+iteration 0 - despues
+
+circ_pump_mass
+                name  return_junction  flow_junction  p_flow_bar  t_flow_k  mdot_flow_kg_per_s  in_service type
+0  Circ_pump_storage                1              7         NaN     313.0              0.0001        True    t
+
+res_circ_pump_mass
+   p_from_bar  p_to_bar    t_from_k      t_to_k  t_outlet_k  mdot_from_kg_per_s  mdot_to_kg_per_s  vdot_m3_per_s   deltat_k     qext_w
+0    2.999513  2.500515  359.785486  304.771822       313.0              0.0001           -0.0001   1.020590e-07  46.785486 -19.608265
+
+res_junction
+       p_bar         t_k
+0   3.000000  360.000000
+1   2.999513  359.785486
+2   2.999289  359.465083
+3   2.999250  359.058005
+4   2.999258  359.137490
+5   2.999468  359.304297
+6   2.500000  304.693373
+7   2.500515  304.771822
+8   2.501030  304.850053
+9   2.501077  305.000000
+10  2.501068  305.000000
+11  2.501085  305.000000
+
+iteration 1 - antes
+
+circ_pump_mass
+                name  return_junction  flow_junction  p_flow_bar    t_flow_k  mdot_flow_kg_per_s  in_service type
+0  Circ_pump_storage                1              7         NaN  312.947804                0.88        True    t
+
+res_circ_pump_mass
+   p_from_bar  p_to_bar    t_from_k      t_to_k  t_outlet_k  mdot_from_kg_per_s  mdot_to_kg_per_s  vdot_m3_per_s   deltat_k        qext_w
+0    2.999007  2.501021  359.851252  307.287091  312.947804                0.88             -0.88       0.000898  46.903448 -172988.98454
+
+res_junction
+       p_bar         t_k
+0   3.000000  360.000000
+1   2.999007  359.851252
+2   2.998784  359.530227
+3   2.998744  359.122360
+4   2.998752  359.201998
+5   2.998962  359.369127
+6   2.500000  307.228357
+7   2.501021  307.287091
+8   2.501535  304.849874
+9   2.501582  305.000000
+10  2.501573  305.000000
+11  2.501590  305.000000
+
+iteration 1 - despues
+
+circ_pump_mass
+                name  return_junction  flow_junction  p_flow_bar    t_flow_k  mdot_flow_kg_per_s  in_service type
+0  Circ_pump_storage                1              7         NaN  312.947804                0.88        True    t
+
+res_circ_pump_mass
+   p_from_bar  p_to_bar    t_from_k      t_to_k  t_outlet_k  mdot_from_kg_per_s  mdot_to_kg_per_s  vdot_m3_per_s   deltat_k        qext_w
+0    2.999007  2.501021  359.851252  307.287091  312.947804                0.88             -0.88       0.000898  46.903448 -172988.98454
+
+res_junction
+       p_bar         t_k
+0   3.000000  360.000000
+1   2.999007  359.851252
+2   2.998784  359.530227
+3   2.998744  359.122360
+4   2.998752  359.201998
+5   2.998962  359.369127
+6   2.500000  307.228357
+7   2.501021  307.287091
+8   2.501535  304.849874
+9   2.501582  305.000000
+10  2.501573  305.000000
+11  2.501590  305.000000
+
+iteration 2 - antes
+
+circ_pump_mass
+                name  return_junction  flow_junction  p_flow_bar    t_flow_k  mdot_flow_kg_per_s  in_service type
+0  Circ_pump_storage                7              1         NaN  356.100811                0.15        True    t
+
+res_circ_pump_mass
+   p_from_bar  p_to_bar   t_from_k      t_to_k  t_outlet_k  mdot_from_kg_per_s  mdot_to_kg_per_s  vdot_m3_per_s   deltat_k        qext_w
+0     2.50045  2.999577  304.77262  359.493197  356.100811                0.15             -0.15       0.000153 -51.328192  32257.905508
+
+res_junction
+       p_bar         t_k
+0   3.000000  360.000000
+1   2.999577  359.493197
+2   2.999351  359.175554
+3   2.999311  358.771972
+4   2.999319  358.850776
+5   2.999531  359.016156
+6   2.500000  304.688240
+7   2.500450  304.772620
+8   2.500970  304.850850
+9   2.501018  305.000000
+10  2.501008  305.000000
+11  2.501026  305.000000
+
+iteration 2 - despues
+
+circ_pump_mass
+                name  return_junction  flow_junction  p_flow_bar    t_flow_k  mdot_flow_kg_per_s  in_service type
+0  Circ_pump_storage                7              1         NaN  356.100811                0.15        True    t
+
+res_circ_pump_mass
+   p_from_bar  p_to_bar   t_from_k      t_to_k  t_outlet_k  mdot_from_kg_per_s  mdot_to_kg_per_s  vdot_m3_per_s   deltat_k        qext_w
+0     2.50045  2.999577  304.77262  359.493197  356.100811                0.15             -0.15       0.000153 -51.328192  32257.905508
+
+res_junction
+       p_bar         t_k
+0   3.000000  360.000000
+1   2.999577  359.493197
+2   2.999351  359.175554
+3   2.999311  358.771972
+4   2.999319  358.850776
+5   2.999531  359.016156
+6   2.500000  304.688240
+7   2.500450  304.772620
+8   2.500970  304.850850
+9   2.501018  305.000000
+10  2.501008  305.000000
+11  2.501026  305.000000
+
+iteration 3 - antes
+
+circ_pump_mass
+                name  return_junction  flow_junction  p_flow_bar    t_flow_k  mdot_flow_kg_per_s  in_service type
+0  Circ_pump_storage                7              1         NaN  355.992091                0.18        True    t
+
+res_circ_pump_mass
+   p_from_bar  p_to_bar    t_from_k      t_to_k  t_outlet_k  mdot_from_kg_per_s  mdot_to_kg_per_s  vdot_m3_per_s   deltat_k        qext_w
+0    2.500305  2.999719  304.728894  359.313519  355.992091                0.18             -0.18       0.000183 -51.263197  38660.059056
+
+res_junction
+       p_bar         t_k
+0   3.000000  360.000000
+1   2.999719  359.313519
+2   2.999586  358.894242
+3   2.999574  358.101547
+4   2.999554  358.572189
+5   2.999673  358.839019
+6   2.500000  304.624705
+7   2.500305  304.728894
+8   2.500680  304.822145
+9   2.500696  305.000000
+10  2.500718  305.000000
+11  2.500735  305.000000
+
+iteration 3 - despues
+
+circ_pump_mass
+                name  return_junction  flow_junction  p_flow_bar    t_flow_k  mdot_flow_kg_per_s  in_service type
+0  Circ_pump_storage                7              1         NaN  355.992091                0.18        True    t
+
+res_circ_pump_mass
+   p_from_bar  p_to_bar    t_from_k      t_to_k  t_outlet_k  mdot_from_kg_per_s  mdot_to_kg_per_s  vdot_m3_per_s   deltat_k        qext_w
+0    2.500305  2.999719  304.728894  359.313519  355.992091                0.18             -0.18       0.000183 -51.263197  38660.059056
+
+res_junction
+       p_bar         t_k
+0   3.000000  360.000000
+1   2.999719  359.313519
+2   2.999586  358.894242
+3   2.999574  358.101547
+4   2.999554  358.572189
+5   2.999673  358.839019
+6   2.500000  304.624705
+7   2.500305  304.728894
+8   2.500680  304.822145
+9   2.500696  305.000000
+10  2.500718  305.000000
+11  2.500735  305.000000
+
+iteration 4 - antes
+
+circ_pump_mass
+                name  return_junction  flow_junction  p_flow_bar    t_flow_k  mdot_flow_kg_per_s  in_service type
+0  Circ_pump_storage                1              7         NaN  311.311818                0.88        True    t
+
+res_circ_pump_mass
+   p_from_bar  p_to_bar    t_from_k      t_to_k  t_outlet_k  mdot_from_kg_per_s  mdot_to_kg_per_s  vdot_m3_per_s   deltat_k         qext_w
+0    2.999311  2.500717  359.820637  307.151728  311.311818                0.88             -0.88       0.000898  48.508818 -178911.099315
+
+res_junction
+       p_bar         t_k
+0   3.000000  360.000000
+1   2.999311  359.820637
+2   2.999087  359.499901
+3   2.999048  359.092402
+4   2.999056  359.171968
+5   2.999306  357.957929
+6   2.500000  307.081188
+7   2.500717  307.151728
+8   2.501022  304.801326
+9   2.501069  305.000000
+10  2.501059  305.000000
+11  2.501029  305.000000
+
+iteration 4 - despues
+
+circ_pump_mass
+                name  return_junction  flow_junction  p_flow_bar    t_flow_k  mdot_flow_kg_per_s  in_service type
+0  Circ_pump_storage                1              7         NaN  311.311818                0.88        True    t
+
+res_circ_pump_mass
+   p_from_bar  p_to_bar    t_from_k      t_to_k  t_outlet_k  mdot_from_kg_per_s  mdot_to_kg_per_s  vdot_m3_per_s   deltat_k         qext_w
+0    2.999311  2.500717  359.820637  307.151728  311.311818                0.88             -0.88       0.000898  48.508818 -178911.099315
+
+res_junction
+       p_bar         t_k
+0   3.000000  360.000000
+1   2.999311  359.820637
+2   2.999087  359.499901
+3   2.999048  359.092402
+4   2.999056  359.171968
+5   2.999306  357.957929
+6   2.500000  307.081188
+7   2.500717  307.151728
+8   2.501022  304.801326
+9   2.501069  305.000000
+10  2.501059  305.000000
+11  2.501029  305.000000
+
+iteration 5 - antes
+
+circ_pump_mass
+                name  return_junction  flow_junction  p_flow_bar    t_flow_k  mdot_flow_kg_per_s  in_service type
+0  Circ_pump_storage                1              7         NaN  311.261836                0.75        True    t
+
+res_circ_pump_mass
+   p_from_bar  p_to_bar    t_from_k      t_to_k  t_outlet_k  mdot_from_kg_per_s  mdot_to_kg_per_s  vdot_m3_per_s   deltat_k         qext_w
+0    2.999466   2.50056  359.795419  307.041724  311.261836                0.75             -0.75       0.000765  48.533583 -152558.554464
+
+res_junction
+       p_bar         t_k
+0   3.000000  360.000000
+1   2.999466  359.795419
+2   2.999335  359.370124
+3   2.999324  358.566123
+4   2.999304  359.043455
+5   2.999453  358.843702
+6   2.500000  306.961528
+7   2.500560  307.041724
+8   2.500807  304.776719
+9   2.500823  305.000000
+10  2.500845  305.000000
+11  2.500826  305.000000
+
+iteration 5 - despues
+
+circ_pump_mass
+                name  return_junction  flow_junction  p_flow_bar    t_flow_k  mdot_flow_kg_per_s  in_service type
+0  Circ_pump_storage                1              7         NaN  311.261836            0.723775        True    t
+
+res_circ_pump_mass
+   p_from_bar  p_to_bar    t_from_k      t_to_k  t_outlet_k  mdot_from_kg_per_s  mdot_to_kg_per_s  vdot_m3_per_s   deltat_k         qext_w
+0    2.999479  2.500547  359.792815  306.987744  311.261836            0.723775         -0.723775       0.000738  48.530978 -147216.212848
+
+res_junction
+       p_bar         t_k
+0   3.000000  360.000000
+1   2.999479  359.792815
+2   2.999348  359.367552
+3   2.999337  358.563613
+4   2.999317  359.040908
+5   2.999466  358.841171
+6   2.500000  306.906656
+7   2.500547  306.987744
+8   2.500794  304.776730
+9   2.500810  305.000000
+10  2.500832  305.000000
+11  2.500813  305.000000
+
+iteration 6 - antes
+
+circ_pump_mass
+                name  return_junction  flow_junction  p_flow_bar   t_flow_k  mdot_flow_kg_per_s  in_service type
+0  Circ_pump_storage                1              7         NaN  311.21192                0.75        True    t
+
+res_circ_pump_mass
+   p_from_bar  p_to_bar   t_from_k      t_to_k  t_outlet_k  mdot_from_kg_per_s  mdot_to_kg_per_s  vdot_m3_per_s  deltat_k         qext_w
+0    2.999468  2.500558  359.79503  307.065847   311.21192                0.75             -0.75       0.000765  48.58311 -152714.274487
+
+res_junction
+       p_bar         t_k
+0   3.000000  360.000000
+1   2.999468  359.795030
+2   2.999406  359.159369
+3   2.999367  358.755982
+4   2.999406  293.150000
+5   2.999423  359.313705
+6   2.500000  306.985441
+7   2.500558  307.065847
+8   2.500804  304.836217
+9   2.500851  305.000000
+10  2.500804  293.150000
+11  2.500859  305.000000
+
+iteration 6 - despues
+
+circ_pump_mass
+                name  return_junction  flow_junction  p_flow_bar   t_flow_k  mdot_flow_kg_per_s  in_service type
+0  Circ_pump_storage                1              7         NaN  311.21192              0.0001        True    t
+
+res_circ_pump_mass
+   p_from_bar  p_to_bar    t_from_k      t_to_k  t_outlet_k  mdot_from_kg_per_s  mdot_to_kg_per_s  vdot_m3_per_s   deltat_k     qext_w
+0    2.999775  2.500247  359.679895  304.719738   311.21192              0.0001           -0.0001   1.020216e-07  48.467975 -20.313414
+
+res_junction
+       p_bar         t_k
+0   3.000000  360.000000
+1   2.999775  359.679895
+2   2.999712  359.046385
+3   2.999673  358.644359
+4   2.999712  293.150000
+5   2.999729  359.200207
+6   2.500000  304.602870
+7   2.500247  304.719738
+8   2.500494  304.836559
+9   2.500542  305.000000
+10  2.500494  293.150000
+11  2.500549  305.000000
+
+iteration 7 - antes
+
+circ_pump_mass
+                name  return_junction  flow_junction  p_flow_bar    t_flow_k  mdot_flow_kg_per_s  in_service type
+0  Circ_pump_storage                7              1         NaN  357.409067                 0.4        True    t
+
+res_circ_pump_mass
+   p_from_bar  p_to_bar    t_from_k      t_to_k  t_outlet_k  mdot_from_kg_per_s  mdot_to_kg_per_s  vdot_m3_per_s  deltat_k        qext_w
+0    2.500136  2.999881  304.723147  358.914838  357.409067                 0.4              -0.4       0.000407 -52.68592  88308.107736
+
+res_junction
+       p_bar         t_k
+0   3.000000  360.000000
+1   2.999881  358.914838
+2   2.999817  358.295537
+3   2.999776  357.902496
+4   2.999817  293.150000
+5   2.999834  358.445955
+6   2.500000  304.559293
+7   2.500136  304.723147
+8   2.500389  304.838833
+9   2.500438  305.000000
+10  2.500389  293.150000
+11  2.500445  305.000000
+
+iteration 7 - despues
+
+circ_pump_mass
+                name  return_junction  flow_junction  p_flow_bar    t_flow_k  mdot_flow_kg_per_s  in_service type
+0  Circ_pump_storage                7              1         NaN  357.409067                 0.4        True    t
+
+res_circ_pump_mass
+   p_from_bar  p_to_bar    t_from_k      t_to_k  t_outlet_k  mdot_from_kg_per_s  mdot_to_kg_per_s  vdot_m3_per_s  deltat_k        qext_w
+0    2.500136  2.999881  304.723147  358.914838  357.409067                 0.4              -0.4       0.000407 -52.68592  88308.107736
+
+res_junction
+       p_bar         t_k
+0   3.000000  360.000000
+1   2.999881  358.914838
+2   2.999817  358.295537
+3   2.999776  357.902496
+4   2.999817  293.150000
+5   2.999834  358.445955
+6   2.500000  304.559293
+7   2.500136  304.723147
+8   2.500389  304.838833
+9   2.500438  305.000000
+10  2.500389  293.150000
+11  2.500445  305.000000
+
+iteration 8 - antes
+
+circ_pump_mass
+                name  return_junction  flow_junction  p_flow_bar    t_flow_k  mdot_flow_kg_per_s  in_service type
+0  Circ_pump_storage                7              1         NaN  357.298631                 0.5        True    t
+
+res_circ_pump_mass
+   p_from_bar  p_to_bar    t_from_k      t_to_k  t_outlet_k  mdot_from_kg_per_s  mdot_to_kg_per_s  vdot_m3_per_s   deltat_k         qext_w
+0    2.500113  2.999902  304.724308  358.687031  357.298631                 0.5              -0.5       0.000509 -52.574323  110150.101771
+
+res_junction
+       p_bar         t_k
+0   3.000000  360.000000
+1   2.999902  358.687031
+2   2.999838  358.071932
+3   2.999797  357.681549
+4   2.999838  293.150000
+5   2.999855  358.221344
+6   2.500000  304.542363
+7   2.500113  304.724308
+8   2.500369  304.839510
+9   2.500418  305.000000
+10  2.500369  293.150000
+11  2.500425  305.000000
+
+iteration 8 - despues
+
+circ_pump_mass
+                name  return_junction  flow_junction  p_flow_bar    t_flow_k  mdot_flow_kg_per_s  in_service type
+0  Circ_pump_storage                7              1         NaN  357.298631                 0.5        True    t
+
+res_circ_pump_mass
+   p_from_bar  p_to_bar    t_from_k      t_to_k  t_outlet_k  mdot_from_kg_per_s  mdot_to_kg_per_s  vdot_m3_per_s   deltat_k         qext_w
+0    2.500113  2.999902  304.724308  358.687031  357.298631                 0.5              -0.5       0.000509 -52.574323  110150.101771
+
+res_junction
+       p_bar         t_k
+0   3.000000  360.000000
+1   2.999902  358.687031
+2   2.999838  358.071932
+3   2.999797  357.681549
+4   2.999838  293.150000
+5   2.999855  358.221344
+6   2.500000  304.542363
+7   2.500113  304.724308
+8   2.500369  304.839510
+9   2.500418  305.000000
+10  2.500369  293.150000
+11  2.500425  305.000000
+
+iteration 9 - antes
+
+circ_pump_mass
+                name  return_junction  flow_junction  p_flow_bar    t_flow_k  mdot_flow_kg_per_s  in_service type
+0  Circ_pump_storage                1              7         NaN  306.840057                0.75        True    t
+
+res_circ_pump_mass
+   p_from_bar  p_to_bar   t_from_k      t_to_k  t_outlet_k  mdot_from_kg_per_s  mdot_to_kg_per_s  vdot_m3_per_s   deltat_k        qext_w
+0    2.999618  2.500408  359.75688  305.576334  306.840057                0.75             -0.75       0.000765  52.916823 -166340.40492
+
+res_junction
+       p_bar         t_k
+0   3.000000  360.000000
+1   2.999618  359.756880
+2   2.999599  358.514790
+3   2.999587  357.731057
+4   2.999599  293.150000
+5   2.999572  359.276098
+6   2.500000  305.485159
+7   2.500408  305.576334
+8   2.500557  304.782996
+9   2.500573  305.000000
+10  2.500557  293.150000
+11  2.500611  305.000000
+
+iteration 9 - despues
+
+circ_pump_mass
+                name  return_junction  flow_junction  p_flow_bar    t_flow_k  mdot_flow_kg_per_s  in_service type
+0  Circ_pump_storage                1              7         NaN  306.840057                0.75        True    t
+
+res_circ_pump_mass
+   p_from_bar  p_to_bar   t_from_k      t_to_k  t_outlet_k  mdot_from_kg_per_s  mdot_to_kg_per_s  vdot_m3_per_s   deltat_k        qext_w
+0    2.999618  2.500408  359.75688  305.576334  306.840057                0.75             -0.75       0.000765  52.916823 -166340.40492
+
+res_junction
+       p_bar         t_k
+0   3.000000  360.000000
+1   2.999618  359.756880
+2   2.999599  358.514790
+3   2.999587  357.731057
+4   2.999599  293.150000
+5   2.999572  359.276098
+6   2.500000  305.485159
+7   2.500408  305.576334
+8   2.500557  304.782996
+9   2.500573  305.000000
+10  2.500557  293.150000
+11  2.500611  305.000000
+
+iteration 10 - antes
+
+circ_pump_mass
+                name  return_junction  flow_junction  p_flow_bar    t_flow_k  mdot_flow_kg_per_s  in_service type
+0  Circ_pump_storage                7              1         NaN  357.686547                 0.5        True    t
+
+res_circ_pump_mass
+   p_from_bar  p_to_bar    t_from_k      t_to_k  t_outlet_k  mdot_from_kg_per_s  mdot_to_kg_per_s  vdot_m3_per_s   deltat_k         qext_w
+0      2.5002   2.99982  304.730163  359.057388  357.686547                 0.5              -0.5       0.000509 -52.956384  110954.879238
+
+res_junction
+       p_bar         t_k
+0   3.000000  360.000000
+1   2.999820  359.057388
+2   2.999686  358.641293
+3   2.999674  357.854577
+4   2.999654  358.321682
+5   2.999774  358.586500
+6   2.500000  304.598418
+7   2.500200  304.730163
+8   2.500578  304.822978
+9   2.500594  305.000000
+10  2.500617  305.000000
+11  2.500634  305.000000
+
+iteration 10 - despues
+
+circ_pump_mass
+                name  return_junction  flow_junction  p_flow_bar    t_flow_k  mdot_flow_kg_per_s  in_service type
+0  Circ_pump_storage                7              1         NaN  357.686547                 0.5        True    t
+
+res_circ_pump_mass
+   p_from_bar  p_to_bar    t_from_k      t_to_k  t_outlet_k  mdot_from_kg_per_s  mdot_to_kg_per_s  vdot_m3_per_s   deltat_k         qext_w
+0      2.5002   2.99982  304.730163  359.057388  357.686547                 0.5              -0.5       0.000509 -52.956384  110954.879238
+
+res_junction
+       p_bar         t_k
+0   3.000000  360.000000
+1   2.999820  359.057388
+2   2.999686  358.641293
+3   2.999674  357.854577
+4   2.999654  358.321682
+5   2.999774  358.586500
+6   2.500000  304.598418
+7   2.500200  304.730163
+8   2.500578  304.822978
+9   2.500594  305.000000
+10  2.500617  305.000000
+11  2.500634  305.000000
+
+iteration 11 - antes
+
+circ_pump_mass
+                name  return_junction  flow_junction  p_flow_bar    t_flow_k  mdot_flow_kg_per_s  in_service type
+0  Circ_pump_storage                7              1         NaN  357.575747                 0.5        True    t
+
+res_circ_pump_mass
+   p_from_bar  p_to_bar    t_from_k      t_to_k  t_outlet_k  mdot_from_kg_per_s  mdot_to_kg_per_s  vdot_m3_per_s   deltat_k         qext_w
+0    2.500028  2.999979  304.568584  358.101277  357.575747                 0.5              -0.5       0.000509 -53.007163  111060.146858
+
+res_junction
+       p_bar         t_k
+0   3.000000  360.000000
+1   2.999979  358.101277
+2   2.999972  355.831969
+3   2.999968  354.414614
+4   2.999972  293.150000
+5   2.999931  357.643760
+6   2.500000  304.143107
+7   2.500028  304.568584
+8   2.500143  304.748751
+9   2.500150  305.000000
+10  2.500143  293.150000
+11  2.500201  305.000000
+
+iteration 11 - despues
+
+circ_pump_mass
+                name  return_junction  flow_junction  p_flow_bar    t_flow_k  mdot_flow_kg_per_s  in_service type
+0  Circ_pump_storage                7              1         NaN  357.575747                 0.5        True    t
+
+res_circ_pump_mass
+   p_from_bar  p_to_bar    t_from_k      t_to_k  t_outlet_k  mdot_from_kg_per_s  mdot_to_kg_per_s  vdot_m3_per_s   deltat_k         qext_w
+0    2.500028  2.999979  304.568584  358.101277  357.575747                 0.5              -0.5       0.000509 -53.007163  111060.146858
+
+res_junction
+       p_bar         t_k
+0   3.000000  360.000000
+1   2.999979  358.101277
+2   2.999972  355.831969
+3   2.999968  354.414614
+4   2.999972  293.150000
+5   2.999931  357.643760
+6   2.500000  304.143107
+7   2.500028  304.568584
+8   2.500143  304.748751
+9   2.500150  305.000000
+10  2.500143  293.150000
+11  2.500201  305.000000
+
+iteration 0 - antes
+
+circ_pump_mass
+                name  return_junction  flow_junction  p_flow_bar  t_flow_k  mdot_flow_kg_per_s  in_service type
+0  Circ_pump_storage                1              7         NaN     313.0              0.0001        True    t
+
+res_circ_pump_mass
+   p_from_bar  p_to_bar    t_from_k      t_to_k  t_outlet_k  mdot_from_kg_per_s  mdot_to_kg_per_s  vdot_m3_per_s   deltat_k     qext_w
+0    2.999513  2.500515  359.785486  304.771822       313.0              0.0001           -0.0001   1.020590e-07  46.785486 -19.608265
+
+res_junction
+       p_bar         t_k
+0   3.000000  360.000000
+1   2.999513  359.785486
+2   2.999289  359.465083
+3   2.999250  359.058005
+4   2.999258  359.137490
+5   2.999468  359.304297
+6   2.500000  304.693373
+7   2.500515  304.771822
+8   2.501030  304.850053
+9   2.501077  305.000000
+10  2.501068  305.000000
+11  2.501085  305.000000
+
+iteration 0 - despues
+
+circ_pump_mass
+                name  return_junction  flow_junction  p_flow_bar  t_flow_k  mdot_flow_kg_per_s  in_service type
+0  Circ_pump_storage                1              7         NaN     313.0              0.0001        True    t
+
+res_circ_pump_mass
+   p_from_bar  p_to_bar    t_from_k      t_to_k  t_outlet_k  mdot_from_kg_per_s  mdot_to_kg_per_s  vdot_m3_per_s   deltat_k     qext_w
+0    2.999513  2.500515  359.785486  304.771822       313.0              0.0001           -0.0001   1.020590e-07  46.785486 -19.608265
+
+res_junction
+       p_bar         t_k
+0   3.000000  360.000000
+1   2.999513  359.785486
+2   2.999289  359.465083
+3   2.999250  359.058005
+4   2.999258  359.137490
+5   2.999468  359.304297
+6   2.500000  304.693373
+7   2.500515  304.771822
+8   2.501030  304.850053
+9   2.501077  305.000000
+10  2.501068  305.000000
+11  2.501085  305.000000
+
+iteration 1 - antes
+
+circ_pump_mass
+                name  return_junction  flow_junction  p_flow_bar    t_flow_k  mdot_flow_kg_per_s  in_service type
+0  Circ_pump_storage                1              7         NaN  312.947804                0.88        True    t
+
+res_circ_pump_mass
+   p_from_bar  p_to_bar    t_from_k      t_to_k  t_outlet_k  mdot_from_kg_per_s  mdot_to_kg_per_s  vdot_m3_per_s   deltat_k        qext_w
+0    2.999007  2.501021  359.851252  307.287091  312.947804                0.88             -0.88       0.000898  46.903448 -172988.98454
+
+res_junction
+       p_bar         t_k
+0   3.000000  360.000000
+1   2.999007  359.851252
+2   2.998784  359.530227
+3   2.998744  359.122360
+4   2.998752  359.201998
+5   2.998962  359.369127
+6   2.500000  307.228357
+7   2.501021  307.287091
+8   2.501535  304.849874
+9   2.501582  305.000000
+10  2.501573  305.000000
+11  2.501590  305.000000
+
+iteration 1 - despues
+
+circ_pump_mass
+                name  return_junction  flow_junction  p_flow_bar    t_flow_k  mdot_flow_kg_per_s  in_service type
+0  Circ_pump_storage                1              7         NaN  312.947804                0.88        True    t
+
+res_circ_pump_mass
+   p_from_bar  p_to_bar    t_from_k      t_to_k  t_outlet_k  mdot_from_kg_per_s  mdot_to_kg_per_s  vdot_m3_per_s   deltat_k        qext_w
+0    2.999007  2.501021  359.851252  307.287091  312.947804                0.88             -0.88       0.000898  46.903448 -172988.98454
+
+res_junction
+       p_bar         t_k
+0   3.000000  360.000000
+1   2.999007  359.851252
+2   2.998784  359.530227
+3   2.998744  359.122360
+4   2.998752  359.201998
+5   2.998962  359.369127
+6   2.500000  307.228357
+7   2.501021  307.287091
+8   2.501535  304.849874
+9   2.501582  305.000000
+10  2.501573  305.000000
+11  2.501590  305.000000
+
+iteration 2 - antes
+
+circ_pump_mass
+                name  return_junction  flow_junction  p_flow_bar    t_flow_k  mdot_flow_kg_per_s  in_service type
+0  Circ_pump_storage                7              1         NaN  356.100811                0.15        True    t
+
+res_circ_pump_mass
+   p_from_bar  p_to_bar   t_from_k      t_to_k  t_outlet_k  mdot_from_kg_per_s  mdot_to_kg_per_s  vdot_m3_per_s   deltat_k        qext_w
+0     2.50045  2.999577  304.77262  359.493197  356.100811                0.15             -0.15       0.000153 -51.328192  32257.905508
+
+res_junction
+       p_bar         t_k
+0   3.000000  360.000000
+1   2.999577  359.493197
+2   2.999351  359.175554
+3   2.999311  358.771972
+4   2.999319  358.850776
+5   2.999531  359.016156
+6   2.500000  304.688240
+7   2.500450  304.772620
+8   2.500970  304.850850
+9   2.501018  305.000000
+10  2.501008  305.000000
+11  2.501026  305.000000
+
+iteration 2 - despues
+
+circ_pump_mass
+                name  return_junction  flow_junction  p_flow_bar    t_flow_k  mdot_flow_kg_per_s  in_service type
+0  Circ_pump_storage                7              1         NaN  356.100811                0.15        True    t
+
+res_circ_pump_mass
+   p_from_bar  p_to_bar   t_from_k      t_to_k  t_outlet_k  mdot_from_kg_per_s  mdot_to_kg_per_s  vdot_m3_per_s   deltat_k        qext_w
+0     2.50045  2.999577  304.77262  359.493197  356.100811                0.15             -0.15       0.000153 -51.328192  32257.905508
+
+res_junction
+       p_bar         t_k
+0   3.000000  360.000000
+1   2.999577  359.493197
+2   2.999351  359.175554
+3   2.999311  358.771972
+4   2.999319  358.850776
+5   2.999531  359.016156
+6   2.500000  304.688240
+7   2.500450  304.772620
+8   2.500970  304.850850
+9   2.501018  305.000000
+10  2.501008  305.000000
+11  2.501026  305.000000
+
+iteration 3 - antes
+
+circ_pump_mass
+                name  return_junction  flow_junction  p_flow_bar    t_flow_k  mdot_flow_kg_per_s  in_service type
+0  Circ_pump_storage                7              1         NaN  355.992091                0.18        True    t
+
+res_circ_pump_mass
+   p_from_bar  p_to_bar    t_from_k      t_to_k  t_outlet_k  mdot_from_kg_per_s  mdot_to_kg_per_s  vdot_m3_per_s   deltat_k        qext_w
+0    2.500305  2.999719  304.728894  359.313519  355.992091                0.18             -0.18       0.000183 -51.263197  38660.059056
+
+res_junction
+       p_bar         t_k
+0   3.000000  360.000000
+1   2.999719  359.313519
+2   2.999586  358.894242
+3   2.999574  358.101547
+4   2.999554  358.572189
+5   2.999673  358.839019
+6   2.500000  304.624705
+7   2.500305  304.728894
+8   2.500680  304.822145
+9   2.500696  305.000000
+10  2.500718  305.000000
+11  2.500735  305.000000
+
+iteration 3 - despues
+
+circ_pump_mass
+                name  return_junction  flow_junction  p_flow_bar    t_flow_k  mdot_flow_kg_per_s  in_service type
+0  Circ_pump_storage                7              1         NaN  355.992091                0.18        True    t
+
+res_circ_pump_mass
+   p_from_bar  p_to_bar    t_from_k      t_to_k  t_outlet_k  mdot_from_kg_per_s  mdot_to_kg_per_s  vdot_m3_per_s   deltat_k        qext_w
+0    2.500305  2.999719  304.728894  359.313519  355.992091                0.18             -0.18       0.000183 -51.263197  38660.059056
+
+res_junction
+       p_bar         t_k
+0   3.000000  360.000000
+1   2.999719  359.313519
+2   2.999586  358.894242
+3   2.999574  358.101547
+4   2.999554  358.572189
+5   2.999673  358.839019
+6   2.500000  304.624705
+7   2.500305  304.728894
+8   2.500680  304.822145
+9   2.500696  305.000000
+10  2.500718  305.000000
+11  2.500735  305.000000
+
+iteration 4 - antes
+
+circ_pump_mass
+                name  return_junction  flow_junction  p_flow_bar    t_flow_k  mdot_flow_kg_per_s  in_service type
+0  Circ_pump_storage                1              7         NaN  311.311818                0.88        True    t
+
+res_circ_pump_mass
+   p_from_bar  p_to_bar    t_from_k      t_to_k  t_outlet_k  mdot_from_kg_per_s  mdot_to_kg_per_s  vdot_m3_per_s   deltat_k         qext_w
+0    2.999311  2.500717  359.820637  307.151728  311.311818                0.88             -0.88       0.000898  48.508818 -178911.099315
+
+res_junction
+       p_bar         t_k
+0   3.000000  360.000000
+1   2.999311  359.820637
+2   2.999087  359.499901
+3   2.999048  359.092402
+4   2.999056  359.171968
+5   2.999306  357.957929
+6   2.500000  307.081188
+7   2.500717  307.151728
+8   2.501022  304.801326
+9   2.501069  305.000000
+10  2.501059  305.000000
+11  2.501029  305.000000
+
+iteration 4 - despues
+
+circ_pump_mass
+                name  return_junction  flow_junction  p_flow_bar    t_flow_k  mdot_flow_kg_per_s  in_service type
+0  Circ_pump_storage                1              7         NaN  311.311818                0.88        True    t
+
+res_circ_pump_mass
+   p_from_bar  p_to_bar    t_from_k      t_to_k  t_outlet_k  mdot_from_kg_per_s  mdot_to_kg_per_s  vdot_m3_per_s   deltat_k         qext_w
+0    2.999311  2.500717  359.820637  307.151728  311.311818                0.88             -0.88       0.000898  48.508818 -178911.099315
+
+res_junction
+       p_bar         t_k
+0   3.000000  360.000000
+1   2.999311  359.820637
+2   2.999087  359.499901
+3   2.999048  359.092402
+4   2.999056  359.171968
+5   2.999306  357.957929
+6   2.500000  307.081188
+7   2.500717  307.151728
+8   2.501022  304.801326
+9   2.501069  305.000000
+10  2.501059  305.000000
+11  2.501029  305.000000
+
+iteration 5 - antes
+
+circ_pump_mass
+                name  return_junction  flow_junction  p_flow_bar    t_flow_k  mdot_flow_kg_per_s  in_service type
+0  Circ_pump_storage                1              7         NaN  311.261836                0.75        True    t
+
+res_circ_pump_mass
+   p_from_bar  p_to_bar    t_from_k      t_to_k  t_outlet_k  mdot_from_kg_per_s  mdot_to_kg_per_s  vdot_m3_per_s   deltat_k         qext_w
+0    2.999466   2.50056  359.795419  307.041724  311.261836                0.75             -0.75       0.000765  48.533583 -152558.554464
+
+res_junction
+       p_bar         t_k
+0   3.000000  360.000000
+1   2.999466  359.795419
+2   2.999335  359.370124
+3   2.999324  358.566123
+4   2.999304  359.043455
+5   2.999453  358.843702
+6   2.500000  306.961528
+7   2.500560  307.041724
+8   2.500807  304.776719
+9   2.500823  305.000000
+10  2.500845  305.000000
+11  2.500826  305.000000
+
+iteration 5 - despues
+
+circ_pump_mass
+                name  return_junction  flow_junction  p_flow_bar    t_flow_k  mdot_flow_kg_per_s  in_service type
+0  Circ_pump_storage                1              7         NaN  311.261836            0.723775        True    t
+
+res_circ_pump_mass
+   p_from_bar  p_to_bar    t_from_k      t_to_k  t_outlet_k  mdot_from_kg_per_s  mdot_to_kg_per_s  vdot_m3_per_s   deltat_k         qext_w
+0    2.999479  2.500547  359.792815  306.987744  311.261836            0.723775         -0.723775       0.000738  48.530978 -147216.212848
+
+res_junction
+       p_bar         t_k
+0   3.000000  360.000000
+1   2.999479  359.792815
+2   2.999348  359.367552
+3   2.999337  358.563613
+4   2.999317  359.040908
+5   2.999466  358.841171
+6   2.500000  306.906656
+7   2.500547  306.987744
+8   2.500794  304.776730
+9   2.500810  305.000000
+10  2.500832  305.000000
+11  2.500813  305.000000
+
+iteration 6 - antes
+
+circ_pump_mass
+                name  return_junction  flow_junction  p_flow_bar   t_flow_k  mdot_flow_kg_per_s  in_service type
+0  Circ_pump_storage                1              7         NaN  311.21192                0.75        True    t
+
+res_circ_pump_mass
+   p_from_bar  p_to_bar   t_from_k      t_to_k  t_outlet_k  mdot_from_kg_per_s  mdot_to_kg_per_s  vdot_m3_per_s  deltat_k         qext_w
+0    2.999468  2.500558  359.79503  307.065847   311.21192                0.75             -0.75       0.000765  48.58311 -152714.274487
+
+res_junction
+       p_bar         t_k
+0   3.000000  360.000000
+1   2.999468  359.795030
+2   2.999406  359.159369
+3   2.999367  358.755982
+4   2.999406  293.150000
+5   2.999423  359.313705
+6   2.500000  306.985441
+7   2.500558  307.065847
+8   2.500804  304.836217
+9   2.500851  305.000000
+10  2.500804  293.150000
+11  2.500859  305.000000
+
+iteration 6 - despues
+
+circ_pump_mass
+                name  return_junction  flow_junction  p_flow_bar   t_flow_k  mdot_flow_kg_per_s  in_service type
+0  Circ_pump_storage                1              7         NaN  311.21192              0.0001        True    t
+
+res_circ_pump_mass
+   p_from_bar  p_to_bar    t_from_k      t_to_k  t_outlet_k  mdot_from_kg_per_s  mdot_to_kg_per_s  vdot_m3_per_s   deltat_k     qext_w
+0    2.999775  2.500247  359.679895  304.719738   311.21192              0.0001           -0.0001   1.020216e-07  48.467975 -20.313414
+
+res_junction
+       p_bar         t_k
+0   3.000000  360.000000
+1   2.999775  359.679895
+2   2.999712  359.046385
+3   2.999673  358.644359
+4   2.999712  293.150000
+5   2.999729  359.200207
+6   2.500000  304.602870
+7   2.500247  304.719738
+8   2.500494  304.836559
+9   2.500542  305.000000
+10  2.500494  293.150000
+11  2.500549  305.000000
+
+iteration 7 - antes
+
+circ_pump_mass
+                name  return_junction  flow_junction  p_flow_bar    t_flow_k  mdot_flow_kg_per_s  in_service type
+0  Circ_pump_storage                7              1         NaN  357.409067                 0.4        True    t
+
+res_circ_pump_mass
+   p_from_bar  p_to_bar    t_from_k      t_to_k  t_outlet_k  mdot_from_kg_per_s  mdot_to_kg_per_s  vdot_m3_per_s  deltat_k        qext_w
+0    2.500136  2.999881  304.723147  358.914838  357.409067                 0.4              -0.4       0.000407 -52.68592  88308.107736
+
+res_junction
+       p_bar         t_k
+0   3.000000  360.000000
+1   2.999881  358.914838
+2   2.999817  358.295537
+3   2.999776  357.902496
+4   2.999817  293.150000
+5   2.999834  358.445955
+6   2.500000  304.559293
+7   2.500136  304.723147
+8   2.500389  304.838833
+9   2.500438  305.000000
+10  2.500389  293.150000
+11  2.500445  305.000000
+
+iteration 7 - despues
+
+circ_pump_mass
+                name  return_junction  flow_junction  p_flow_bar    t_flow_k  mdot_flow_kg_per_s  in_service type
+0  Circ_pump_storage                7              1         NaN  357.409067                 0.4        True    t
+
+res_circ_pump_mass
+   p_from_bar  p_to_bar    t_from_k      t_to_k  t_outlet_k  mdot_from_kg_per_s  mdot_to_kg_per_s  vdot_m3_per_s  deltat_k        qext_w
+0    2.500136  2.999881  304.723147  358.914838  357.409067                 0.4              -0.4       0.000407 -52.68592  88308.107736
+
+res_junction
+       p_bar         t_k
+0   3.000000  360.000000
+1   2.999881  358.914838
+2   2.999817  358.295537
+3   2.999776  357.902496
+4   2.999817  293.150000
+5   2.999834  358.445955
+6   2.500000  304.559293
+7   2.500136  304.723147
+8   2.500389  304.838833
+9   2.500438  305.000000
+10  2.500389  293.150000
+11  2.500445  305.000000
+
+iteration 8 - antes
+
+circ_pump_mass
+                name  return_junction  flow_junction  p_flow_bar    t_flow_k  mdot_flow_kg_per_s  in_service type
+0  Circ_pump_storage                7              1         NaN  357.298631                 0.5        True    t
+
+res_circ_pump_mass
+   p_from_bar  p_to_bar    t_from_k      t_to_k  t_outlet_k  mdot_from_kg_per_s  mdot_to_kg_per_s  vdot_m3_per_s   deltat_k         qext_w
+0    2.500113  2.999902  304.724308  358.687031  357.298631                 0.5              -0.5       0.000509 -52.574323  110150.101771
+
+res_junction
+       p_bar         t_k
+0   3.000000  360.000000
+1   2.999902  358.687031
+2   2.999838  358.071932
+3   2.999797  357.681549
+4   2.999838  293.150000
+5   2.999855  358.221344
+6   2.500000  304.542363
+7   2.500113  304.724308
+8   2.500369  304.839510
+9   2.500418  305.000000
+10  2.500369  293.150000
+11  2.500425  305.000000
+
+iteration 8 - despues
+
+circ_pump_mass
+                name  return_junction  flow_junction  p_flow_bar    t_flow_k  mdot_flow_kg_per_s  in_service type
+0  Circ_pump_storage                7              1         NaN  357.298631                 0.5        True    t
+
+res_circ_pump_mass
+   p_from_bar  p_to_bar    t_from_k      t_to_k  t_outlet_k  mdot_from_kg_per_s  mdot_to_kg_per_s  vdot_m3_per_s   deltat_k         qext_w
+0    2.500113  2.999902  304.724308  358.687031  357.298631                 0.5              -0.5       0.000509 -52.574323  110150.101771
+
+res_junction
+       p_bar         t_k
+0   3.000000  360.000000
+1   2.999902  358.687031
+2   2.999838  358.071932
+3   2.999797  357.681549
+4   2.999838  293.150000
+5   2.999855  358.221344
+6   2.500000  304.542363
+7   2.500113  304.724308
+8   2.500369  304.839510
+9   2.500418  305.000000
+10  2.500369  293.150000
+11  2.500425  305.000000
+
+iteration 9 - antes
+
+circ_pump_mass
+                name  return_junction  flow_junction  p_flow_bar    t_flow_k  mdot_flow_kg_per_s  in_service type
+0  Circ_pump_storage                1              7         NaN  306.840057                0.75        True    t
+
+res_circ_pump_mass
+   p_from_bar  p_to_bar   t_from_k      t_to_k  t_outlet_k  mdot_from_kg_per_s  mdot_to_kg_per_s  vdot_m3_per_s   deltat_k        qext_w
+0    2.999618  2.500408  359.75688  305.576334  306.840057                0.75             -0.75       0.000765  52.916823 -166340.40492
+
+res_junction
+       p_bar         t_k
+0   3.000000  360.000000
+1   2.999618  359.756880
+2   2.999599  358.514790
+3   2.999587  357.731057
+4   2.999599  293.150000
+5   2.999572  359.276098
+6   2.500000  305.485159
+7   2.500408  305.576334
+8   2.500557  304.782996
+9   2.500573  305.000000
+10  2.500557  293.150000
+11  2.500611  305.000000
+
+iteration 9 - despues
+
+circ_pump_mass
+                name  return_junction  flow_junction  p_flow_bar    t_flow_k  mdot_flow_kg_per_s  in_service type
+0  Circ_pump_storage                1              7         NaN  306.840057                0.75        True    t
+
+res_circ_pump_mass
+   p_from_bar  p_to_bar   t_from_k      t_to_k  t_outlet_k  mdot_from_kg_per_s  mdot_to_kg_per_s  vdot_m3_per_s   deltat_k        qext_w
+0    2.999618  2.500408  359.75688  305.576334  306.840057                0.75             -0.75       0.000765  52.916823 -166340.40492
+
+res_junction
+       p_bar         t_k
+0   3.000000  360.000000
+1   2.999618  359.756880
+2   2.999599  358.514790
+3   2.999587  357.731057
+4   2.999599  293.150000
+5   2.999572  359.276098
+6   2.500000  305.485159
+7   2.500408  305.576334
+8   2.500557  304.782996
+9   2.500573  305.000000
+10  2.500557  293.150000
+11  2.500611  305.000000
+
+iteration 10 - antes
+
+circ_pump_mass
+                name  return_junction  flow_junction  p_flow_bar    t_flow_k  mdot_flow_kg_per_s  in_service type
+0  Circ_pump_storage                7              1         NaN  357.686547                 0.5        True    t
+
+res_circ_pump_mass
+   p_from_bar  p_to_bar    t_from_k      t_to_k  t_outlet_k  mdot_from_kg_per_s  mdot_to_kg_per_s  vdot_m3_per_s   deltat_k         qext_w
+0      2.5002   2.99982  304.730163  359.057388  357.686547                 0.5              -0.5       0.000509 -52.956384  110954.879238
+
+res_junction
+       p_bar         t_k
+0   3.000000  360.000000
+1   2.999820  359.057388
+2   2.999686  358.641293
+3   2.999674  357.854577
+4   2.999654  358.321682
+5   2.999774  358.586500
+6   2.500000  304.598418
+7   2.500200  304.730163
+8   2.500578  304.822978
+9   2.500594  305.000000
+10  2.500617  305.000000
+11  2.500634  305.000000
+
+iteration 10 - despues
+
+circ_pump_mass
+                name  return_junction  flow_junction  p_flow_bar    t_flow_k  mdot_flow_kg_per_s  in_service type
+0  Circ_pump_storage                7              1         NaN  357.686547                 0.5        True    t
+
+res_circ_pump_mass
+   p_from_bar  p_to_bar    t_from_k      t_to_k  t_outlet_k  mdot_from_kg_per_s  mdot_to_kg_per_s  vdot_m3_per_s   deltat_k         qext_w
+0      2.5002   2.99982  304.730163  359.057388  357.686547                 0.5              -0.5       0.000509 -52.956384  110954.879238
+
+res_junction
+       p_bar         t_k
+0   3.000000  360.000000
+1   2.999820  359.057388
+2   2.999686  358.641293
+3   2.999674  357.854577
+4   2.999654  358.321682
+5   2.999774  358.586500
+6   2.500000  304.598418
+7   2.500200  304.730163
+8   2.500578  304.822978
+9   2.500594  305.000000
+10  2.500617  305.000000
+11  2.500634  305.000000
+
+iteration 11 - antes
+
+circ_pump_mass
+                name  return_junction  flow_junction  p_flow_bar    t_flow_k  mdot_flow_kg_per_s  in_service type
+0  Circ_pump_storage                7              1         NaN  357.575747                 0.5        True    t
+
+res_circ_pump_mass
+   p_from_bar  p_to_bar    t_from_k      t_to_k  t_outlet_k  mdot_from_kg_per_s  mdot_to_kg_per_s  vdot_m3_per_s   deltat_k         qext_w
+0    2.500028  2.999979  304.568584  358.101277  357.575747                 0.5              -0.5       0.000509 -53.007163  111060.146858
+
+res_junction
+       p_bar         t_k
+0   3.000000  360.000000
+1   2.999979  358.101277
+2   2.999972  355.831969
+3   2.999968  354.414614
+4   2.999972  293.150000
+5   2.999931  357.643760
+6   2.500000  304.143107
+7   2.500028  304.568584
+8   2.500143  304.748751
+9   2.500150  305.000000
+10  2.500143  293.150000
+11  2.500201  305.000000
+
+iteration 11 - despues
+
+circ_pump_mass
+                name  return_junction  flow_junction  p_flow_bar    t_flow_k  mdot_flow_kg_per_s  in_service type
+0  Circ_pump_storage                7              1         NaN  357.575747                 0.5        True    t
+
+res_circ_pump_mass
+   p_from_bar  p_to_bar    t_from_k      t_to_k  t_outlet_k  mdot_from_kg_per_s  mdot_to_kg_per_s  vdot_m3_per_s   deltat_k         qext_w
+0    2.500028  2.999979  304.568584  358.101277  357.575747                 0.5              -0.5       0.000509 -53.007163  111060.146858
+
+res_junction
+       p_bar         t_k
+0   3.000000  360.000000
+1   2.999979  358.101277
+2   2.999972  355.831969
+3   2.999968  354.414614
+4   2.999972  293.150000
+5   2.999931  357.643760
+6   2.500000  304.143107
+7   2.500028  304.568584
+8   2.500143  304.748751
+9   2.500150  305.000000
+10  2.500143  293.150000
+11  2.500201  305.000000
+
